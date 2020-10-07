@@ -22,13 +22,13 @@
 <h1>${search.title}</h1>
 
 <!-- Spring har sin egen måde at lave forms på - skal det gøres ensartet? -->
-<form:form>
+<form>
     <div class="form-SearchInput">
         <input id="searchInput" placeholder="Search.."/>
         <button id="submitSearch">Submit</button>
     </div>
     <p id="userFeedback"></p>
-</form:form>
+</form>
 
 <form:form action="${search.buttonUrl}">
     <input type="submit" value = "${search.buttonName}">

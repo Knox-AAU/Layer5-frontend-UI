@@ -5,3 +5,9 @@ h2{
 body{
     font-family: "Arial";
 }
+
+.form-SearchInput {
+    text-align: center;
+    border-bottom: 1px solid;
+    font-size: 15px;
+}
