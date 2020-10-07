@@ -1,9 +1,6 @@
 <%@ page contentType="text/html charset=utf-8"%>
-<link rel="stylesheet" href="../../resources/css/style.css">
 <html>
-    <head>
-
-    </head>
+        <%@ include file="common/header.jspf"%>
     <body>
         <p>Test</p>
         <h2>${message}</h2>

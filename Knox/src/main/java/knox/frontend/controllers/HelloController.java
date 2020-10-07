@@ -13,4 +13,10 @@ public class HelloController {
         return "hello";
     }
 
+    @RequestMapping("/test")
+    public String testView(ModelMap model){
+        model.addAttribute("message","Hallo Spring MVC Framework");
+        return "test/jquery_test_view";
+    }
+
 }
