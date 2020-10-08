@@ -8,17 +8,17 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class DatabaseSelectionController {
 
-    @RequestMapping(value = "/grundfoss")
+    @RequestMapping(value = "/grundfos")
     public ModelAndView grundfoss(){
-        Search grundfoss = new Search("Grundfoss search engine", "Grundfoss", "Nordjyske", "/nordjyske");
+        Search grundfos = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "/nordjyske");
         ModelAndView modelAndView = new ModelAndView("search-interface");
-        modelAndView.addObject("search", grundfoss);
+        modelAndView.addObject("search", grundfos);
         return modelAndView;
     }
 
     @RequestMapping(value = "/nordjyske")
     public ModelAndView nordjyske(){
-        Search nordjyske = new Search("Nordjyske search engine", "Nordjyske", "Grundfoss", "/grundfoss");
+        Search nordjyske = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
         ModelAndView modelAndView = new ModelAndView("search-interface");
         modelAndView.addObject("search", nordjyske);
         return modelAndView;
