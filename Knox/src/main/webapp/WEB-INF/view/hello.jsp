@@ -9,7 +9,7 @@
                 <input type="submit" value = "Nordjyske">
             </form:form>
 
-            <form:form action="/grundfoss">
+            <form:form action="/grundfos">
                 <input type="submit" value = "Grundfoss">
             </form:form>
 
