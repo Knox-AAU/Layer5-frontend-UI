@@ -15,7 +15,8 @@
 
 <script>
     $( "#TEST" ).click(function() {
-        alert( "Handler for .click() called." );
+     console.log("Dude?");
+     PostCall("nordjysksearch","Hallo");
     });
 
 </script>
