@@ -1,7 +1,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <link rel="stylesheet" href="../../resources/style/general.css">
 <head>
-    <title>Knox ${search.name}</title>
+    <title>Knox ${search.databaseName}</title>
 
     <spring:url value="/resources/lib/jquery-3.5.1.min.js" var="jquary" />
     <script src="${jquary}"></script>

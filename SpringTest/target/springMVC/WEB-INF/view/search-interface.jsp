@@ -18,7 +18,7 @@
     <input type="submit" value = "Home">
 </form:form>
 
-<h1>${search.title}</h1>
+<h1>${search.pageTitle}</h1>
 
 <!-- Spring har sin egen måde at lave forms på - skal det gøres ensartet? -->
 <form:form>
