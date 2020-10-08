@@ -9,8 +9,12 @@
 <html>
 <%@ include file="../common/header.jspf"%>
 <body>
+ <div>
  <a id="TEST">Press Me</a>
-
+ </div>
+ <div>
+ <a id="GrundFossTEST">press for grundfoss</a>
+ </div>
 </body>
 
 <script>
@@ -19,6 +23,10 @@
      PostCall("nordjysksearch","Hallo");
     });
 
+    $( "#GrundFossTEST" ).click(function() {
+     console.log("maDude?");
+     PostCall("grundfosssearch","Hallothere");
+    });
 </script>
 
 

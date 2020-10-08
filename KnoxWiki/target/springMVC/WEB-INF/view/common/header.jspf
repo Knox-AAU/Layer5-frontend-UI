@@ -9,13 +9,13 @@
     <script src="${jquary}"></script>
 
 
-    <spring:url value="/resources/CSS/general.css" var="generalstyle" />
+    <spring:url value="/resources/style/general.css" var="generalstyle" />
     <link rel="stylesheet" href="${generalstyle}">
 
-    <spring:url value="/resources/CSS/nav.css" var="navstyle" />
+    <spring:url value="/resources/style/nav.css" var="navstyle" />
     <link rel="stylesheet" href="${navstyle}">
 
-    <spring:url value="/resources/CSS/sidebar.css" var="navstyle" />
+    <spring:url value="/resources/style/sidebar.css" var="navstyle" />
     <link rel="stylesheet" href="${navstyle}">
 
     <spring:url value="/resources/JavaScript/ClassForm.js" var="mainJs" />
@@ -25,6 +25,4 @@
         <spring:url value="${file.path}" var="temp" />
         <link rel="stylesheet" href="${temp}">
     </c:forEach>
-
-
 </head>
