@@ -1,5 +1,8 @@
 package knox.frontend.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DummyData {
 
 //Nordjyske DummyData
@@ -8,16 +11,16 @@ public class DummyData {
     public String author; //Author of article
     public String date; //Date of article
     public String articleText; //Article text
-    public String images; //Images in article
+    public List<String> images = new ArrayList<>(); //Images in article
 
 
-    public DummyData() {
+    public DummyData() {/*
         this.title = title;
         this.subtitle = subtitle;
         this.author = author;
         this.date = date;
         this.articleText = articleText;
-        this.images = images;
+        this.images = images;*/
 
 // https://nordjyske.dk/nyheder/mariagerfjord/nu-kommer-mariagerfjords-kaeledaegge-paa-museum/a5c8e3fd-1fd2-4628-a706-e34e3b01759a
         title = "Nu kommer Mariagerfjords kæledægge på museum";
@@ -50,10 +53,11 @@ public class DummyData {
                         "Mariagerfjord Kommune har indgået en såkaldt udlånsaftale med Statens Naturhistoriske Museum, der løber de næste ti år. " +
                         "Aftalen betyder, at kommunen er forpligtet til at udstille skelet og hjerte for offentligheden under gode og ordnede forhold. " +
                         "Det sker i samarbejde med Jutlander Fonden Hobro, som gavmildt har doneret 190.000 kroner til formålet.";
-        images = "https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop, " +
-                 "https://img.nordjyske.dk/s3/nj-prod-public-images/J2YNvD1NwhQJrxKEfLB5NZCvaUg.jpg?w=624&scale=both&mode=crop," +
-                 "https://img.nordjyske.dk/s3/nj-prod-public-images/F7LXx9sFbGFJC40CGXMidLcYDY8.jpg?w=624&scale=both&mode=crop," +
-                 "https://img.nordjyske.dk/s3/nj-prod-public-images/2GTPwxHUYSW-URlzKmG1U0I1hgo.jpg?w=624&scale=both&mode=crop," +
-                 "https://img.nordjyske.dk/s3/nj-prod-public-images/W_MFuFmiAYL-SawUfmcihDOsEfc.jpg?w=624&scale=both&mode=crop";
+                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop");
+                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/J2YNvD1NwhQJrxKEfLB5NZCvaUg.jpg?w=624&scale=both&mode=crop");
+                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/F7LXx9sFbGFJC40CGXMidLcYDY8.jpg?w=624&scale=both&mode=crop");
+                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/2GTPwxHUYSW-URlzKmG1U0I1hgo.jpg?w=624&scale=both&mode=crop");
+                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/W_MFuFmiAYL-SawUfmcihDOsEfc.jpg?w=624&scale=both&mode=crop");
+
     }
 }
