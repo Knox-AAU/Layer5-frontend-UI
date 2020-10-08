@@ -11,9 +11,11 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Knox" />
+          <element id="module-output" name="springMVC" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.9.RELEASE" />
@@ -22,12 +24,19 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:3.4.1" />
+          <element id="library" level="project" name="Maven: org.webjars:webjars-locator-core:0.45" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.29" />
+          <element id="library" level="project" name="Maven: io.github.classgraph:classgraph:4.8.69" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/Knox/target/springMVC/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/SpringTest/target/springMVC/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="Knox/web/Web" />
+      <element id="javaee-facet-resources" facet="springMVC/web/Web" />
     </root>
   </artifact>
 </component>

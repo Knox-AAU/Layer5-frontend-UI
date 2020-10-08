@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Knox/Knox.iml" filepath="$PROJECT_DIR$/Knox/Knox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Knox-Frontend.iml" filepath="$PROJECT_DIR$/.idea/Knox-Frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTest/springMVC.iml" filepath="$PROJECT_DIR$/SpringTest/springMVC.iml" />
     </modules>
   </component>
 </project>
