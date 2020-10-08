@@ -1,0 +1,14 @@
+#navbar {
+    top: 0;
+    width: 100%;
+    background-color: #992a11;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+}
+#navbar h1 {
+    color: aliceblue;
+    padding-left: 10px;
+}
