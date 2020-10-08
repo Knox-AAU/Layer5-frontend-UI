@@ -1,5 +1,4 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<link rel="stylesheet" href="../../resources/style/general.css">
 <head>
     <title>Knox ${search.databaseName}</title>
 
@@ -10,5 +9,5 @@
     <script src="${ajax}"></script>
 
     <spring:url value="/resources/style/general.css" var="style" />
-    <link rel="${style}">
+    <link rel="stylesheet" href="${style}">
 </head>
