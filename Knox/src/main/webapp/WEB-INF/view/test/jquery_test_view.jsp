@@ -20,7 +20,7 @@
 <script>
     $( "#TEST" ).click(function() {
      console.log("Dude?");
-     PostCall("nordjysksearch","Hallo");
+     PostCall("nordjysksearch","dummydata");
     });
 
     $( "#GrundFossTEST" ).click(function() {
