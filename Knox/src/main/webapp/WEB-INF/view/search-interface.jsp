@@ -11,9 +11,8 @@
 
 
 <html>
-<head>
-    <title>${search.name}</title>
-</head>
+
+<%@ include file="common/header.jspf"%>
 
 <form:form action="/" method="get">
     <input type="submit" value = "Home">
