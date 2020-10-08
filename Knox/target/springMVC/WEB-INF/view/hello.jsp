@@ -10,7 +10,7 @@
             </form:form>
 
             <form:form action="/grundfos">
-                <input type="submit" value = "Grundfoss">
+                <input type="submit" value = "Grundfos">
             </form:form>
 
         </body>
