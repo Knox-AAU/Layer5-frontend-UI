@@ -28,6 +28,7 @@
      PostCall("grundfosssearch","Hallothere");
     });
 </script>
-
+<spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />
+<script src="${converter}"></script>
 
 </html>
