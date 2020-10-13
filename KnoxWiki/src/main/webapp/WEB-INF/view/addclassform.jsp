@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -14,15 +15,18 @@
 <%@ include file="common/nav.jspf"%>
 <div class="mainbody">
     <%@ include file="common/sidebar.jspf"%>
+
         <div id="AddClassForm">
             <!-- Header -->
             <div class="addclass_header_section">
                 <h1 >Add New Class</h1>
             </div>
+
             <!-- Class Name -->
             <div class="addclass_section">
                 <h2 class="addclass_section_header">Class Name</h2>
                 <input id="class_name_input" class="addclass_txt_input" type="text">
+
             </div>
             <!-- Class Exctents -->
             <div class="addclass_section">
@@ -64,6 +68,7 @@
                 <button  class="btn_confirm btn"  id="SaveClass">Save</button>
             </div>
         </div>
+
 </div>
 </body>
 <script>
@@ -142,9 +147,9 @@
     function SendData (classObject) {
         //var data = JSON.stringify(classObject);
 
-        var test = JSON.stringify({
-            name : "hallo", lastname : "there"
-        });
+        var test = JSON.stringify(
+            classObject
+        );
 
         console.log(test);
         $.ajax({

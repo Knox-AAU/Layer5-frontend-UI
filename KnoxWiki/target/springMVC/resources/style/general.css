@@ -1,13 +1,36 @@
-h2{
-    color:blue;
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana;
+}
+body {
+    color: #424040;
 }
 
-body{
-    font-family: "Arial";
+h1 {
+    font-family: Cambria;
+    margin-bottom: 5px;
 }
 
-.form-SearchInput {
-    text-align: center;
-    border-bottom: 1px solid;
-    font-size: 15px;
+.btn {
+    cursor: pointer;
+    border-width: 0;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.btn_accept {
+    background-color: #2f8a41;
+    color: white;
+}
+
+.btn_confirm {
+    background-color: #3ea1c2;
+    color: white;
+}
+
+.mainbody {
+    display: flex;
+    padding-top: 50px;
+    position: relative;
 }

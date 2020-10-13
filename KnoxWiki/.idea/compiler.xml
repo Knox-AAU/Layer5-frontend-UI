@@ -11,5 +11,8 @@
         <module name="KnoxWiki" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="KnoxWiki" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

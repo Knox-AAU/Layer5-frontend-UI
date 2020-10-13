@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import springTest.springMVC.controllerSupport.FileManager;
+import springTest.springMVC.datatypes.JavaClassStruct;
 import springTest.springMVC.datatypes.frontendfile;
 import springTest.springMVC.security.LoginValidator;
 
@@ -38,6 +39,8 @@ public class HelloController {
     @RequestMapping(value = "/newclass", method = RequestMethod.GET)
     public String createNewClass(ModelMap model){
         System.out.println("createNewClass");
+
+
         new FileManager(model).AddCssFile("addclassform").finish();
 
         return "addclassform";

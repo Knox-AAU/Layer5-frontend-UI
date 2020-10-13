@@ -11,7 +11,7 @@
         <p>Test 2</p>
         <h2>${message}</h2>
 
-        <form action="/SpringTest_war_exploded/newclass" method="get">
+        <form action="/newclass" method="get">
             <button type="submit" class="btn btn_accept" value="">Create new Class</button>
         </form>
 
