@@ -11,3 +11,25 @@ body{
     border-bottom: 1px solid;
     font-size: 15px;
 }
+
+.SearchBar {
+    border-color: aquamarine;
+    margin-bottom: 2.4em;
+
+}
+
+.form-ArticleEntity {
+    text-align: center;
+    border-bottom: slategrey;
+    border-style: dashed;
+    margin-bottom: 2.4em;
+}
+
+.form-ArticleEntity:hover {
+    background: slategrey;
+}
+
+.form-ArticleList {
+    border-left: black;
+    border-right: black;
+}
