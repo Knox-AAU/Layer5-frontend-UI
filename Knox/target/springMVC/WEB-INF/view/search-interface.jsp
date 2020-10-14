@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <%@ include file="common/header.jspf"%>
 
