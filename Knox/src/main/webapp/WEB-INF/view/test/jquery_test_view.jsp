@@ -12,64 +12,31 @@
 
 <div>
 
- <h1 id="Title">
- </h1>
-
- <h2 id="SubTitle">
-
- </h2>
+ <h1 id="Title"></h1>
+ <h2 id="SubTitle"> </h2>
 
 </div>
 
+<div>
+ <p id="Author"></p>
 
+</div>
+
+<div>
+ <p id="Date"></p>
+
+</div>
 
 <div>
 
- <p id="Author">
-
- </p>
+ <p id="ArticleText"></p>
 
 </div>
 
-
-
-<div>
- <p id="Date">
-
- </p>
-
-
-</div>
-
-
-
-<div>
- <p id="ArticleText">
-
- </p>
-
-</div>
 
 <div id="Pictures">
 
 </div>
-
-
-<!--
-<img id="Picture0" src= "https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop">
-
-<img id="Picture1" src= "https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop">
-
-<img id="Picture2" src= "https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop">
-
-<img id="Picture3" src= "https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop">
-
-<img id="Picture4" src= "https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop">
-
--->
-
-
-
 
 
 <div>
