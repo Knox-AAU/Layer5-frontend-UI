@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/api")
 @RestController
-public class RestNordJysk {
+public class RestGrundFos {
 
-    @PostMapping(value = "/nordjysksearch", consumes = "application/json")
+    @PostMapping(value = "/grundfossearch", consumes = "application/json")
     @ResponseBody
     public String search(@RequestBody String search) throws JsonProcessingException {
         System.out.println("Working");
