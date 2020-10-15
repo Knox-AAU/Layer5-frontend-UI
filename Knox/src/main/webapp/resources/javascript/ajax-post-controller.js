@@ -9,7 +9,12 @@ function PostCall (functionName, search) {
         success: function (returnValue) {
             console.log("success");
             console.log(returnValue);
-            converttohtml(returnValue);
+            if(functionName == "nordjysksearch") {
+                converttohtml(returnValue);
+            }
+            else{
+                converttoHtml(returnValue);
+            }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             console.log (XMLHttpRequest);
