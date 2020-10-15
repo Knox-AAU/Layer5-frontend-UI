@@ -1,0 +1,12 @@
+<div id="sidebar">
+    <div class="sidebar_btn">
+        <a class="sidebar_btn_link" href="/SpringTest_war_exploded/home">
+            <p class="sidebar_btn_txt"> Home </p>
+        </a>
+    </div>
+    <div class="sidebar_btn">
+        <a class="sidebar_btn_link" href="/SpringTest_war_exploded/newclass">
+           <p class="sidebar_btn_txt"> Create new Class </p>
+        </a>
+    </div>
+</div>

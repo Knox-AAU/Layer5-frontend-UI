@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Knox" />
+        <module name="springMVC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Knox" target="1.7" />
+      <module name="springMVC" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

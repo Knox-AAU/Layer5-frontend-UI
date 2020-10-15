@@ -1,0 +1,15 @@
+<div class="classproperty">
+    <div class="addclass_section">
+        <h3 class="">Property Name</h3>
+        <input placeholder="Property Name" class="propertyname_input addclass_txt_input" type="text">
+    </div>
+    <div class="addclass_section">
+        <h3 class="">Property Description</h3>
+        <textarea class="propertydescription_input addclass_textfield"></textarea>
+    </div>
+
+    <div class="addclass_section">
+        <h3 class="">Property Example of Use</h3>
+        <textarea class="propertyexample addclass_textfield"></textarea>
+    </div>
+</div>

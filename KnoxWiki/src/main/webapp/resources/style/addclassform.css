@@ -1,0 +1,67 @@
+#AddClassForm{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: calc(100% - 40px);
+}
+
+.add_element_option {
+    display: flex;
+    align-items: center;
+
+}
+
+.addclass_section_header {
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-style: double;
+    border-color: #dc143c;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+
+    width: 100%;
+}
+
+.addclass_save_Section {
+    margin: auto;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.addclass_save_Section .btn {
+    width: 75px;
+}
+
+.addclass_txt_input{
+    height: 20px;
+}
+
+.addclass_header_section {
+    background-color: #992a11;
+    color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.addclass_section {
+    padding-bottom: 20px;
+}
+
+.addclass_add_btn{
+    margin-left: 20px;
+
+}
+
+.addclass_textfield{
+    width: 100%;
+}
+
+.classmethod{
+    -webkit-box-shadow: 0px 11px 13px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 11px 13px -15px rgba(0,0,0,0.75);
+    box-shadow: 0px 11px 13px -15px rgba(0,0,0,0.75);
+    padding-bottom: 20px;
+}

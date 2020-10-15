@@ -1,0 +1,11 @@
+#container {
+    margin: auto;
+    width: 350px;
+    margin-top: 20vh;
+    display: flex;
+
+}
+
+#login_form {
+    margin: 20px;
+}
