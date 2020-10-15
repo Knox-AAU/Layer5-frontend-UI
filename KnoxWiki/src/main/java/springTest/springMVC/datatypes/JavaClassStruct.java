@@ -1,5 +1,7 @@
 package springTest.springMVC.datatypes;
 
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
+
 import java.util.List;
 
 public class JavaClassStruct {
@@ -18,6 +20,8 @@ public class JavaClassStruct {
         this.methodList = methodList;
         this.propertyList = propertyList;
     }
+
+    public JavaClassStruct() { }
 
     public String getName() {
         return name;
@@ -68,7 +72,7 @@ public class JavaClassStruct {
     }
 
 
-    public class Method  {
+    public static class Method  {
         private String name;
         private String description;
         private String example;
@@ -79,6 +83,8 @@ public class JavaClassStruct {
             this.description = description;
             this.example = example;
         }
+
+        Method(){}
 
         public String getName() {
             return name;
@@ -105,7 +111,7 @@ public class JavaClassStruct {
         }
 
     }
-    public class Property  {
+    public static class Property  {
         private String name;
         private String description;
         private String example;
@@ -115,6 +121,8 @@ public class JavaClassStruct {
             this.description = description;
             this.example = example;
         }
+
+        Property(){}
 
         public String getName() {
             return name;
