@@ -36,7 +36,7 @@ public class RestAPI {
     //--------------------------------------------------------------------------------------
 
     //Path is relative to project, but might have to be changed to a more specific subpath
-    String xmlPath = "..\\..\\..\\Knox-frontend\\xmltestfile.xml";
+    String xmlPath = "..\\..\\..\\layer5-frontend-ui\\xmltestfile.xml";
 
 
     @PostMapping(value = "/test", consumes = "application/json")
