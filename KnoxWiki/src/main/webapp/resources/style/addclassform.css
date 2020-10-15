@@ -7,13 +7,15 @@
 
 .add_element_option {
     display: flex;
-    align-items: center;
+    text-align: center;
+    align-items: baseline;
 
 }
 
 .addclass_section_header {
     border-width: 0;
-    border-bottom-width: 3px;
+    border-top-width: 3px;
+    border-top-left-radius: 10px ;
     border-style: double;
     border-color: #dc143c;
     margin-bottom: 10px;
@@ -36,6 +38,7 @@
 
 .addclass_txt_input{
     height: 20px;
+    margin-bottom: 20px;
 }
 
 .addclass_header_section {
@@ -47,7 +50,8 @@
 }
 
 .addclass_section {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+
 }
 
 .addclass_add_btn{
