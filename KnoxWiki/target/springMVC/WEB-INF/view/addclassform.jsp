@@ -28,10 +28,10 @@
                 <input id="class_name_input" class="addclass_txt_input" type="text">
 
             </div>
-            <!-- Class Exctents -->
+            <!-- Class Extends -->
             <div class="addclass_section">
                 <h2 class="addclass_section_header">Inheritence</h2>
-                <h3>Excents Class</h3>
+                <h3>Extends Class</h3>
                 <input id="class_parent_input" class="addclass_txt_input"  type="text">
                 <div id="Interface_Section">
                     <h3>Implements Interfaces</h3>

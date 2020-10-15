@@ -7,6 +7,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/classcomponents/classmethod.jspf" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/classcomponents" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jspf" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/sidebar.jspf" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addclassform.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
       </map>
     </option>
   </component>
