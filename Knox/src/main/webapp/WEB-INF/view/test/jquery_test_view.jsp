@@ -43,7 +43,7 @@
  <a id="TEST">Press Me</a>
  </div>
  <div>
- <a id="GrundFossTEST">press for grundfoss</a>
+ <a id="GrundFosTEST">press for grundfos</a>
  </div>
 </body>
 
@@ -53,9 +53,9 @@
      PostCall("nordjysksearch","dummydata");
     });
 
-    $( "#GrundFossTEST" ).click(function() {
+    $( "#GrundFosTEST" ).click(function() {
      console.log("maDude?");
-     PostCall("grundfosssearch","Hallothere");
+     PostCall("grundfossearch","Hallothere");
     });
 </script>
 <spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />
