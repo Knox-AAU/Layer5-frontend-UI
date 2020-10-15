@@ -1,0 +1,44 @@
+.classwrapper {
+    padding: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breakline {
+
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 5px;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.class_section_wrapper {
+    background: #f7f7f7;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.description_wrapper {
+    margin-bottom: 20px;
+
+}
+.class_table  {
+    border-spacing: 0px;
+}
+.class_table th, .class_table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+    min-width: 150px;
+}
+
+.class_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.class_link {
+    color: darkblue;
+}

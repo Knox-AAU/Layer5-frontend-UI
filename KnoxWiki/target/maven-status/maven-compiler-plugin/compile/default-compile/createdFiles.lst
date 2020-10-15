@@ -1,4 +1,5 @@
 springTest\springMVC\controllers\RestAPI.class
+springTest\springMVC\debug\ClassGenerator.class
 springTest\springMVC\controllers\HelloController.class
 springTest\springMVC\datatypes\JavaClassStruct$Property.class
 springTest\springMVC\controllerSupport\FileManager.class

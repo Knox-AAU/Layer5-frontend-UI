@@ -23,8 +23,8 @@
 <!-- Spring har sin egen måde at lave forms på - skal det gøres ensartet? -->
 <form:form>
     <div class="form-SearchInput">
-        <input id="searchInput" placeholder="Search.."/>
-        <button id="submitSearch">Submit</button>
+        <input id="searchInput" class="SearchBar" placeholder="Search.."/>
+        <button id="submitSearch" type="button">Submit</button>
     </div>
     <p id="userFeedback"></p>
 </form:form>
@@ -37,4 +37,6 @@
 
 
 </body>
+<spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />
+<script src="${converter}"></script>
 </html>

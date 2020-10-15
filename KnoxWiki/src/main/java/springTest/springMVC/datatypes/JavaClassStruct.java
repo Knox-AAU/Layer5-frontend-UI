@@ -32,7 +32,12 @@ public class JavaClassStruct {
     }
 
     public String getParentClass() {
-        return parentClass;
+        if (parentClass != null) {
+            return parentClass;
+        } else {
+            return "Java Object";
+        }
+
     }
 
     public void setParentClass(String parentClass) {
@@ -116,7 +121,7 @@ public class JavaClassStruct {
         private String description;
         private String example;
 
-        public Property(String name, String description, String example) {
+        public  Property(String name, String description, String example) {
             this.name = name;
             this.description = description;
             this.example = example;
