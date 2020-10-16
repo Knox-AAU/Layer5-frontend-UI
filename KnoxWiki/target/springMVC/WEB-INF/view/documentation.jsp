@@ -19,7 +19,7 @@
             <li>Parent: ${listValue.parentClass}</li>
             <li>Methods:</li>
             <c:forEach var="interface" items="${listValue.interfaces}">
-                <li>Interface name: ${interface}</li>
+                <li>Interface name: ${interface.toString()}</li>
             </c:forEach>
             <c:forEach var="methods" items="${listValue.methodList}">
                 <li>Method name: ${methods.name}</li>

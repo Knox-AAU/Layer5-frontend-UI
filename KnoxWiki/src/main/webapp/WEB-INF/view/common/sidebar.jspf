@@ -9,4 +9,9 @@
            <p class="sidebar_btn_txt"> Create new Class </p>
         </a>
     </div>
+    <div class="sidebar_btn">
+        <a class="sidebar_btn_link" href="/documentation">
+            <p class="sidebar_btn_txt"> Documentation </p>
+        </a>
+    </div>
 </div>

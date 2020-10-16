@@ -32,16 +32,20 @@ import java.util.Map;
 
 @RestController
 public class RestAPI {
-    //String xmlPath = "C:\\Users\\teisv\\Documents\\Git\\Knox-frontend\\xmltestfile.xml";
-    //--------------------------------------------------------------------------------------
+    int xmlCount;
+    String xmlPath;
 
-    //Path is relative to project, but might have to be changed to a more specific subpath
-    String xmlPath = "..\\..\\..\\layer5-frontend-ui\\xmltestfile.xml";
-
+    public RestAPI(){
+        xmlCount = 0;
+    }
 
     @PostMapping(value = "/test", consumes = "application/json")
     @ResponseBody
     public String testajax(@RequestBody String name) throws JsonProcessingException {
+
+        //Path is relative to project, but might have to be changed to a more specific subpath
+        xmlPath = "..\\..\\..\\layer5-frontend-ui\\KnoxWiki\\xml\\doc_class" + xmlCount + ".xml" ;
+
         System.out.println("testajax");
         //System.out.println(test.getName());
 
@@ -56,6 +60,7 @@ public class RestAPI {
             e.printStackTrace();
         }
 
+        xmlCount++;
         return "success";
     }
 }
