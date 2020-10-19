@@ -110,15 +110,10 @@ public class HelloController {
             }
         }
 
-
         List<String> fileNames = new ArrayList<String>();
         for (int i = 0; i < files.size(); i++) {
             fileNames.add(files.get(i).getName());
         }
-
-        //Kan man passe XML-filerne til JavaClassStructs-objekter og sende en liste af dem ind til viewet?
-
-        //====
 
         for (File file:files) {
             JavaClassStruct jcs = new JavaClassStruct();
@@ -183,6 +178,35 @@ public class HelloController {
 
             }
             jcs.setMethodList(methodList);
+
+            //Properties
+            Element propertiesNode = (Element)e.getElementsByTagName("properties").item(0);
+            NodeList properties = propertiesNode.getChildNodes();
+
+            List<JavaClassStruct.Property> propertyList = new ArrayList<>();
+            for(int i = 0; i < properties.getLength(); i++){
+                Element property = (Element) properties.item(i);
+                Node propertyNameNode = property.getElementsByTagName("propertyName").item(0);
+                String propertyName = propertyNameNode.getTextContent();
+                System.out.println("propertyName" + i + " " + propertyName);
+
+                Node propertyDescriptionNode = property.getElementsByTagName("propertyDescription").item(0);
+                String propertyDescription = propertyDescriptionNode.getTextContent();
+                System.out.println("propertydesc" + i + " " + propertyDescription);
+
+                Node propertyUsageNode = property.getElementsByTagName("propertyUsage").item(0);
+                String propertyUsage = propertyUsageNode.getTextContent();
+                System.out.println("propertyusage" + i + " " + propertyUsage);
+
+                JavaClassStruct.Property prop = new JavaClassStruct.Property(propertyName, propertyDescription, propertyUsage);
+                propertyList.add(prop);
+
+            }
+            jcs.setPropertyList(propertyList);
+
+
+
+
 
             jcsList.add(jcs);
 

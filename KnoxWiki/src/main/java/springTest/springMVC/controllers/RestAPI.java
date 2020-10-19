@@ -45,6 +45,9 @@ public class RestAPI {
 
         //Path is relative to project, but might have to be changed to a more specific subpath
         xmlPath = "..\\..\\..\\layer5-frontend-ui\\KnoxWiki\\xml\\doc_class" + xmlCount + ".xml" ;
+        while(new File(xmlPath).exists()){
+            xmlCount++;
+        }
 
         System.out.println("testajax");
         //System.out.println(test.getName());

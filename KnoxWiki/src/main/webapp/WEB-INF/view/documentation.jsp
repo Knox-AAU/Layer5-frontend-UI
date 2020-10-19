@@ -18,16 +18,23 @@
             <li>Description: ${listValue.description}</li>
             <li>Parent: ${listValue.parentClass}</li>
             <li>Methods:</li>
-            <c:forEach var="interface" items="${listValue.interfaces}">
-                <li>Interface name: ${interface}</li>
+            <c:forEach var="iface" items="${listValue.interfaces}">
+                <li>Interface: ${iface}</li>
+
             </c:forEach>
             <c:forEach var="methods" items="${listValue.methodList}">
                 <li>Method name: ${methods.name}</li>
                 <li>Method description: ${methods.description}</li>
                 <li>Method usage: ${methods.example}</li>
             </c:forEach>
-            <li>Properties: </li>
 
+
+            <li>Properties: </li>
+            <c:forEach var="properties" items="${listValue.propertyList}">
+                <li>Method name: ${properties.name}</li>
+                <li>Method description: ${properties.description}</li>
+                <li>Method usage: ${properties.example}</li>
+            </c:forEach>
             <li> -------------</li>
 
         </c:forEach>
