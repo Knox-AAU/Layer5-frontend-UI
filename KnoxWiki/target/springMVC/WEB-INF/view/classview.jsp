@@ -24,7 +24,7 @@
                 <h1>${theClass.name}</h1>
             </div>
             <div>
-                <p class="text_fragment">Extends </p> <a class="class_link"> ${theClass.parentClass != '' ? theClass.parentClass : "NaN"} </a>
+                <p class="text_fragment">Extends </p> <a class="class_link"> ${theClass.parentClass != '' ? theClass.parentClass : "NaN"} </a> <!-- Bedre måde at gøre dette på? -->
             </div>
 
             <div>
@@ -35,7 +35,7 @@
                     </a>
                 </c:forEach>
                 <a class="class_link">
-                    ${theClass.interfaces.size() == 0 ? "NaN" : ""}
+                    ${theClass.interfaces.size() == 0 ? "NaN" : ""}   <!-- Bedre måde at gøre dette på? -->
                 </a>
             </div>
         </div>

@@ -78,7 +78,7 @@ public class HelloController {
 
         ModelAndView modelAndView = new ModelAndView("classview");
         modelAndView.addObject("jcsList", jcsList);
-        modelAndView.addObject("theClass", jcsList.get(className)); // <---- JavaClassStruct-element bliver hardcoded lige pt.
+        modelAndView.addObject("theClass", jcsList.get(className));
         modelAndView.addObject("test","test");
 
         new FileManager(modelAndView.getModelMap()).AddCssFile("classview").finish();
