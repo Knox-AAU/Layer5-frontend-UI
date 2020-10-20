@@ -1,6 +1,6 @@
 <div id="sidebar">
     <div class="sidebar_btn">
-        <a class="sidebar_btn_link" href="/home">
+        <a class="sidebar_btn_link" href="/">
             <p class="sidebar_btn_txt"> Home </p>
         </a>
     </div>
@@ -10,7 +10,7 @@
         </a>
     </div>
     <div class="sidebar_btn">
-        <a class="sidebar_btn_link" href="/documentation">
+        <a class="sidebar_btn_link" href="/documentation?class=">
             <p class="sidebar_btn_txt"> Documentation </p>
         </a>
     </div>

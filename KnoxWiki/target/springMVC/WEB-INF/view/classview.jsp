@@ -24,9 +24,9 @@
                 <h1>${theClass.name}</h1>
             </div>
             <div>
-                <p class="text_fragment">Extends </p> <a class="class_link"> ${theClass.parentClass} </a>
-
+                <p class="text_fragment">Extends </p> <a class="class_link"> ${theClass.parentClass != '' ? theClass.parentClass : "NaN"} </a>
             </div>
+
             <div>
                 <p class="text_fragment">Implements </p>
                 <c:forEach items="${theClass.interfaces}" var="ainterface">
@@ -34,6 +34,9 @@
                         ${ainterface}
                     </a>
                 </c:forEach>
+                <a class="class_link">
+                    ${theClass.interfaces.size() == 0 ? "NaN" : ""}
+                </a>
             </div>
         </div>
         <div class="breakline"></div>
@@ -79,6 +82,14 @@
                 </c:forEach>
             </table>
         </div>
+    </div>
+
+    <div class="classlist">
+        <c:forEach items="${jcsList}" var="jcs">
+
+            <a class="class_link" href="/documentation?class=${jcs.key}"> ${jcs.value.name} </a> <br>
+
+        </c:forEach>
     </div>
 </div>
 </body>

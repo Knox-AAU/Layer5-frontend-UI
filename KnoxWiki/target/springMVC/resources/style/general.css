@@ -27,7 +27,8 @@ a{
     cursor: pointer;
 }
 .text_fragment {
-    float: left;
+
+     float: left;
     padding-right: 10px;
 }
 .btn_accept {

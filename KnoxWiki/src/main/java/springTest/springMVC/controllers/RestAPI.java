@@ -32,25 +32,15 @@ import java.util.Map;
 
 @RestController
 public class RestAPI {
-    int xmlCount;
-    String xmlPath;
 
     public RestAPI(){
-        xmlCount = 0;
     }
 
     @PostMapping(value = "/test", consumes = "application/json")
     @ResponseBody
     public String testajax(@RequestBody String name) throws JsonProcessingException {
 
-        //Path is relative to project, but might have to be changed to a more specific subpath
-        xmlPath = "..\\..\\..\\layer5-frontend-ui\\KnoxWiki\\xml\\doc_class" + xmlCount + ".xml" ;
-        while(new File(xmlPath).exists()){
-            xmlCount++;
-        }
-
         System.out.println("testajax");
-        //System.out.println(test.getName());
 
         ObjectMapper objectMapper = new ObjectMapper();
 
@@ -58,12 +48,11 @@ public class RestAPI {
             JavaClassStruct jcs = objectMapper.readValue(name, JavaClassStruct.class);
 
             //Generate XML-file. Generation happens in constructor, so no need for calling further methods
-            XMLGenerator xml = new XMLGenerator(jcs, xmlPath);
+            XMLGenerator xml = new XMLGenerator(jcs);
         } catch(JsonProcessingException e){
             e.printStackTrace();
         }
 
-        xmlCount++;
         return "success";
     }
 }

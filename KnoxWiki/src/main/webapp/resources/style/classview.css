@@ -1,6 +1,6 @@
 .classwrapper {
     padding: 20px;
-    max-width: 900px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -13,6 +13,9 @@
     border-radius: 6px;
     margin-top: 10px;
     margin-bottom: 20px;
+
+
+
 }
 
 .class_section_wrapper {
@@ -41,4 +44,14 @@
 }
 .class_link {
     color: darkblue;
+}
+
+.classlist{
+    position: absolute;
+    left: 270px;
+    color: #992a11;
+}
+
+.inheritance_wrapper{
+    height: auto;
 }

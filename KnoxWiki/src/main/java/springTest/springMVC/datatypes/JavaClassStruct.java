@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import java.util.List;
 
 public class JavaClassStruct {
+    private String fileName;
     private String name;
     private String parentClass;
     private String description;
@@ -13,6 +14,7 @@ public class JavaClassStruct {
     private List<Property> propertyList;
 
     public JavaClassStruct(String name, String parentClass, String description, List<String> interfaces, List<Method> methodList, List<Property> propertyList) {
+        fileName = null;
         this.name = name;
         this.parentClass = parentClass;
         this.description = description;
@@ -22,6 +24,10 @@ public class JavaClassStruct {
     }
 
     public JavaClassStruct() { }
+
+    public String getFileName() { return fileName; }
+
+    public void setFileName(String fileName) { this.fileName = fileName; }
 
     public String getName() {
         return name;

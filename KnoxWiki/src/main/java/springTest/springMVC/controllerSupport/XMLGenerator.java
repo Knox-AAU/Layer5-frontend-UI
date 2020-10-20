@@ -13,6 +13,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.sql.Timestamp;
 import java.util.List;
 
 public class XMLGenerator {
@@ -24,10 +25,11 @@ public class XMLGenerator {
     List<JavaClassStruct.Property> propertyList;
 
     JavaClassStruct jcs;
+    String xmlPath;
 
 
 
-    public XMLGenerator(JavaClassStruct jcs, String xmlPath){
+    public XMLGenerator(JavaClassStruct jcs){
         this.jcs = jcs;
         className = jcs.getName();
         parentClass = jcs.getParentClass();
@@ -35,6 +37,7 @@ public class XMLGenerator {
         description = jcs.getDescription();
         methodList = jcs.getMethodList();
         propertyList = jcs.getPropertyList();
+        xmlPath = "..\\..\\..\\layer5-frontend-ui\\KnoxWiki\\xml\\" + className + System.currentTimeMillis() + ".xml";
 
         try{
             DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
