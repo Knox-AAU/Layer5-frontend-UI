@@ -38,7 +38,8 @@ body{
 
 
 .NJSearchbar{
-    width: calc(100% - 200px);
+    width: 80%;
+    min-width:200px ;
     text-align: center;
     margin-top: 150px;
     float: left;
@@ -54,11 +55,21 @@ body{
     -moz-border-radius: 30px;
     border-radius: 30px;
     border: 1px solid grey;
+    outline: none;
+}
+.NJSearchbar input[type=image]{
+    right: 58px;
+    position: relative;
+    top: 7px;
+    width:24px;
+    height:24px;
+    outline: none;
+
 }
 
 
 .NJSidebar{
-    width: 200px;
+    width: 20%;
     height: 100%;
     background: #FC975E;
     float: right;
@@ -66,10 +77,11 @@ body{
 }
 
 .NJSortBy{
+
     background: white;
     margin-top: 100px;
     width: 80%;
-    height: 200px;
+    height: fit-content;
     border-radius: 5px;
     border: 1px solid grey;
     position: relative;
@@ -79,47 +91,30 @@ body{
 
     /*float: left;*/
 
-
-
-
 }
-
-.checkbox, .checkbox label {
-
+#filter_by, #sort_by{
+    margin-left: 3%;
+    color: black;
 }
-
 .checkbox label {
-  /*
     text-align: left;
-
-    float: right; no touch
-   */
-    line-break: anywhere;
-
+    word-break: break-word;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 .checkbox input {
-    /*
-        float: right;
-
-    margin-left: 16px;
-
-    */
+    line-break: anywhere;
+    float: right;
+    position: absolute;
+    margin-left: 40%;
 }
 
 
 .nobullets{
-    /*
-
-
-    columns: 2 auto;
-    column-gap: 100px;
-    margin-right: -100px;
-*/
-    padding-left: 0;
+    padding-left: 3%;
     list-style-type: none;
-
+    margin-right: 16px;
     columns: 2;
-}
-
-li{
 }

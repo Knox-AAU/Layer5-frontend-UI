@@ -98,11 +98,19 @@ body{
 }
 .checkbox label {
     text-align: left;
+<<<<<<< HEAD
+
+    float: right; no touch
+   */
+    line-break: anywhere;
+
+=======
     word-break: break-word;
     display: inline-block;
     margin-right: 20px;
     margin-top: 2px;
     margin-bottom: 2px;
+>>>>>>> 59e6913ed74841bbecc212e66402e37c5bc97195
 }
 .checkbox input {
     line-break: anywhere;
