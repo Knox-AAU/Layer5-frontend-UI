@@ -16,10 +16,12 @@ public class DatabaseSelectionController {
     }
 
     @RequestMapping(value = "/nordjyske")
-    public ModelAndView nordjyske(){
+    public ModelAndView nordjyske(@RequestParam(name = "searched", defaultValue = "hello there Theis") String searchname){
+
         Search search = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
         ModelAndView modelAndView = new ModelAndView("Nordjyske/NordjyskeInterface");
         modelAndView.addObject("search", search);
+        System.out.println(searchname);
         return modelAndView;
     }
 }
