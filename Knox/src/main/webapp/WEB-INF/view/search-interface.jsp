@@ -14,9 +14,17 @@
 
 <%@ include file="common/header.jspf"%>
 
-<form:form action="/" method="get">
+<form:form method="get">
     <input type="submit" value = "Home">
 </form:form>
+
+<a href="">Home</a>
+<a href="/">Home1</a>
+<a href="../">Home1</a>
+<a href="~/">Home1</a>
+<a href="//">Home1</a>
+<a href="/Knox">Home2</a>
+<a href="Knox/">Home3</a>
 
 <h1>${search.pageTitle}</h1>
 

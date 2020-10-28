@@ -8,7 +8,6 @@
             <form:form action="/nordjyske">
                 <input type="submit" value = "Nordjyske">
             </form:form>
-
             <form:form action="/grundfos">
                 <input type="submit" value = "Grundfos">
             </form:form>

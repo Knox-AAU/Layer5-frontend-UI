@@ -10,7 +10,7 @@ public class DatabaseSelectionController {
 
     @RequestMapping(value = "/grundfos")
     public ModelAndView grundfoss(){
-        Search grundfos = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "/nordjyske");
+        Search grundfos = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "nordjyske");
         ModelAndView modelAndView = new ModelAndView("search-interface");
         modelAndView.addObject("search", grundfos);
         return modelAndView;
@@ -18,7 +18,7 @@ public class DatabaseSelectionController {
 
     @RequestMapping(value = "/nordjyske")
     public ModelAndView nordjyske(){
-        Search nordjyske = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
+        Search nordjyske = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "grundfos");
         ModelAndView modelAndView = new ModelAndView("search-interface");
         modelAndView.addObject("search", nordjyske);
         return modelAndView;

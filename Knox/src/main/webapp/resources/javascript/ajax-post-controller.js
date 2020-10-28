@@ -3,7 +3,7 @@ function PostCall (functionName, search) {
     console.log(json);
     $.ajax({
         type: "POST",
-        url: "/knox/api/" + functionName,
+        url: "api/" + functionName,
         contentType: "application/json",
         data: json,
         success: function (returnValue) {
