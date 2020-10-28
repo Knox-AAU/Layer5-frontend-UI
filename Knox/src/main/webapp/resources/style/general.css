@@ -33,3 +33,93 @@ body{
     border-left: black;
     border-right: black;
 }
+
+
+
+
+.NJSearchbar{
+    width: calc(100% - 200px);
+    text-align: center;
+    margin-top: 150px;
+    float: left;
+}
+
+.NJSearchbar input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    width: 70%;
+    font-size: 17px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid grey;
+}
+
+
+.NJSidebar{
+    width: 200px;
+    height: 100%;
+    background: #FC975E;
+    float: right;
+
+}
+
+.NJSortBy{
+    background: white;
+    margin-top: 100px;
+    width: 80%;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    /*float: left;*/
+
+
+
+
+}
+
+.checkbox, .checkbox label {
+
+}
+
+.checkbox label {
+  /*
+    text-align: left;
+
+    float: right; no touch
+   */
+    line-break: anywhere;
+    
+}
+.checkbox input {
+    /*
+        float: right;
+
+    margin-left: 16px;
+
+    */
+}
+
+
+.nobullets{
+    /*
+
+
+    columns: 2 auto;
+    column-gap: 100px;
+    margin-right: -100px;
+*/
+    padding-left: 0;
+    list-style-type: none;
+
+    columns: 2;
+}
+
+li{
+}

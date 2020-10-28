@@ -1,8 +1,6 @@
 package knox.frontend.controllers;
 import knox.frontend.models.Search;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -20,7 +18,7 @@ public class DatabaseSelectionController {
     @RequestMapping(value = "/nordjyske")
     public ModelAndView nordjyske(){
         Search search = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
-        ModelAndView modelAndView = new ModelAndView("search-interface");
+        ModelAndView modelAndView = new ModelAndView("Nordjyske/NordjyskeInterface");
         modelAndView.addObject("search", search);
         return modelAndView;
     }
