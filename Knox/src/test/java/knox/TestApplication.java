@@ -1,4 +1,4 @@
-package unit_test;
+package knox;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

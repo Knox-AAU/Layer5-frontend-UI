@@ -1,6 +1,5 @@
-package unit_test.controller;
+package knox.intergrations_test.controller;
 
-import knox.frontend.controllers.DatabaseSelectionController;
 import knox.frontend.controllers.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,26 +11,25 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(DatabaseSelectionController.class)
-@Import(DatabaseSelectionController.class)
-class DatabaseSelectionControllerTest {
+@WebMvcTest(HelloController.class)
+@Import(HelloController.class)
+class HelloControllerTest {
     @Autowired
     private MockMvc mvc;
 
     @Test
-    void GrundfosPageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/grundfos");
+    void HomePageAccessible() throws Exception {
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/");
         // Make Request
         mvc.perform(request).andExpect(status().isOk());
     }
 
     @Test
-    void NordjyskePageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/nordjyske");
+    void TestPageAccessible() throws Exception {
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/test");
         // Make Request
         mvc.perform(request).andExpect(status().isOk());
     }
