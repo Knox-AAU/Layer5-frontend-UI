@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <%@ include file="../common/header.jspf"%>
@@ -59,14 +60,22 @@
 </div>
 
 <div class="searchWrapper">
-    <div class="searchResult">
-    <h1 class="articletitle">${dummydata.title} </h1>
-    <h2 class="articlesub">${dummydata.subtitle}</h2>
-    <p class="author">${dummydata.author}</p>
-    <p class="date">${dummydata.date}</p>
-    <p class="articletext">${dummydata.articleText}</p>
-    </div>
+    <c:forEach items="${ddHash}" var="dummydata">
+        <a href ="/nordjyske/search?article=${dummydata.key}" class="searchResultLinks">
+        <div class="searchResult">
+            <h1 class="articletitle">${dummydata.value.title} </h1>
+            <h2 class="articlesub">${dummydata.value.subtitle}</h2>
+            <p class="author">${dummydata.value.author}</p>
+            <p class="date">${dummydata.value.date}</p>
+            <p class="articletext">${dummydata.value.articleText}</p>
+            <p class="keywods">   </p>
+        </div>
+        </a>
+    </c:forEach>
+
+
 </div>
 
 </body>
+
 </html>

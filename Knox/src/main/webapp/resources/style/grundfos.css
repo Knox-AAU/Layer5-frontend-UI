@@ -1,0 +1,36 @@
+#sidebar{
+    background: #FC975E;
+}
+
+#authorSidebar, #keywords{
+    background: #a9653d;
+}
+
+#keywords p{
+    background: #c1c1c1;
+}
+
+#relatedSidebar{
+   background: #a9653d;
+}
+
+*::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgb(157, 69, 50);
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color: #9d4500;
+}
+
+#relatedArtItem{
+    background: #c1c1c1;
+}

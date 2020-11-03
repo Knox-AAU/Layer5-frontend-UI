@@ -1,0 +1,287 @@
+h2{
+    color:black;
+}
+
+body{
+    font-family: "Arial";
+}
+
+.form-SearchInput {
+    text-align: center;
+    border-bottom: 1px solid;
+    font-size: 15px;
+}
+
+#searchBar {
+    border-color: aquamarine;
+    margin-bottom: 2.4em;
+
+}
+
+#form-ArticleEntity {
+    text-align: center;
+    border-bottom: slategrey;
+    border-style: dashed;
+    margin-bottom: 2.4em;
+}
+
+#form-ArticleEntity:hover {
+    background: slategrey;
+}
+
+#form-ArticleList {
+    border-left: black;
+    border-right: black;
+}
+
+
+
+
+#searchbar{
+    width: 80%;
+    min-width:200px ;
+    text-align: center;
+    margin-top: 150px;
+    float: left;
+}
+
+#searchbar input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    width: 70%;
+    font-size: 17px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid grey;
+    outline: none;
+}
+#searchbar input[type=image]{
+    right: 58px;
+    position: relative;
+    top: 7px;
+    width:24px;
+    height:24px;
+    outline: none;
+
+}
+
+
+#sidebar{
+    width: 20%;
+    height: 100%;
+    /*
+    background: #FC975E;
+    */
+    right: 0;
+    position: fixed;
+
+}
+
+.sortBy{
+
+    background: white;
+    margin-top: 100px;
+    width: 80%;
+    height: fit-content;
+    border-radius: 5px;
+    border: 1px solid grey;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    /*float: left;*/
+
+}
+#filter_by, #sort_by{
+    margin-left: 3%;
+    color: black;
+}
+.checkbox label {
+    text-align: left;
+    word-break: break-word;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.checkbox input {
+    line-break: anywhere;
+    float: right;
+    position: absolute;
+    margin-left: 40%;
+}
+
+
+.nobullets{
+    padding-left: 3%;
+    list-style-type: none;
+    margin-right: 16px;
+    columns: 2;
+}
+
+#searchWrapper{
+    position: relative;
+    width: 80%;
+    float: left;
+}
+
+#searchResult{
+    width: 70%;
+    margin-left: 14%;
+    height: 400px;
+    overflow: hidden;
+    background: linear-gradient(0deg,  rgba(150,150,150,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%);
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+#searchResultLinks{
+    text-decoration: none;
+    color: black;
+
+}
+
+#article{
+    width: 80%;
+    float: left;
+    margin-left: 14%;
+}
+
+#articleWrapper{
+    margin-top: 100px;
+    position: relative;
+    width: 80%;
+    float: left;
+}
+#backbtn{
+    width: 40px;
+    left: 3%;
+    top: 5%;
+    position: absolute;
+}
+
+/* something here does not work*/
+#authorSidebar, #keywords{
+    margin-top: 10%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: #a9653d;
+    border-radius: 10px;
+    padding-left: 3%;
+    padding-bottom: 10px;
+}
+
+
+#keywords p{
+    /*float: left;
+    padding-left: 2%;
+    padding-right: 2%;*/
+    display: inline-block;
+    background: #c1c1c1;
+    border-radius: 10px;
+    padding: 3%;
+    margin: 2%;
+
+
+}
+
+#keywords p:hover{
+    background: #a7a7a7;
+    cursor: default;
+}
+
+#authorSidebar p{
+    margin-bottom: 0;
+    margin-top: 4%;
+    padding-left: 3%;
+    font-size: larger;
+
+}
+
+#authorSidebar h2, #keywords h2{
+    padding-top: 10px;
+    margin-bottom: 4%;
+}
+
+#relatedSidebar{
+   margin-left: 10%;
+   margin-right: calc(10% - 6px);
+   margin-top: 10px;
+   padding-bottom: 15px;
+   background: #a9653d;
+   border-radius: 10px;
+   height: 50%;
+   overflow-y: scroll;
+}
+
+*::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgb(157, 69, 50);
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color: #9d4500;
+}
+
+#relatedArtItem{
+    background: #c1c1c1;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 10px;
+}
+
+#relatedSidebar h3{
+    margin-left: 5%;
+    padding-top: 5%;
+    margin-bottom: -7px;
+    font-size: larger;
+}
+#relatedSidebar p{
+    margin-left: 5%;
+    padding-bottom: 5%;
+
+}
+
+#relatedSidebar h2{
+    margin-left: 3%;
+    padding-top: 10px;
+    margin-top: 0;
+}
+
+.grundfos{
+    background: #7272ff;
+}
+.nordjyske{
+    background: #FC975E;
+}
+.nordjyskebox{
+
+}
+.nordjyskeknap{
+    background: #c1c1c1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
