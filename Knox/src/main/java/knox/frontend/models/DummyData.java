@@ -6,12 +6,16 @@ import java.util.List;
 public class DummyData {
 
 //Nordjyske DummyData
-    public String title; //Page title
-    public String subtitle;  //Page subtitle
-    public String author; //Author of article
-    public String date; //Date of article
-    public String articleText; //Article text
-    public List<String> images = new ArrayList<>(); //Images in article
+    private String title; //Page title
+    private String subtitle;  //Page subtitle
+    private String author; //Author of article
+    private String date; //Date of article
+    private String articleText; //Article text
+    private List<String> images = new ArrayList<>(); //Images in article
+    private List<String> keywords = new ArrayList<>(); //Images in article
+    private List<Integer> relatedArticles = new ArrayList<>();
+    private static int id = 0;
+    private int uniqueId;
 
 
     public DummyData() {/*
@@ -58,6 +62,47 @@ public class DummyData {
                    images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/F7LXx9sFbGFJC40CGXMidLcYDY8.jpg?w=624&scale=both&mode=crop");
                    images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/2GTPwxHUYSW-URlzKmG1U0I1hgo.jpg?w=624&scale=both&mode=crop");
                    images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/W_MFuFmiAYL-SawUfmcihDOsEfc.jpg?w=624&scale=both&mode=crop");
+        id++;
+        uniqueId=id;
+        title+=id;
+        relatedArticles.add(1);
+        relatedArticles.add(3);
+        relatedArticles.add(5);
+        keywords.add("awesomeword");
+        keywords.add("hval");
+        keywords.add("coolword");
 
     }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public String getSubtitle(){
+        return subtitle;
+    }
+
+    public String getAuthor(){
+        return author;
+    }
+
+    public String getDate(){
+        return date;
+    }
+
+    public String getArticleText(){
+        return articleText;
+    }
+
+    public List<String> getImages(){
+        return images;
+    }
+
+    public int getUniqueId(){
+        return uniqueId;
+    }
+    
+    public List<Integer> getRelatedArticles(){ return relatedArticles; }
+    
+    public List<String> getKeywords(){ return keywords; }
 }

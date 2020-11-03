@@ -10,13 +10,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <%@ include file="../common/header.jspf"%>
+<link rel="stylesheet" href="../../resources/style/grundfos.css">
+
 <head>
-    <title>Title</title>
+    <spring:url value="/resources/style/grundfos.css" var="style" />
 </head>
 <body>
 
-<div class="articleWrapper">
-    <div class="article">
+<div id="articleWrapper">
+    <div id="article">
         <h1>${article.title}</h1>
         <h2>${article.subtitle}</h2>
         <p>${article.author}</p>
@@ -25,22 +27,22 @@
     </div>
 </div>
 
-<div class="backbtn">
+<div id="backbtn">
 
-    <form:form action="/nordjyske">
+    <form:form action="/grundfos">
         <input type="image" src="../../../resources/icons/arrow-left-solid.svg" name="submit" value="submit">
     </form:form>
 
 </div>
 
-<div class="NJSidebar">
+<div id="sidebar" class="grundfos">
 
-    <div class="relatedSidebar">
+    <div id="relatedSidebar">
         <h2>Related articles: </h2>
 
         <c:forEach items="${article.relatedArticles}" var="relatedArtId">
-            <a href ="/nordjyske/search?article=${relatedArtId}" class="searchResultLinks">
-            <div class="relatedArtItem">
+            <a href ="/grundfos/search?article=${relatedArtId}" id="searchResultLinks">
+            <div id="relatedArtItem">
                 <h3>${ddHash.get(relatedArtId).title}</h3>
                 <p>${ddHash.get(relatedArtId).subtitle}</p>
             </div>
@@ -52,12 +54,18 @@
     </div>
 
 
-
-    <div class="authorSidebar">
+    <!--AUTHOR SKAL MÅSKE SLETTES?-->
+    <div id="authorSidebar">
         <h2>Author: </h2>
         <p>${article.author}</p>
     </div>
-    <div class="keywords">
+
+    <div id="authorSidebar">
+        <h2>Model: </h2>
+        <p>${"234DFGDFG"}</p>
+    </div>
+
+    <div id="keywords">
             <h2>Keyword: </h2>
             <c:forEach items="${article.keywords}" var="keyword">
                 <p>${keyword}</p>
