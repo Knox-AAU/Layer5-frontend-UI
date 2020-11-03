@@ -16,7 +16,7 @@ public class RestGrundFos {
         System.out.println(search);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        DummyData dummydata = new DummyData();
+        DummyData dummydata = DummyData.CreateDummy();
         String data = objectMapper.writeValueAsString(dummydata);
 
 

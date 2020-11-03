@@ -3,11 +3,13 @@ package knox.frontend.restcontroller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import knox.frontend.models.DummyData;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/api")
 @RestController
 public class RestNordJysk {
+
 
     @PostMapping(value = "/nordjysksearch", consumes = "application/json")
     @ResponseBody
@@ -16,10 +18,11 @@ public class RestNordJysk {
         System.out.println(search);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        DummyData dummydata = new DummyData();
+        DummyData dummydata = DummyData.CreateDummy();
         String data = objectMapper.writeValueAsString(dummydata);
 
 
         return data;
     }
+    
 }

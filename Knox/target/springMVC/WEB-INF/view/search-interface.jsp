@@ -14,7 +14,7 @@
 
 <%@ include file="common/header.jspf"%>
 
-<form:form action="/" method="get">
+<form:form action="/knox" method="get">
     <input type="submit" value = "Home">
 </form:form>
 

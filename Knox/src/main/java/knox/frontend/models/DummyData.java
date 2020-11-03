@@ -17,21 +17,15 @@ public class DummyData {
     private static int id = 0;
     private int uniqueId;
 
+    public DummyData () {}
+     public static DummyData CreateDummy () {
+        DummyData returndata = new DummyData();
 
-    public DummyData() {/*
-        this.title = title;
-        this.subtitle = subtitle;
-        this.author = author;
-        this.date = date;
-        this.articleText = articleText;
-        this.images = images;*/
-
-// https://nordjyske.dk/nyheder/mariagerfjord/nu-kommer-mariagerfjords-kaeledaegge-paa-museum/a5c8e3fd-1fd2-4628-a706-e34e3b01759a
-        title = "Nu kommer Mariagerfjords kæledægge på museum";
-        subtitle = "Den sejhval, der blev et tilløbsstykke i slutningen af 2018, bliver udstillet i Hobro";
-        author = "Ole Fink Mejlgaard";
-        date = "08. oktober 2020 kl. 08:03";
-        articleText =   "HOBRO:Mon ikke de fleste husker den hval, som i slutningen af 2018 forvildede sig ind i Mariager " +
+        returndata.title = "Nu kommer Mariagerfjords kæledægge på museum";
+        returndata.subtitle = "Den sejhval, der blev et tilløbsstykke i slutningen af 2018, bliver udstillet i Hobro";
+        returndata.author = "Ole Fink Mejlgaard";
+        returndata.date = "08. oktober 2020 kl. 08:03";
+        returndata.articleText =   "HOBRO:Mon ikke de fleste husker den hval, som i slutningen af 2018 forvildede sig ind i Mariager " +
                         "Fjord og tog ophold i havnen i Hobro, hvor den i halvanden uge nåede at blive et tilløbsstykke og " +
                         "blev til en godnathistorie med navnet Runa på hjemmesiden vilter.dk?\n" + "\n" +
                         "Der blev gjort flere forsøg på at eskortere hvalen ud af fjorden, men det blev mere og mere klart, " +
@@ -57,52 +51,79 @@ public class DummyData {
                         "Mariagerfjord Kommune har indgået en såkaldt udlånsaftale med Statens Naturhistoriske Museum, der løber de næste ti år. " +
                         "Aftalen betyder, at kommunen er forpligtet til at udstille skelet og hjerte for offentligheden under gode og ordnede forhold. " +
                         "Det sker i samarbejde med Jutlander Fonden Hobro, som gavmildt har doneret 190.000 kroner til formålet.";
-                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop");
-                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/J2YNvD1NwhQJrxKEfLB5NZCvaUg.jpg?w=624&scale=both&mode=crop");
-                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/F7LXx9sFbGFJC40CGXMidLcYDY8.jpg?w=624&scale=both&mode=crop");
-                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/2GTPwxHUYSW-URlzKmG1U0I1hgo.jpg?w=624&scale=both&mode=crop");
-                   images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/W_MFuFmiAYL-SawUfmcihDOsEfc.jpg?w=624&scale=both&mode=crop");
-        id++;
-        uniqueId=id;
-        title+=id;
-        relatedArticles.add(1);
-        relatedArticles.add(3);
-        relatedArticles.add(5);
-        keywords.add("awesomeword");
-        keywords.add("hval");
-        keywords.add("coolword");
+         returndata.images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/DrhdqWEz3eKpmWMTe5QHeGHK2kI.jpg?w=960&h=540&scale=both&mode=crop");
+         returndata.images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/J2YNvD1NwhQJrxKEfLB5NZCvaUg.jpg?w=624&scale=both&mode=crop");
+         returndata.images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/F7LXx9sFbGFJC40CGXMidLcYDY8.jpg?w=624&scale=both&mode=crop");
+         returndata.images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/2GTPwxHUYSW-URlzKmG1U0I1hgo.jpg?w=624&scale=both&mode=crop");
+         returndata.images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/W_MFuFmiAYL-SawUfmcihDOsEfc.jpg?w=624&scale=both&mode=crop");
 
+         id++;
+         uniqueId=id;
+         title+=id;
+         relatedArticles.add(1);
+         relatedArticles.add(3);
+         relatedArticles.add(5);
+         keywords.add("awesomeword");
+         keywords.add("hval");
+         keywords.add("coolword");
+
+         return returndata;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
-    public String getSubtitle(){
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getSubtitle() {
         return subtitle;
     }
 
-    public String getAuthor(){
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
+
+    public String getAuthor() {
         return author;
     }
 
-    public String getDate(){
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getDate() {
         return date;
     }
 
-    public String getArticleText(){
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getArticleText() {
         return articleText;
     }
 
-    public List<String> getImages(){
+    public void setArticleText(String articleText) {
+        this.articleText = articleText;
+    }
+
+    public List<String> getImages() {
         return images;
+    }
+
+    public void setImages(List<String> images) {
+        this.images = images;
     }
 
     public int getUniqueId(){
         return uniqueId;
     }
-    
+
     public List<Integer> getRelatedArticles(){ return relatedArticles; }
-    
+
     public List<String> getKeywords(){ return keywords; }
+
 }
