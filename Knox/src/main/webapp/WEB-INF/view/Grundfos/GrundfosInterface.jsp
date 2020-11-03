@@ -10,10 +10,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <%@ include file="../common/header.jspf"%>
-<link rel="stylesheet" href="../../resources/style/grundfos.css">
 
 <head>
     <spring:url value="/resources/style/grundfos.css" var="style" />
+    <link rel="stylesheet" href="${style}">
+
 </head>
 <body>
     <div id="headlineWrapper">
@@ -67,7 +68,7 @@
 
 <div id="searchWrapper">
     <c:forEach items="${ddHash}" var="dummydata">
-        <a href ="/grundfos/search?article=${dummydata.key}" id="searchResultLinks">
+        <a href ="/knox/grundfos/search?article=${dummydata.key}" id="searchResultLinks">
         <div id="searchResult">
             <h1 id="articletitle">${dummydata.value.title} </h1>
             <h2 id="articlesub">${dummydata.value.subtitle}</h2>

@@ -16,7 +16,7 @@ public class DatabaseSelectionController {
 
     private DatabaseSelectionController(){
         for(int i = 0; i<10; i++){
-            DummyData dd = new DummyData();
+            DummyData dd = DummyData.CreateDummy();
             ddHash.put(dd.getUniqueId(), dd);
 
         }

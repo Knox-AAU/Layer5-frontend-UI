@@ -68,7 +68,7 @@
 
 <div id="searchWrapper">
     <c:forEach items="${ddHash}" var="dummydata">
-        <a href ="/nordjyske/search?article=${dummydata.key}" id="searchResultLinks">
+        <a href ="/knox/nordjyske/search?article=${dummydata.key}" id="searchResultLinks">
         <div id="searchResult">
             <h1 class="articletitle">${dummydata.value.title} </h1>
             <h2 class="articlesub">${dummydata.value.subtitle}</h2>

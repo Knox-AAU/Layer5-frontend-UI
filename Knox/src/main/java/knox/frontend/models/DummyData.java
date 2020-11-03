@@ -58,14 +58,14 @@ public class DummyData {
          returndata.images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/W_MFuFmiAYL-SawUfmcihDOsEfc.jpg?w=624&scale=both&mode=crop");
 
          id++;
-         uniqueId=id;
-         title+=id;
-         relatedArticles.add(1);
-         relatedArticles.add(3);
-         relatedArticles.add(5);
-         keywords.add("awesomeword");
-         keywords.add("hval");
-         keywords.add("coolword");
+         returndata.uniqueId=id;
+         returndata.title+=id;
+         returndata.relatedArticles.add(1);
+         returndata.relatedArticles.add(3);
+         returndata.relatedArticles.add(5);
+         returndata.keywords.add("awesomeword");
+         returndata.keywords.add("hval");
+         returndata.keywords.add("coolword");
 
          return returndata;
     }

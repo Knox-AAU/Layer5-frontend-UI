@@ -10,10 +10,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <%@ include file="../common/header.jspf"%>
-<link rel="stylesheet" href="../../resources/style/grundfos.css">
-
 <head>
-    <spring:url value="/resources/style/grundfos.css" var="style" />
+    <spring:url value="resources/style/grundfos.css" var="style" />
+    <link rel="stylesheet" href="${style}">
 </head>
 <body>
 
@@ -29,7 +28,7 @@
 
 <div id="backbtn">
 
-    <form:form action="/grundfos">
+    <form:form action="/knox/grundfos">
         <input type="image" src="../../../resources/icons/arrow-left-solid.svg" name="submit" value="submit">
     </form:form>
 
@@ -41,7 +40,7 @@
         <h2>Related articles: </h2>
 
         <c:forEach items="${article.relatedArticles}" var="relatedArtId">
-            <a href ="/grundfos/search?article=${relatedArtId}" id="searchResultLinks">
+            <a href ="/knox/grundfos/search?article=${relatedArtId}" id="searchResultLinks">
             <div id="relatedArtItem">
                 <h3>${ddHash.get(relatedArtId).title}</h3>
                 <p>${ddHash.get(relatedArtId).subtitle}</p>

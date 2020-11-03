@@ -29,7 +29,7 @@
 
 <div id="backbtn">
 
-    <form:form action="/nordjyske">
+    <form:form action="/knox/nordjyske">
         <input type="image" src="../../../resources/icons/arrow-left-solid.svg" name="submit" value="submit">
     </form:form>
 
@@ -41,7 +41,7 @@
         <h2>Related articles: </h2>
 
         <c:forEach items="${article.relatedArticles}" var="relatedArtId">
-            <a href ="/nordjyske/search?article=${relatedArtId}" id="searchResultLinks">
+            <a href ="/knox/nordjyske/search?article=${relatedArtId}" id="searchResultLinks">
             <div id="relatedArtItem">
                 <h3>${ddHash.get(relatedArtId).title}</h3>
                 <p>${ddHash.get(relatedArtId).subtitle}</p>
