@@ -1,6 +1,6 @@
 package knox.intergrations_test.controller;
 
-import knox.frontend.controllers.DatabaseSelectionController;
+import knox.frontend.controllers.GrundfosController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,22 +14,15 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(DatabaseSelectionController.class)
-@Import(DatabaseSelectionController.class)
-class DatabaseSelectionControllerTest {
+@WebMvcTest(GrundfosController.class)
+@Import(GrundfosController.class)
+class GrundfosControllerTest {
     @Autowired
     private MockMvc mvc;
 
     @Test
     void GrundfosPageAccessible() throws Exception {
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/grundfos");
-        // Make Request
-        mvc.perform(request).andExpect(status().isOk());
-    }
-
-    @Test
-    void NordjyskePageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/nordjyske");
         // Make Request
         mvc.perform(request).andExpect(status().isOk());
     }

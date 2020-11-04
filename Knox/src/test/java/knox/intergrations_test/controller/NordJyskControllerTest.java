@@ -1,6 +1,7 @@
 package knox.intergrations_test.controller;
 
-import knox.frontend.controllers.HomeController;
+import knox.frontend.controllers.GrundfosController;
+import knox.frontend.controllers.NordJyskController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,22 +15,15 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(HomeController.class)
-@Import(HomeController.class)
-class HelloControllerTest {
+@WebMvcTest(NordJyskController.class)
+@Import(NordJyskController.class)
+class NordJyskControllerTest {
     @Autowired
     private MockMvc mvc;
 
     @Test
-    void HomePageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/");
-        // Make Request
-        mvc.perform(request).andExpect(status().isOk());
-    }
-
-    @Test
-    void TestPageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/test");
+    void NordJyskePageAccessible() throws Exception {
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/nordjyske");
         // Make Request
         mvc.perform(request).andExpect(status().isOk());
     }

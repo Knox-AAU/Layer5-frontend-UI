@@ -1,6 +1,6 @@
 package knox.frontend.models;
 
-public class Search {
+public class Search   {
     private String pageTitle; //Page title
     private String databaseName;  //Name of search engine
     private String buttonName; //Name of button, that leads to the other search engine

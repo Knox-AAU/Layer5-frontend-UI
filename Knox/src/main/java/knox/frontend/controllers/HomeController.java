@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping(value = "/")
 @Controller
-public class HelloController {
+public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String printHallo(ModelMap model){
+
         model.addAttribute("message","KNOX");
-        return "hello";
+        return "index";
     }
 
     @RequestMapping("/test")
