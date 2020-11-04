@@ -10,10 +10,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <%@ include file="../common/header.jspf"%>
-<link rel="stylesheet" href="../../resources/style/nordjyske.css">
+
+
 
 <head>
-    <spring:url value="/resources/style/nordjyske.css" var="style" />
 </head>
 <body>
     <div id="headlineWrapper">

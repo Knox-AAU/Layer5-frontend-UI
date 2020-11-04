@@ -12,8 +12,7 @@
 <%@ include file="../common/header.jspf"%>
 
 <head>
-    <spring:url value="/resources/style/grundfos.css" var="style" />
-    <link rel="stylesheet" href="${style}">
+
 
 </head>
 <body>

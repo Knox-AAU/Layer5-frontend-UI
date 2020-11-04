@@ -11,4 +11,18 @@
 
     <spring:url value="/resources/style/general.css" var="style" />
     <link rel="stylesheet" href="${style}">
+
+    <spring:url value="resources/style/grundfos.css" var="style" />
+    <link rel="stylesheet" href="${style}">
+
+    <spring:url value="/resources/style/grundfos.css" var="style" />
+    <link rel="stylesheet" href="${style}">
+
+    <spring:url value="/resources/style/nordjyske.css" var="style" />
+    <link rel="stylesheet" href="${style}">
+
+    <spring:url value="/resources/style/nordjyske.css" var="style" />
+    <link rel="stylesheet" href="${style}">
+
+
 </head>
