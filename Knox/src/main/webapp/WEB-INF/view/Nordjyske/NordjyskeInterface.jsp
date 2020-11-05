@@ -23,9 +23,12 @@
     </div>
 
 <div id="searchbar">
-    <form:form action="/nordjyske">
+    <form:form action="/knox/nordjyske" method="get">
         <input type="text" name="searched" placeholder="Search..." >
-        <input type="image" src="../../../resources/icons/search-solid.svg" name="submit" value="submit">
+
+
+        <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
+        <input type="image" src="${search_solid}" name="submit" value="submit">
 
     </form:form>
 

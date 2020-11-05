@@ -18,7 +18,7 @@ public class RestNordJysk {
         System.out.println(search);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        DummyData dummydata = DummyData.CreateDummy();
+        DummyData dummydata = DummyData.CreateDummy(1);
         String data = objectMapper.writeValueAsString(dummydata);
 
 

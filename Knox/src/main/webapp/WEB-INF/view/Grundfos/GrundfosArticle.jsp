@@ -27,8 +27,9 @@
 
 <div id="backbtn">
 
-    <form:form action="/knox/grundfos">
-        <input type="image" src="../../../resources/icons/arrow-left-solid.svg" name="submit" value="submit">
+    <form:form action="/knox/grundfos"  method="get">
+        <spring:url value="/resources/icons/arrow-left-solid.svg" var="arrow_left_solid" />
+        <input type="image" src="${arrow_left_solid}" name="submit" value="submit">
     </form:form>
 
 </div>

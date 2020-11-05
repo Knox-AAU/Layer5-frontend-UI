@@ -9,7 +9,7 @@ public  abstract class  AbstractCompanyController  {
 
     public AbstractCompanyController(){
         for(int i = 0; i<10; i++){
-            DummyData dd = DummyData.CreateDummy();
+            DummyData dd = DummyData.CreateDummy(i);
             ddHash.put(dd.getUniqueId(), dd);
         }
     }

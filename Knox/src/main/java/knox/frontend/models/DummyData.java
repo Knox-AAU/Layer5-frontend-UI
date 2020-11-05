@@ -14,11 +14,10 @@ public class DummyData {
     private List<String> images = new ArrayList<>(); //Images in article
     private List<String> keywords = new ArrayList<>(); //Images in article
     private List<Integer> relatedArticles = new ArrayList<>();
-    private static int id = 0;
     private int uniqueId;
 
     public DummyData () {}
-     public static DummyData CreateDummy () {
+     public static DummyData CreateDummy (int id) {
         DummyData returndata = new DummyData();
 
         returndata.title = "Nu kommer Mariagerfjords kæledægge på museum";
@@ -57,7 +56,6 @@ public class DummyData {
          returndata.images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/2GTPwxHUYSW-URlzKmG1U0I1hgo.jpg?w=624&scale=both&mode=crop");
          returndata.images.add("https://img.nordjyske.dk/s3/nj-prod-public-images/W_MFuFmiAYL-SawUfmcihDOsEfc.jpg?w=624&scale=both&mode=crop");
 
-         id++;
          returndata.uniqueId=id;
          returndata.title+=id;
          returndata.relatedArticles.add(1);
