@@ -2,15 +2,11 @@
     background: #FC975E;
 }
 
-#authorSidebar, #keywords{
-    background: #a9653d;
-}
-
-#keywords p{
+.keywords p{
     background: #c1c1c1;
 }
 
-#relatedSidebar{
+.sidebar_component{
    background: #a9653d;
 }
 

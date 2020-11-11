@@ -38,6 +38,16 @@
 
 </div>
 
+<button id="btn_dropdown">
+ Dropdown
+</button>
+<div id="dropdown" class="dropdown dropdownclosed">
+  <a>Hey</a>
+ <a>Hello</a>
+ <a>Goodday</a>
+ <a>Guttentag</a>
+</div>
+
 
 <div>
  <a id="TEST">Press Me</a>
@@ -56,6 +66,17 @@
     $( "#GrundFosTEST" ).click(function() {
      console.log("maDude?");
      PostCall("grundfossearch","Hallothere");
+    });
+
+    $("#btn_dropdown").click(function () {
+        var dropdown = document.getElementById("dropdown");
+        if (dropdown.classList.contains("dropdownopen")){
+         dropdown.classList.remove("dropdownopen");
+         dropdown.classList.add("dropdownclosed");
+        } else {
+         dropdown.classList.add("dropdownopen");
+         dropdown.classList.remove("dropdownclosed");
+        }
     });
 </script>
 <spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />

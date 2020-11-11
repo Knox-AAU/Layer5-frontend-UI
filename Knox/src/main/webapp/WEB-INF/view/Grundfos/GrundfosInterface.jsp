@@ -34,8 +34,8 @@
 
 <div id="sidebar" class="grundfos">
 
-    <div class="sortBy">
-        <h2 id="sort_by"> Sort by</h2>
+    <div class="sidebar_component">
+        <h2> Sort by</h2>
         <div class="checkbox">
             <ul class="nobullets">
                 <li><label><input type="radio" id="sdfg" name="sorting">HejHejHesadasdasdasasdsdffsdfsdfdjej</label></li>
@@ -48,8 +48,8 @@
         </div>
     </div>
 
-    <div class="sortBy">
-        <h2 id="filter_by"> Filter by</h2>
+    <div class="sidebar_component">
+        <h2 > Filter by</h2>
         <div class="checkbox">
             <ul class="nobullets">
                 <li><label><input type="checkbox" id="foo">HejHejHesadasdasdasasdsdffsdfsdfdjej</label></li>
@@ -68,15 +68,15 @@
 
 <div id="searchWrapper">
     <c:forEach items="${ddHash}" var="dummydata">
-        <a href ="/knox/grundfos/search?article=${dummydata.key}" id="searchResultLinks">
-        <div id="searchResult">
-            <h1 id="articletitle">${dummydata.value.title} </h1>
-            <h2 id="articlesub">${dummydata.value.subtitle}</h2>
-            <p  id="author">${dummydata.value.author}</p>
-            <p  id="date">${dummydata.value.date}</p>
-            <p  id="articletext">${dummydata.value.articleText}</p>
-            <p  id="keywods">   </p>
-        </div>
+        <a href ="/knox/grundfos/search?article=${dummydata.key}" class="button_link">
+            <div id="searchResult">
+                <h1 id="articletitle">${dummydata.value.title} </h1>
+                <h2 id="articlesub">${dummydata.value.subtitle}</h2>
+                <p  id="author">${dummydata.value.author}</p>
+                <p  id="date">${dummydata.value.date}</p>
+                <p  id="articletext">${dummydata.value.articleText}</p>
+                <p  id="keywods">   </p>
+            </div>
         </a>
     </c:forEach>
 

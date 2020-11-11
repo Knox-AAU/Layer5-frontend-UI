@@ -2,11 +2,11 @@
     background: #acacff;
 }
 
-#authorSidebar, #keywords, #relatedSidebar{
+.sidebar_component{
     background: #7777bc;
 }
 
-#keywords p, #relatedArtItem{
+.keywords p, #relatedArtItem{
     background: #c1c1c1;
 }
 
