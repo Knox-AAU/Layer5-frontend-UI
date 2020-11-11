@@ -9,12 +9,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@ include file="../common/header.jspf"%>
-
-
-<head>
-</head>
+<%@ include file="../common/html_head.jspf"%>
 <body>
+<%@ include file="../common/header.jspf"%>
 
 <div id="articleWrapper">
     <div id="article">
@@ -26,23 +23,13 @@
     </div>
 </div>
 
-<div id="backbtn">
-
-    <form:form action="/knox/nordjyske" method="get">
-
-        <spring:url value="/resources/icons/arrow-left-solid.svg" var="arrow_left_solid" />
-        <input type="image" src="${arrow_left_solid}" name="submit" value="submit">
-    </form:form>
-
-</div>
-
 <div id="sidebar" class="nordjyske">
 
     <div id="relatedSidebar">
         <h2>Related articles: </h2>
 
         <c:forEach items="${article.relatedArticles}" var="relatedArtId">
-            <a href ="/knox/nordjyske/search?article=${relatedArtId}" id="searchResultLinks">
+            <a href ="/knox/nordjyske/search?article=${relatedArtId}" class="button_link">
             <div id="relatedArtItem">
                 <h3>${ddHash.get(relatedArtId).title}</h3>
                 <p>${ddHash.get(relatedArtId).subtitle}</p>

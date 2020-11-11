@@ -1,30 +1,18 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<head>
-    <title>Knox ${search.databaseName}</title>
-
-    <spring:url value="/resources/lib/jquery-3.5.1.min.js" var="jquary" />
-    <script src="${jquary}"></script>
-
-    <spring:url value="/resources/javascript/ajax-post-controller.js" var="ajax" />
-    <script src="${ajax}"></script>
 
 
-    <spring:url value="/resources/style/general.css" var="style" />
-    <link rel="stylesheet" href="${style}">
+<div class="header">
+    <div id="backbtn">
+        <spring:url value="/resources/icons/arrow-left-solid.svg" var="arrow_left_solid" />
+        <a href="#" onclick="GoBack(); return false;">
+            <img src="${arrow_left_solid}">
+        </a>
+    </div>
+</div>
 
-    <spring:url value="/resources/style/sidebar.css" var="style" />
-    <link rel="stylesheet" href="${style}">
-    <spring:url value="/resources/style/article.css" var="style" />
-    <link rel="stylesheet" href="${style}">
-    <spring:url value="/resources/style/search-interface.css" var="style" />
-    <link rel="stylesheet" href="${style}">
-
-
-    <c:forEach items="${CSSFiles}" var="file">
-        <spring:url value="${file.path}" var="temp" />
-        <link rel="stylesheet" href="${temp}">
-    </c:forEach>
-
-
-</head>
+<script>
+    function GoBack () {
+        window.history.back();
+    }
+</script>

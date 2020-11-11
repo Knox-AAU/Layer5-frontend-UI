@@ -9,13 +9,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<%@ include file="../common/html_head.jspf"%>
+<body>
 <%@ include file="../common/header.jspf"%>
 
-<head>
-
-
-</head>
-<body>
     <div id="headlineWrapper">
         <div id="headline">
             <h1>Grundfos</h1>

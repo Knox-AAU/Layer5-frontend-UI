@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@ include file="../common/header.jspf"%>
+<%@ include file="../common/html_head.jspf"%>
 <body>
 
 <div>
