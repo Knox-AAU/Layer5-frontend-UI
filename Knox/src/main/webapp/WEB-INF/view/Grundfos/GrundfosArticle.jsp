@@ -32,8 +32,8 @@
         <h2>Related articles: </h2>
 
         <c:forEach items="${article.relatedArticles}" var="relatedArtId">
-            <a href ="/knox/grundfos/search?article=${relatedArtId}" class="button_link">
-                <div id="relatedArtItem">
+            <a href ="/knox/grundfos/search?article=${relatedArtId}" class="button_link relatedArtItem">
+                <div >
                     <h3>${ddHash.get(relatedArtId).title}</h3>
                     <p>${ddHash.get(relatedArtId).subtitle}</p>
                 </div>

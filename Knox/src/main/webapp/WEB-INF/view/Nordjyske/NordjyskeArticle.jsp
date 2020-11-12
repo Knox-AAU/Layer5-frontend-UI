@@ -25,12 +25,12 @@
 
 <div id="sidebar" class="nordjyske">
 
-    <div id="relatedSidebar">
+    <div id="relatedSidebar"  class="sidebar_component">
         <h2>Related articles: </h2>
 
         <c:forEach items="${article.relatedArticles}" var="relatedArtId">
-            <a href ="/knox/nordjyske/search?article=${relatedArtId}" class="button_link">
-            <div id="relatedArtItem">
+            <a href ="/knox/nordjyske/search?article=${relatedArtId}" class="button_link relatedArtItem">
+            <div>
                 <h3>${ddHash.get(relatedArtId).title}</h3>
                 <p>${ddHash.get(relatedArtId).subtitle}</p>
             </div>
@@ -43,11 +43,11 @@
 
 
 
-    <div id="authorSidebar">
+    <div id="authorSidebar"  class="sidebar_component">
         <h2>Author: </h2>
         <p>${article.author}</p>
     </div>
-    <div id="keywords">
+    <div class="keywords sidebar_component">
             <h2>Keyword: </h2>
             <c:forEach items="${article.keywords}" var="keyword">
                 <p>${keyword}</p>

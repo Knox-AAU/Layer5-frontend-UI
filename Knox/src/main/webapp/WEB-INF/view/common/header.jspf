@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<script>
+<script type="application/javascript">
     function GoBack () {
         window.history.back();
     }

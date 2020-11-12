@@ -15,6 +15,10 @@
 
     <spring:url value="/resources/style/sidebar.css" var="style" />
     <link rel="stylesheet" href="${style}">
+    <spring:url value="/resources/style/header.css" var="style" />
+    <link rel="stylesheet" href="${style}">
+
+
     <spring:url value="/resources/style/article.css" var="style" />
     <link rel="stylesheet" href="${style}">
     <spring:url value="/resources/style/search-interface.css" var="style" />

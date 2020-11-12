@@ -13,21 +13,34 @@
 <body>
 <%@ include file="../common/header.jspf"%>
 
+<div class="maincontent">
     <div id="headlineWrapper">
         <div id="headline">
             <h1>Grundfos</h1>
         </div>
     </div>
     <div id="searchbar">
-    <form:form action="/knox/grundfos" method="get">
-        <input type="text" name="searched" placeholder="Search..." >
-        <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
-        <input type="image" src="${search_solid}" name="submit" value="submit">
-
-    </form:form>
-
+        <form:form action="/knox/grundfos" method="get">
+            <input class="search_input" type="text" name="searched" placeholder="Search..." >
+            <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
+            <input class="search_icon"  type="image" src="${search_solid}" name="submit" value="submit">
+        </form:form>
+    </div>
+    <div id="searchWrapper">
+        <c:forEach items="${ddHash}" var="dummydata">
+            <a href ="/knox/grundfos/search?article=${dummydata.key}" class="button_link searchResult">
+                <div >
+                    <h1 id="articletitle">${dummydata.value.title} </h1>
+                    <h2 id="articlesub">${dummydata.value.subtitle}</h2>
+                    <p  id="author">${dummydata.value.author}</p>
+                    <p  id="date">${dummydata.value.date}</p>
+                    <p  id="articletext">${dummydata.value.articleText}</p>
+                    <p  id="keywods">   </p>
+                </div>
+            </a>
+        </c:forEach>
+    </div>
 </div>
-
 
 <div id="sidebar" class="grundfos">
 
@@ -63,22 +76,6 @@
     </div>
 </div>
 
-<div id="searchWrapper">
-    <c:forEach items="${ddHash}" var="dummydata">
-        <a href ="/knox/grundfos/search?article=${dummydata.key}" class="button_link">
-            <div id="searchResult">
-                <h1 id="articletitle">${dummydata.value.title} </h1>
-                <h2 id="articlesub">${dummydata.value.subtitle}</h2>
-                <p  id="author">${dummydata.value.author}</p>
-                <p  id="date">${dummydata.value.date}</p>
-                <p  id="articletext">${dummydata.value.articleText}</p>
-                <p  id="keywods">   </p>
-            </div>
-        </a>
-    </c:forEach>
-
-
-</div>
 
 </body>
 
