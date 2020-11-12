@@ -1,0 +1,92 @@
+
+
+#sidebar{
+    width: 20%;
+    position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    background: var(--main-color);
+}
+#relatedSidebar{
+    height: 50%;
+    overflow-y: scroll;
+}
+
+.sidebar_component{
+
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+
+    width: 80%;
+
+    border-radius: 5px;
+    border: 1px solid var(--sidebar-component-border);
+
+    position: relative;
+    /*float: left;*/
+}
+.sidebar_component h2{
+    margin-top: 10px;
+    color: var(--text-h2);
+}
+.sidebar_component p{
+    background: var(--main-color-dark);
+}
+
+
+
+.checkbox label {
+    text-align: left;
+    word-break: break-word;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+.checkbox input {
+    line-break: anywhere;
+    float: right;
+    position: absolute;
+    margin-left: 40%;
+}
+
+
+
+.relatedArtItem{
+    border-radius: 10px;
+    padding: 7px;
+    margin-bottom: 7px;
+    display: block;
+    background: var(--secondary-color);
+}
+
+#relatedSidebar h3{
+    font-size: larger;
+    margin: 0px;
+}
+
+
+.nobullets{
+    padding-left: 3%;
+    list-style-type: none;
+    margin-right: 16px;
+    columns: 2;
+}
+
+.keywords p{
+    background: var(--secondary-color);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 3px;
+}
+
+.keywords p:hover{
+    background: var(--sidebar-keyword-hover);
+    cursor: default;
+}
+

@@ -9,36 +9,54 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<%@ include file="../common/html_head.jspf"%>
+
+<body>
 <%@ include file="../common/header.jspf"%>
 
+<!-- Main content of the page -->
 
-
-<head>
-</head>
-<body>
+<div class="maincontent">
     <div id="headlineWrapper">
         <div id="headline">
             <h1>Nordjyske</h1>
         </div>
     </div>
 
-<div id="searchbar">
-    <form:form action="/knox/nordjyske" method="get">
-        <input type="text" name="searched" placeholder="Search..." >
+    <div id="searchbar">
+        <form:form action="/knox/nordjyske" method="get">
+            <input class="search_input" type="text" name="searched" placeholder="Search..." >
 
 
-        <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
-        <input type="image" src="${search_solid}" name="submit" value="submit">
+            <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
+            <input class="search_icon"   type="image" src="${search_solid}" name="submit" value="submit">
 
-    </form:form>
+        </form:form>
 
+    </div>
+
+    <div id="searchWrapper">
+        <c:forEach items="${ddHash}" var="dummydata">
+            <a href ="/knox/nordjyske/search?article=${dummydata.key}" class="button_link searchResult">
+                <div>
+                    <h1 class="articletitle">${dummydata.value.title} </h1>
+                    <h2 class="articlesub">${dummydata.value.subtitle}</h2>
+                    <p class="author">${dummydata.value.author}</p>
+                    <p class="date">${dummydata.value.date}</p>
+                    <p class="articletext">${dummydata.value.articleText}</p>
+                    <p class="keywods">   </p>
+                </div>
+            </a>
+        </c:forEach>
+    </div>
 </div>
 
+<!-- Side bar -->
 
 <div id="sidebar" class="nordjyske">
 
-    <div class="sortBy">
-        <h2 id="sort_by"> Sort by</h2>
+    <div class="sidebar_component">
+        <h2 > Sort by</h2>
         <div class="checkbox">
             <ul class="nobullets">
                 <li><label><input type="radio" id="sdfg" name="sorting">SortOption1</label></li>
@@ -51,8 +69,8 @@
         </div>
     </div>
 
-    <div class="sortBy">
-        <h2 id="filter_by"> Filter by</h2>
+    <div class="sidebar_component">
+        <h2 > Filter by</h2>
         <div class="checkbox">
         <ul class="nobullets">
             <li><label><input type="checkbox" id="foo">FilterOption1</label></li>
@@ -69,22 +87,7 @@
     </div>
 </div>
 
-<div id="searchWrapper">
-    <c:forEach items="${ddHash}" var="dummydata">
-        <a href ="/knox/nordjyske/search?article=${dummydata.key}" id="searchResultLinks">
-        <div id="searchResult">
-            <h1 class="articletitle">${dummydata.value.title} </h1>
-            <h2 class="articlesub">${dummydata.value.subtitle}</h2>
-            <p class="author">${dummydata.value.author}</p>
-            <p class="date">${dummydata.value.date}</p>
-            <p class="articletext">${dummydata.value.articleText}</p>
-            <p class="keywods">   </p>
-        </div>
-        </a>
-    </c:forEach>
 
-
-</div>
 
 </body>
 

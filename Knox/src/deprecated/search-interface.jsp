@@ -12,7 +12,7 @@
 
 <html>
 
-<%@ include file="../main/webapp/WEB-INF/view/common/header.jspf"%>
+<%@ include file="../main/webapp/WEB-INF/view/common/html_head.jspf"%>
 
 <form:form action="/knox" method="get">
     <input type="submit" value = "Home">

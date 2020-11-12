@@ -1,4 +1,5 @@
 package knox.frontend.controllers;
+import knox.frontend.utility.FileManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,11 @@ public class HomeController {
     @RequestMapping("/test")
     public String testView(ModelMap model){
         model.addAttribute("message","Hallo Spring MVC Framework");
+        FileManager fileManager = new FileManager(model);
+        fileManager.AddCssFile("test");
+        fileManager.AddCssFile("grundfos");
+        fileManager.finish();
+
         return "test/jquery_test_view" ;
     }
 

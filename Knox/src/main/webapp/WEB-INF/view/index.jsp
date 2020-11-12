@@ -1,7 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html charset=utf-8"%>
     <html>
-        <%@ include file="common/header.jspf"%>
+        <%@ include file="common/html_head.jspf"%>
         <body>
             <h2>${message}</h2>
 

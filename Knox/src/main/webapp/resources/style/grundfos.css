@@ -1,28 +1,14 @@
-#sidebar{
-    background: #acacff;
-}
+:root{
+    --main-color: #acacff;
+    --main-color-dark: #7777bc;
+    --secondary-color: #c1c1c1;
 
-#authorSidebar, #keywords, #relatedSidebar{
-    background: #7777bc;
-}
+    --text-h2: black;
 
-#keywords p, #relatedArtItem{
-    background: #c1c1c1;
-}
+    --sidebar-component-border: grey;
+    --sidebar-keyword-hover: #a7a7a7;
 
-*::-webkit-scrollbar-track
-{
-    -webkit-box-shadow: inset 0 0 6px rgb(21, 45, 117);
-    background-color: #6e87ec;
-}
 
-*::-webkit-scrollbar
-{
-    width: 6px;
-    background-color: #F5F5F5;
-}
-
-*::-webkit-scrollbar-thumb
-{
-    background-color: #152d60;
+    --scrollbar-thump : #152d60;
+    --scrollbar : #6e87ec;
 }
