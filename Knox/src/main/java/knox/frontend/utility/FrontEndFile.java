@@ -1,3 +1,4 @@
+
 package knox.frontend.utility;
 
 public class FrontEndFile {
@@ -21,7 +22,7 @@ public class FrontEndFile {
         String root = "/resources/";
         switch (filetype){
             case CSS: return root + "style/";
-            case JS: return root + "JavaScript/";
+            case JS: return root + "javascript/";
             default: throw new Error("Missing filetype post fix");
         }
     }

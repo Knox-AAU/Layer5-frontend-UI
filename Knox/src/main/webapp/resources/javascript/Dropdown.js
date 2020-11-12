@@ -1,3 +1,4 @@
+console.log("hello from morten");
 
 function DropDown(id) {
     var dropdown = document.getElementById(id);
