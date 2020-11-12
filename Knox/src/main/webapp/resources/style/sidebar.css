@@ -2,13 +2,11 @@
 
 #sidebar{
     width: 20%;
-    height: 100%;
-    /*
-    background: #FC975E;
-    */
-    right: 0;
     position: fixed;
-
+        right: 0;
+        top: 0;
+        bottom: 0;
+    background: var(--main-color);
 }
 #relatedSidebar{
     height: 50%;
@@ -19,19 +17,19 @@
 
     margin: auto;
     margin-top: 20px;
-    padding: 5px;
+    padding: 7px;
 
     width: 80%;
 
     border-radius: 5px;
-    border: 1px solid grey;
+    border: 1px solid var(--sidebar-component-border);
+    background: var(--main-color-dark);
 
     position: relative;
-    /*float: left;*/
 }
 .sidebar_component h2{
     margin-top: 10px;
-    color: black;
+    color: var(--text-h2);
 }
 .sidebar_component p{
 }
@@ -41,65 +39,49 @@
 .checkbox label {
     text-align: left;
     word-break: break-word;
-    display: inline-block;
-    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+
     margin-top: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
 
 
 .checkbox input {
-    line-break: anywhere;
-    float: right;
-    position: absolute;
-    margin-left: 40%;
-}
-
-.button_link{
-    text-decoration: none;
-    color: black;
 }
 
 
 
-#relatedArtItem{
-    margin-right: 5%;
-    margin-left: 5%;
+.relatedArtItem{
     border-radius: 10px;
+    padding: 7px;
+    margin-bottom: 7px;
+    display: block;
+    background: var(--secondary-color);
 }
 
 #relatedSidebar h3{
-    margin-left: 5%;
-    padding-top: 5%;
-    margin-bottom: -7px;
     font-size: larger;
-}
-#relatedSidebar p{
-    margin-left: 5%;
-    padding-bottom: 5%;
-
+    margin: 0px;
 }
 
 
-.nobullets{
-    padding-left: 3%;
-    list-style-type: none;
-    margin-right: 16px;
-    columns: 2;
-}
+
 
 .keywords p{
-    /*float: left;
-    padding-left: 2%;
-    padding-right: 2%;*/
+    background: var(--secondary-color);
     display: inline-block;
     border-radius: 10px;
-    padding: 3%;
-    margin: 2%;
+    padding: 5px;
+    margin: 3px;
 }
 
 .keywords p:hover{
-    background: #a7a7a7;
+    background: var(--sidebar-keyword-hover);
     cursor: default;
+}
+
+.sidebar_option_text{
+    margin: 0;
 }
 

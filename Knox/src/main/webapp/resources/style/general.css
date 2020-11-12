@@ -11,3 +11,42 @@ body{
     margin: 0;
 }
 
+.maincontent {
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button_link{
+    text-decoration: none;
+    color: inherit;
+}
+.nobullets{
+    padding-left: 0;
+    list-style-type: none;
+    columns: 2;
+}
+
+/* Scroll bar related styling */
+*::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgb(157, 69, 50);
+    background-color: var(--scrollbar);
+}
+
+*::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: var(--scrollbar);
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color: var(--scrollbar-thump);
+}
+
+.relatedArtItem{
+    background: var(--sidebar-related-subelement)
+}

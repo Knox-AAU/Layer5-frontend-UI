@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@ include file="../common/header.jspf"%>
+<%@ include file="../common/html_head.jspf"%>
 <body>
 
 <div>
@@ -77,6 +77,8 @@
 <spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />
 <script src="${converter}"></script>
 
+<spring:url value="/resources/javascript/convert-to-html-grundfos.js" var="converter" />
+<script src="${converter}"></script>
 
 
 </html>
