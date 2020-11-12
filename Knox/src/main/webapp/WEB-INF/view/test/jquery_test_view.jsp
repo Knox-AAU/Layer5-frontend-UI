@@ -68,9 +68,11 @@
      PostCall("grundfossearch","Hallothere");
     });
 
-    $("#btn_dropdown").click( function (){ DropDown("dropdown");
+    $("#btn_dropdown").click(function () {
+     console.log("hello from Mortan");
+     DropDown("Dropdown") ;})
 
-    });
+
 </script>
 <spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />
 <script src="${converter}"></script>
