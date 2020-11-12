@@ -23,7 +23,11 @@ body{
     text-decoration: none;
     color: inherit;
 }
-
+.nobullets{
+    padding-left: 0;
+    list-style-type: none;
+    columns: 2;
+}
 
 /* Scroll bar related styling */
 *::-webkit-scrollbar-track

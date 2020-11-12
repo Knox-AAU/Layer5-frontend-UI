@@ -17,22 +17,21 @@
 
     margin: auto;
     margin-top: 20px;
-    padding: 5px;
+    padding: 7px;
 
     width: 80%;
 
     border-radius: 5px;
     border: 1px solid var(--sidebar-component-border);
+    background: var(--main-color-dark);
 
     position: relative;
-    /*float: left;*/
 }
 .sidebar_component h2{
     margin-top: 10px;
     color: var(--text-h2);
 }
 .sidebar_component p{
-    background: var(--main-color-dark);
 }
 
 
@@ -40,18 +39,15 @@
 .checkbox label {
     text-align: left;
     word-break: break-word;
-    display: inline-block;
-    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+
     margin-top: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
 
 
 .checkbox input {
-    line-break: anywhere;
-    float: right;
-    position: absolute;
-    margin-left: 40%;
 }
 
 
@@ -70,12 +66,7 @@
 }
 
 
-.nobullets{
-    padding-left: 3%;
-    list-style-type: none;
-    margin-right: 16px;
-    columns: 2;
-}
+
 
 .keywords p{
     background: var(--secondary-color);
@@ -88,5 +79,9 @@
 .keywords p:hover{
     background: var(--sidebar-keyword-hover);
     cursor: default;
+}
+
+.sidebar_option_text{
+    margin: 0;
 }
 
