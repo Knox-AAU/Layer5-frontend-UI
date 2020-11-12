@@ -82,6 +82,8 @@
 <spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />
 <script src="${converter}"></script>
 
+<spring:url value="/resources/javascript/convert-to-html-grundfos.js" var="converter" />
+<script src="${converter}"></script>
 
 
 </html>
