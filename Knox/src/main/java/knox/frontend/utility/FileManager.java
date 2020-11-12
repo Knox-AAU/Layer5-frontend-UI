@@ -27,7 +27,7 @@ public class FileManager {
 
     public void finish () {
         model.addAttribute("CSSFiles",csslist);
-        model.addAttribute("JsFiles",jslist);
+        model.addAttribute("JSFiles",jslist);
     }
 
 }
