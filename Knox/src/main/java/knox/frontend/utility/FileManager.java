@@ -13,11 +13,16 @@ public class FileManager {
         csslist = new ArrayList<FrontEndFile>();
     }
 
+    /*
     public FileManager AddCssFile (String filename) {
         csslist.add(new FrontEndFile("var", filename, FrontEndFile.FILETYPE.CSS));
         return this;
     }
-
+    
+     */
+    public void AddCssFile (String filename) {
+        csslist.add(new FrontEndFile("var", filename, FrontEndFile.FILETYPE.CSS));
+    }
     public void finish () {
         model.addAttribute("CSSFiles",csslist);
 

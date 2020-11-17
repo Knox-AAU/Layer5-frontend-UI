@@ -1,6 +1,11 @@
 package knox.frontend.utility;
 
 public class FrontEndFile {
+    private String variable;
+    private String path;
+    private FILETYPE filetype;
+
+
     public enum FILETYPE {
         CSS,
         JS
@@ -49,7 +54,5 @@ public class FrontEndFile {
         this.filetype = filetype;
     }
 
-    private String variable;
-    private String path;
-    private FILETYPE filetype;
+
 }

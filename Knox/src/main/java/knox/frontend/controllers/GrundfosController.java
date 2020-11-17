@@ -20,7 +20,8 @@ public class GrundfosController extends  AbstractCompanyController {
         Search search = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "/nordjyske");
         ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosInterface");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddCssFile("grundfos").finish();
+        fileManager.AddCssFile("grundfos");
+        fileManager.finish();
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
         return modelAndView;
@@ -31,7 +32,8 @@ public class GrundfosController extends  AbstractCompanyController {
         System.out.println("Hello there, Grundfos. Article id: " + articleId);
         ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosArticle");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddCssFile("grundfos").finish();
+        fileManager.AddCssFile("grundfos");
+        fileManager.finish();
         modelAndView.addObject("article", ddHash.get(articleId));
         modelAndView.addObject("ddHash", ddHash);
         return modelAndView;
