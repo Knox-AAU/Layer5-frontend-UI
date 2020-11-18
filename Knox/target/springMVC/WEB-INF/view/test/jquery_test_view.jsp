@@ -48,6 +48,14 @@
  <a>Guttentag</a>
 </div>
 
+<button id="btn_dropright">
+ DropRight
+</button>
+<div id="dropright" class ="dropright droprightclosed">
+ <a>Nihao</a>
+ <a>Bonjour</a>
+ <a>Mojn</a>
+</div>
 
 <div>
  <a id="TEST">Press Me</a>
@@ -70,7 +78,11 @@
 
     $("#btn_dropdown").click(function () {
      console.log("hello from Mortan");
-     DropDown("Dropdown") ;})
+     DropDown("dropdown") ;})
+
+    $("#btn_dropright").click(function () {
+     console.log("hello from Gh057ly");
+     DropRight("dropright") ;})
 
 
 </script>
