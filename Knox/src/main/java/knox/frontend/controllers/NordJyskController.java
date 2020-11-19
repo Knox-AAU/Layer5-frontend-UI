@@ -17,7 +17,7 @@ public class NordJyskController extends AbstractCompanyController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView nordjyske(@RequestParam(name = "searched", defaultValue = "hello there Theis") String searchname){
+    public ModelAndView GetSearchPage(@RequestParam(name = "searched", defaultValue = "hello there Theis") String searchname){
 
         System.out.println(searchname);
         Search search = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
@@ -31,7 +31,7 @@ public class NordJyskController extends AbstractCompanyController {
 
 
     @RequestMapping(value = "/search")
-    public ModelAndView nordjyske(@RequestParam(name = "article") int articleId){
+    public ModelAndView GetArticlePage(@RequestParam(name = "article") int articleId){
         System.out.println("Hello there, Nordjyske. Article id: " + articleId);
         ModelAndView modelAndView = new ModelAndView("Nordjyske/NordjyskeArticle");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
