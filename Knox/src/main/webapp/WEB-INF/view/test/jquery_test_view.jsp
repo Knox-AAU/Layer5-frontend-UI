@@ -70,7 +70,7 @@
 
     $("#btn_dropdown").click(function () {
      console.log("hello from Mortan");
-     DropDown("Dropdown") ;})
+     DropDown("dropdown") ;})
 
 
 </script>

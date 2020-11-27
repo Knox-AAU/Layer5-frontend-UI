@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="${style}">
 
 
+
     <spring:url value="/resources/style/article.css" var="style" />
     <link rel="stylesheet" href="${style}">
     <spring:url value="/resources/style/search-interface.css" var="style" />
@@ -29,6 +30,12 @@
         <spring:url value="${file.path}" var="temp" />
         <link rel="stylesheet" href="${temp}">
     </c:forEach>
+
+    <c:forEach items="${JSFiles}" var="file">
+        <spring:url value="${file.path}" var="temp" />
+        <script src="${temp}" ></script>
+    </c:forEach>
+
 
 
 </head>
