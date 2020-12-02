@@ -18,7 +18,7 @@ public class FileManager {
 
     public FileManager AddCssFile (String filename) {
         csslist.add(new FrontEndFile(filename, FrontEndFile.FILETYPE.CSS));
-        return this;
+        return this; 
     }
 
     public FileManager AddJSFile (String filename) {
