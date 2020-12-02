@@ -1,7 +1,7 @@
-function PostCall (functionName, parameters) {
-    parameters = [name, value];
-    search = parameters;
-    var json = JSON.stringify({search:search});
+function PostCall (functionName, parameters, callBack) {
+
+    var json = JSON.stringify(parameters);
+
 
     console.log(json);
     $.ajax({
@@ -13,13 +13,7 @@ function PostCall (functionName, parameters) {
             console.log("success");
             console.log(returnValue);
 
-            if(functionName == "nordjyskesearch") {
-                convertNordjyskeToHtml(returnValue);
-            }
-            else if (functionName == "grundfossearch") {
-                convertGrundfosToHtml(returnValue);
-            }
-
+            callBack(returnValue);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             console.log (XMLHttpRequest);
@@ -27,20 +21,5 @@ function PostCall (functionName, parameters) {
         }
     });
 }
-
-
-
-
-
-
-/* Search skal udskiftes med et parameter der består af elementer; navn og værdi.
-
-*  Vi skal tilføje en eventlistener der kan separere metode kald mellem to filer
-
-*  Eventlistener kan gøres således den tager  3 parametere; navnet på function, en function,  liste af  parametre
-  en function might be
-*  called  callBack
-*
-* */
 
 
