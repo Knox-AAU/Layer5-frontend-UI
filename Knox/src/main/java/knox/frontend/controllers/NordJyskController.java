@@ -2,6 +2,7 @@ package knox.frontend.controllers;
 
 import knox.frontend.models.Search;
 import knox.frontend.utility.FileManager;
+import knox.frontend.utility.NordJyskeConnection;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,10 @@ public class NordJyskController extends AbstractCompanyController {
         fileManager.AddCssFile("nordjyske").finish();
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
+
+        NordJyskeConnection nc = new NordJyskeConnection();
+        String result = nc.Search("donald trump", "president", "USA");
+        System.out.println("Result: " + result);
         return modelAndView;
     }
 

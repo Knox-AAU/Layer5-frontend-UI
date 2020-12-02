@@ -21,18 +21,17 @@ import java.util.List;
 public abstract class AbstractConnection {
     public String Request (String methodName,List<NameValuePair> parameters)  {
         try {
+
             HttpPost post = new HttpPost(CreateURL(methodName));
 
             // add request parameter, form parameters
             post.setEntity(new UrlEncodedFormEntity(parameters));
 
-            try (CloseableHttpClient httpClient = HttpClients.createDefault();
-                 CloseableHttpResponse response = httpClient.execute(post)) {
+            CloseableHttpClient httpClient = HttpClients.createDefault();
+            CloseableHttpResponse response = httpClient.execute(post);
+            String returnString = EntityUtils.toString(response.getEntity());
+            return returnString;
 
-                String returnString = EntityUtils.toString(response.getEntity());
-                System.out.println(returnString);
-                return returnString;
-            }
         } catch (IOException e){
             throw new Error ("Error occurred while attempting to connect to an API : " + e);
         }

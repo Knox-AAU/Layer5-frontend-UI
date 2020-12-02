@@ -7,11 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NordJyskeConnection extends AbstractConnection {
-    String ip = "0.0.0.0";
-    String port = "480";
+    //String ip = "0.0.0.0";
+    String ip = "192.38.49.147";
+    String port = "9090";
     @Override
     public String CreateURL(String methodName) {
-        return "http://" + ip +":"+ port +"/" + methodName;
+        String returnString = "http://" + ip +":"+ port +"/" + methodName;
+        System.out.println(returnString);
+        return returnString;
     }
 
     public String Search (String objekt, String subject ,String predicate) {
@@ -20,6 +23,6 @@ public class NordJyskeConnection extends AbstractConnection {
         parameters.add(new BasicNameValuePair("subject", subject));
         parameters.add(new BasicNameValuePair("predicate", predicate));
 
-        return Request("factcheck ",parameters);
+        return Request("factcheck",parameters);
     }
 }
