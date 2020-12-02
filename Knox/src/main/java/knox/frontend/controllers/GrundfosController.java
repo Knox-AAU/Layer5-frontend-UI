@@ -16,7 +16,7 @@ public class GrundfosController extends  AbstractCompanyController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView grundfoss(@RequestParam(name = "searched", defaultValue = "hello there Theis") String searchname){
+    public ModelAndView GetSearchPage(@RequestParam(name = "searched", defaultValue = "hello there Theis") String searchname){
         Search search = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "/nordjyske");
         ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosInterface");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
@@ -27,7 +27,7 @@ public class GrundfosController extends  AbstractCompanyController {
     }
 
     @RequestMapping(value = "/search")
-    public ModelAndView grundfos(@RequestParam(name = "article") int articleId){
+    public ModelAndView GetArticlePage(@RequestParam(name = "article") int articleId){
         System.out.println("Hello there, Grundfos. Article id: " + articleId);
         ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosArticle");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());

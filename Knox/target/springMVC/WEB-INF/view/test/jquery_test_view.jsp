@@ -69,15 +69,10 @@
     });
 
     $("#btn_dropdown").click(function () {
-        var dropdown = document.getElementById("dropdown");
-        if (dropdown.classList.contains("dropdownopen")){
-         dropdown.classList.remove("dropdownopen");
-         dropdown.classList.add("dropdownclosed");
-        } else {
-         dropdown.classList.add("dropdownopen");
-         dropdown.classList.remove("dropdownclosed");
-        }
-    });
+     console.log("hello from Mortan");
+     DropDown("dropdown") ;})
+
+
 </script>
 <spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />
 <script src="${converter}"></script>
