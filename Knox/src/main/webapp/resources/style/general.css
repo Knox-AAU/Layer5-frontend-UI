@@ -46,7 +46,3 @@ body{
 {
     background-color: var(--scrollbar-thump);
 }
-
-.relatedArtItem{
-    background: var(--sidebar-related-subelement)
-}

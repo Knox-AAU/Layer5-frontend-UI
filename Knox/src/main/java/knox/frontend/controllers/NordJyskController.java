@@ -23,8 +23,7 @@ public class NordJyskController extends AbstractCompanyController {
         Search search = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
         ModelAndView modelAndView = new ModelAndView("Nordjyske/NordjyskeInterface");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddCssFile("nordjyske");
-        fileManager.finish();
+        fileManager.AddCssFile("nordjyske").finish();
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
         return modelAndView;
@@ -36,8 +35,7 @@ public class NordJyskController extends AbstractCompanyController {
         System.out.println("Hello there, Nordjyske. Article id: " + articleId);
         ModelAndView modelAndView = new ModelAndView("Nordjyske/NordjyskeArticle");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddCssFile("nordjyske");
-        fileManager.finish();
+        fileManager.AddCssFile("nordjyske").finish();
         modelAndView.addObject("article", ddHash.get(articleId));
         modelAndView.addObject("ddHash", ddHash);
         return modelAndView;

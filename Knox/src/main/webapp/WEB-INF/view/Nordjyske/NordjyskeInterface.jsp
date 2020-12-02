@@ -26,8 +26,6 @@
     <div id="searchbar">
         <form:form action="/knox/nordjyske" method="get">
             <input class="search_input" type="text" name="searched" placeholder="Search..." >
-
-
             <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
             <input class="search_icon"   type="image" src="${search_solid}" name="submit" value="submit">
 
