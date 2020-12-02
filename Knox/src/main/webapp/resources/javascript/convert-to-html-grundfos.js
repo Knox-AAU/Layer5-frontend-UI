@@ -1,4 +1,6 @@
-function converttoHtml(input){
+
+
+function convertGrundfosToHtml(input){
 
     var pdfpage = JSON.parse(input);
     console.log(pdfpage);

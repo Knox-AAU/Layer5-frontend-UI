@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileManager {
-    private List<FrontEndFile> csslist;
-    private List<FrontEndFile> jslist;
-    private ModelMap model;
+    private final List<FrontEndFile> csslist;
+    private final List<FrontEndFile> jslist;
+    private final ModelMap model;
     public FileManager (ModelMap model) {
         this.model = model;
         csslist = new ArrayList<FrontEndFile>();

@@ -12,8 +12,8 @@ public class DummyData {
     private String date; //Date of article
     private String articleText; //Article text
     private List<String> images = new ArrayList<>(); //Images in article
-    private List<String> keywords = new ArrayList<>(); //Images in article
-    private List<Integer> relatedArticles = new ArrayList<>();
+    private final List<String> keywords = new ArrayList<>(); //Images in article
+    private final List<Integer> relatedArticles = new ArrayList<>();
     private int uniqueId;
 
     public DummyData () {}

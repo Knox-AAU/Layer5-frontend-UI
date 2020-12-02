@@ -1,4 +1,4 @@
-function converttohtml(input){
+function convertNordjyskeToHtml(input){
 
     var article = JSON.parse(input);
     console.log(article);
