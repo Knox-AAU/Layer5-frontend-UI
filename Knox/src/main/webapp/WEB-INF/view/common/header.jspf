@@ -3,11 +3,42 @@
 
 
 <div class="header">
-    <div id="backbtn">
-        <spring:url value="/resources/icons/arrow-left-solid.svg" var="arrow_left_solid" />
-        <a href="#" onclick="GoBack(); return false;">
-            <img src="${arrow_left_solid}">
-        </a>
+    <div class="header_content">
+        <div class="header_left_side">
+            <div>
+                <p class="header_title">${Header.title}</p>
+            </div>
+            <!--
+            <div id="backbtn">
+                <spring:url value="/resources/icons/arrow-left-solid.svg" var="arrow_left_solid" />
+                <a href="#" onclick="GoBack(); return false;">
+                    <img src="${arrow_left_solid}">
+                </a>
+            </div>
+            -->
+            <div id="backbtn">
+                <spring:url value="/resources/icons/databaseIcon.png" var="databaseicon" />
+                <a >
+                    <img src="${databaseicon}">
+                </a>
+            </div>
+        </div>
+
+        <div class="header_right_side">
+            <div class="header_icon_wrapper">
+                <spring:url value="/resources/icons/LogOut.png" var="LogOut" />
+                <img src="${LogOut}">
+            </div>
+            <div class="header_icon_wrapper">
+                <spring:url value="/resources/icons/SettingIcon.png" var="SettingIcon" />
+                <img src="${SettingIcon}">
+            </div>
+            <div class="header_username_wrapper">
+                <p class="header_username">
+                    ${Header.username}
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 

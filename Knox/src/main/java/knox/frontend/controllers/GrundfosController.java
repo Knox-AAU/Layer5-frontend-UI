@@ -1,5 +1,6 @@
 package knox.frontend.controllers;
 
+import knox.frontend.models.HeaderData;
 import knox.frontend.models.Search;
 import knox.frontend.utility.FileManager;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,7 @@ public class GrundfosController extends  AbstractCompanyController {
         fileManager.AddCssFile("grundfos").finish();
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
+        modelAndView.addObject("Header", HeaderData.CreateGrundfosHeader("UserName"));
         return modelAndView;
     }
 
@@ -34,6 +36,7 @@ public class GrundfosController extends  AbstractCompanyController {
         fileManager.AddCssFile("grundfos").finish();
         modelAndView.addObject("article", ddHash.get(articleId));
         modelAndView.addObject("ddHash", ddHash);
+        modelAndView.addObject("Header", HeaderData.CreateGrundfosHeader("UserName"));
         return modelAndView;
     }
 }

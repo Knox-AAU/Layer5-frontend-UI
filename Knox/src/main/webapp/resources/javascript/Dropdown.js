@@ -8,3 +8,8 @@ function DropDown(id) {
     } else {
         dropdown.classList.add("dropdownopen");
         dropdown.classList.remove("dropdownclosed");}}
+
+
+        function test (callback) {
+        callback("doThis");
+}

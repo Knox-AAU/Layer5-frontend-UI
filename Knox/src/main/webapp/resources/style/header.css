@@ -6,5 +6,39 @@
 
 
 .header {
-    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+}
+.header_content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header_left_side, .header_right_side {
+    display: flex;
+    align-items: center;
+}
+
+.header_title {
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+}
+.header_username {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+.header_username_wrapper {
+    border-width: 0px;
+    border-left-width: 3px;
+    padding: 5px 0px 5px 10px;
+    border-style: solid;
+    border-color: white;
+}
+
+.header_icon_wrapper{
+    margin-right: 15px;
 }

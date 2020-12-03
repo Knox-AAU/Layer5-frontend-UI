@@ -1,0 +1,17 @@
+/* The Knox color theme
+
+ */
+:root{
+    --main-color: #a13b27;
+    --main-color-dark: #692318;
+    --secondary-color: #c1c1c1;
+
+    --text-h2: black;
+
+    --sidebar-component-border: grey;
+    --sidebar-keyword-hover: #a7a7a7;
+
+
+    --scrollbar-thump : #152d60;
+    --scrollbar : #6e87ec;
+}
