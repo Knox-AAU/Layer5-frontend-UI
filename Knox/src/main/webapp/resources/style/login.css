@@ -1,0 +1,22 @@
+
+.Submit_btn {
+    border-radius: 25px;
+    background: #4473d8;
+    margin: 10px;
+    padding: 5px;
+    width: 80px;
+    height: 30px;
+}
+
+.Credentials-Fields{
+    margin: 10px;
+    padding: 5px;
+    width: 100px;
+    height: 20px;
+}
+
+.userFeedback-Field{
+    font-size: medium;
+    color: #9d2500;
+    margin: 10px;
+}
