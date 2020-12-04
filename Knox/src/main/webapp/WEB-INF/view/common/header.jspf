@@ -18,7 +18,7 @@
             -->
             <div id="backbtn">
                 <spring:url value="/resources/icons/databaseIcon.png" var="databaseicon" />
-                <a >
+                <a>
                     <img src="${databaseicon}">
                 </a>
             </div>
