@@ -9,28 +9,28 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <%@ include file="../common/html_head.jspf"%>
-<head style="align-self: center">
+<head>
     <title>LoginPage</title>
-    <h1>Welcome!</h1>
+    <h1 style="text-align: center">Welcome!</h1>
 </head>
 <body>
-    <div style="align-self: center">
+    <div class="Credentials-table">
         <h3>Please enter credentials</h3>
-        <div class="userFeedback-Field" id="Feedback" >${UserFeedback}</div>
+        <h2 class="userFeedback-Field" id="Feedback" >${UserFeedback}</h2>
         <form id="LoginForm" method="post">
-        <table>
-            <tr>
-                <td>Username</td>
-                <td> <input type="text" class="Credentials-Fields" id="username" name="username"> </td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td> <input type="text" class="Credentials-Fields" id="password" name="password"> </td>
-            </tr>
-            <tr>
-                <td><input type="submit" class="Submit_btn" value="Submit"/></td>
-            </tr>
-        </table>
+            <table>
+                <tr class="">
+                    <td>Username</td>
+                    <td> <input type="text" class="Credentials-Fields" id="username" name="username"> </td>
+                </tr>
+                <tr class="Credentials-Cell">
+                    <td>Password</td>
+                    <td> <input type="text" class="Credentials-Fields" id="password" name="password"> </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" class="Submit_btn" value="Submit"/></td>
+                </tr>
+            </table>
         </form>
     </div>
 </body>

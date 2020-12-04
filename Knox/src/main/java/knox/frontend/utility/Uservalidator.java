@@ -5,13 +5,13 @@ public class Uservalidator {
    public static Boolean  ValidateLogin(String username ,String password)
     {
 
-        if (username == "grundfos" && password == "grundfos"){
+        if (username.equals("grundfos") && password.equals("grundfos")){
             return true;
         }
-        else if (username == "nordjyske" && password == "nordjyske"){
+        else if (username.equals("nordjyske") && password.equals("nordjyske")){
             return true;
         }
-        else if (username == "both" && password == "both"){
+        else if (username.equals("both") && password.equals("both")){
             return true;
         }
         else {
