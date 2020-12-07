@@ -8,7 +8,7 @@ import java.util.List;
 
 public class NordJyskeConnection extends AbstractConnection {
     //String ip = "0.0.0.0";
-    String ip = "192.38.49.147";
+    String ip = "localhost";
     String port = "9090";
     @Override
     public String CreateURL(String methodName) {
