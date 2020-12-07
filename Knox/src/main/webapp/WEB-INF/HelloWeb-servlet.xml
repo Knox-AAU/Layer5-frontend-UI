@@ -20,4 +20,12 @@
 
     <mvc:annotation-driven />
 
+    <!-- Set up intercepters-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/grundfos"/>
+            <bean  id="TestInterceptor" class="knox.frontend.filters.GrundfosInterceptor"/>
+        </mvc:interceptor>
+        <bean id="GrundfosInterceptor" class="knox.frontend.filters.AnotherTestIncterceptor"/>
+    </mvc:interceptors>
 </beans>
