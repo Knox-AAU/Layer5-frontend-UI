@@ -10,9 +10,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.PostConstruct;
+
 @RequestMapping(value = "/nordjyske")
 @Controller
 public class NordJyskController extends AbstractCompanyController {
+    @Override
+    void Initiate(ModelAndView modelAndView ) {
+
+    }
+
     public NordJyskController() {
         super();
     }

@@ -10,6 +10,10 @@
     <script src="${ajax}"></script>
 
 
+    <spring:url value="/resources/javascript/Dropdown.js" var="DropDown" />
+    <script src="${DropDown}"></script>
+
+
     <spring:url value="/resources/style/general.css" var="style" />
     <link rel="stylesheet" href="${style}">
 

@@ -16,11 +16,28 @@
                 </a>
             </div>
             -->
-            <div id="backbtn">
+            <div id="database_dropdown_wrapper" class="wrapper">
                 <spring:url value="/resources/icons/databaseIcon.png" var="databaseicon" />
-                <a >
-                    <img src="${databaseicon}">
+                <spring:url value="/resources/icons/down_arrow.png" var="downarrowicon" />
+                <a type="button" onclick="DropDown('database_dropdown')" class="database_selector">
+                    <div class="">
+                        <p>Grundfos</p>
+                        <img id="dropdownarrow" src="${downarrowicon}">
+                    </div>
+                    <img class="databaseicon" src="${databaseicon}">
                 </a>
+                <div id="database_dropdown" class="">
+                    <!-- Generate the Database Icons -->
+                    <c:forEach items="${HubIcons}" var="hubicon">
+                        <a class="button_link database_dropdown_item" href="${hubicon.link}">
+                            <div class="database_dropdown_item_content">
+                                <spring:url value="${hubicon.imagePath}" var="imagePath" />
+                                <img class="database_dropdown_img" src="${imagePath}">
+                                <p>${hubicon.title} </p>
+                            </div>
+                        </a>
+                    </c:forEach>
+                </div>
             </div>
         </div>
 
@@ -46,4 +63,19 @@
     function GoBack () {
         window.history.back();
     }
+
+
+    $('document').ready(function(){
+        console.log("Drop down set up");
+        var database_dropdown = InitiateDropDown("database_dropdown","database_dropdown_wrapper");
+        console.log(database_dropdown);
+        database_dropdown.onClose = function () {
+            var arrow = document.getElementById("dropdownarrow");
+            arrow.classList.remove("rotated");
+        };
+        database_dropdown.onOpen = function () {
+            var arrow = document.getElementById("dropdownarrow");
+            arrow.classList.add("rotated");
+        };
+    });
 </script>
