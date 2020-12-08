@@ -8,7 +8,7 @@ import java.util.List;
 
 public class NordJyskeConnection extends AbstractConnection {
     //String ip = "0.0.0.0";
-    String ip = "192.38.49.147";
+    String ip = "localhost";
     String port = "9090";
     @Override
     public String CreateURL(String methodName) {
@@ -24,5 +24,10 @@ public class NordJyskeConnection extends AbstractConnection {
         parameters.add(new BasicNameValuePair("predicate", predicate));
 
         return Request("factcheck",parameters);
+    }
+
+    public String Article(String filename){
+        List<NameValuePair> parameters = new ArrayList<>();
+        return Request(filename, parameters);
     }
 }

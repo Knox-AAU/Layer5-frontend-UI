@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GrundfosConnection extends AbstractConnection {
-    String ip = "0.0.0.0";
-    String port = "480";
+    String ip = "localhost";
+    String port = "8081";
     @Override
     public String CreateURL(String methodName) {
         return "http://" + ip +":"+ port +"/" + methodName;
@@ -19,6 +19,6 @@ public class GrundfosConnection extends AbstractConnection {
         List<NameValuePair> parameters = new ArrayList<>();
         parameters.add(parameter);
 
-        return Request("Search",parameters);
+        return Request("search",parameters);
     }
 }

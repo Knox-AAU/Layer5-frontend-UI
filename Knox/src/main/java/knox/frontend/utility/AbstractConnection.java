@@ -27,6 +27,7 @@ public abstract class AbstractConnection {
             // add request parameter, form parameters
             post.setEntity(new UrlEncodedFormEntity(parameters));
 
+
             CloseableHttpClient httpClient = HttpClients.createDefault();
             CloseableHttpResponse response = httpClient.execute(post);
             String returnString = EntityUtils.toString(response.getEntity());
