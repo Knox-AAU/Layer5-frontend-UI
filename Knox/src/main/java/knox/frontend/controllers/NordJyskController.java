@@ -15,10 +15,6 @@ import javax.annotation.PostConstruct;
 @RequestMapping(value = "/nordjyske")
 @Controller
 public class NordJyskController extends AbstractCompanyController {
-    @Override
-    void Initiate(ModelAndView modelAndView ) {
-
-    }
 
     public NordJyskController() {
         super();

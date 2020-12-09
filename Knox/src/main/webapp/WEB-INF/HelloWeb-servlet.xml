@@ -24,12 +24,12 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/grundfos"/>
-            <bean  id="GrundfosInterceptor" class="knox.frontend.interceptor.GrundfosInterceptor"/>
+            <bean  id="GrundfosInterceptor" class="knox.frontend.interceptors.GrundfosInterceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/nordjyske"/>
-            <bean  id="NordJyskeInterceptor" class="knox.frontend.interceptor.NordJyskeInterceptor"/>
+            <bean  id="NordJyskeInterceptor" class="knox.frontend.interceptors.NordJyskeInterceptor"/>
         </mvc:interceptor>
-        <bean id="BaseInterceptor" class="knox.frontend.interceptor.BaseInterceptor"/>
+        <bean id="BaseInterceptor" class="knox.frontend.interceptors.BaseInterceptor"/>
     </mvc:interceptors>
 </beans>

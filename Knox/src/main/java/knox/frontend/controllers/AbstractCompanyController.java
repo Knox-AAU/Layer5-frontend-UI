@@ -7,7 +7,6 @@ import java.util.HashMap;
 
 public  abstract class  AbstractCompanyController  {
     HashMap<Integer, DummyData> ddHash = new HashMap<>();
-    abstract void Initiate (ModelAndView modelAndView) ;
 
 
     public AbstractCompanyController(){
