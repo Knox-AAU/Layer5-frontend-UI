@@ -1,4 +1,4 @@
-package knox.frontend.interceptors;
+package knox.frontend.interceptor;
 
 import knox.frontend.utility.FileManager;
 import org.springframework.web.servlet.HandlerInterceptor;

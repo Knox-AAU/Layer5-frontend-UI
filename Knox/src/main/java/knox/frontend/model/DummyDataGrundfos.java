@@ -1,4 +1,4 @@
-package knox.frontend.models;
+package knox.frontend.model;
 
 import java.util.ArrayList;
 import java.util.List;

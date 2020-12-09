@@ -1,7 +1,6 @@
-package knox.frontend.controllers;
+package knox.frontend.controller;
 
-import knox.frontend.models.DummyData;
-import org.springframework.web.servlet.ModelAndView;
+import knox.frontend.model.DummyData;
 
 import java.util.HashMap;
 

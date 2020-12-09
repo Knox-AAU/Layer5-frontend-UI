@@ -1,4 +1,4 @@
-package knox.frontend.models;
+package knox.frontend.model;
 
 public class Search   {
     private String pageTitle; //Page title

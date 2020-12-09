@@ -1,6 +1,6 @@
-package knox.frontend.controllers;
-import knox.frontend.models.HeaderData;
-import knox.frontend.models.HubIcon;
+package knox.frontend.controller;
+import knox.frontend.model.HeaderData;
+import knox.frontend.model.HubIcon;
 import knox.frontend.utility.FileManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

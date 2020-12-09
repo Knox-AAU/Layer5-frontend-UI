@@ -1,16 +1,9 @@
-package knox.frontend.controllers;
-import knox.frontend.models.LoginAttempt;
+package knox.frontend.controller;
 import knox.frontend.utility.FileManager;
 import knox.frontend.utility.Uservalidator;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.List;
 
 @RequestMapping("/Neutral")
 @Controller
