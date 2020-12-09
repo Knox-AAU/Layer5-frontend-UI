@@ -26,7 +26,7 @@ public class GrundfosController extends  AbstractCompanyController {
         modelAndView.setViewName("Grundfos/GrundfosInterface");
         Initiate(modelAndView);
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddCssFile("grundfos").AddCssFile("test").finish();
+        fileManager.AddCssFile("search-interface").finish();
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
         modelAndView.addObject("Header", HeaderData.CreateGrundfosHeader("UserName"));
@@ -37,9 +37,10 @@ public class GrundfosController extends  AbstractCompanyController {
     public ModelAndView GetArticlePage(@RequestParam(name = "article") int articleId){
         System.out.println("Hello there, Grundfos. Article id: " + articleId);
         ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosArticle");
+
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        modelAndView.setViewName("Grundfos/GrundfosArticle");
-        fileManager.AddCssFile("grundfos").finish();
+        fileManager.AddCssFile("article").finish();
+
         modelAndView.addObject("article", ddHash.get(articleId));
         modelAndView.addObject("ddHash", ddHash);
         modelAndView.addObject("Header", HeaderData.CreateGrundfosHeader("UserName"));

@@ -24,7 +24,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/grundfos"/>
-            <bean  id="TestInterceptor" class="knox.frontend.filters.GrundfosInterceptor"/>
+            <bean  id="TestInterceptor" class="knox.frontend.interceptor.GrundfosInterceptor"/>
         </mvc:interceptor>
         <bean id="GrundfosInterceptor" class="knox.frontend.filters.AnotherTestIncterceptor"/>
     </mvc:interceptors>

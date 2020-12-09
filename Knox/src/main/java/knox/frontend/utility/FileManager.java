@@ -27,6 +27,15 @@ public class FileManager {
     }
 
     public void finish () {
+        // Make sure to not over write allready added files
+        if (model.getAttribute("CSSFiles") instanceof java.util.ArrayList){
+            List<FrontEndFile> tempCSSFiles = (List<FrontEndFile>)model.getAttribute("CSSFiles");
+            csslist.addAll(tempCSSFiles);
+        }
+        if (model.getAttribute("JSFiles") instanceof java.util.ArrayList){
+            List<FrontEndFile> tempJSFiles = (List<FrontEndFile>)model.getAttribute("JSFiles");
+            jslist.addAll(tempJSFiles);
+        }
         model.addAttribute("CSSFiles",csslist);
         model.addAttribute("JSFiles",jslist);
     }
