@@ -3,15 +3,19 @@
     display: inline-block;
     height: auto;
     min-height: 100vh;
-    position: sticky;
+    /*position: sticky;
+
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 0; */
     background: var(--main-color);
+}
+.sidebar_wrapper {
+    margin-bottom: 20px;
 }
 #relatedSidebar{
     height: 50%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .sidebar_component{

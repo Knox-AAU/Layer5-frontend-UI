@@ -2,8 +2,7 @@ package knox.frontend.restcontroller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import knox.frontend.models.DummyData;
-import org.springframework.boot.test.context.TestConfiguration;
+import knox.frontend.model.DummyData;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/api")

@@ -25,7 +25,9 @@
 
     <div id="searchbar">
         <form:form action="/knox/nordjyske" method="get">
-            <input class="search_input" type="text" name="searched" placeholder="Search..." >
+            <input class="search_input" type="text" name="object" placeholder="Object..." >
+            <input class="search_input" type="text" name="subject" placeholder="Subject..." >
+            <input class="search_input" type="text" name="predicate" placeholder="Predicate..." >
             <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
             <input class="search_icon"   type="image" src="${search_solid}" name="submit" value="submit">
 
@@ -34,19 +36,16 @@
     </div>
 
     <div id="searchWrapper">
-        <c:forEach items="${ddHash}" var="dummydata">
-            <a href ="/knox/nordjyske/search?article=${dummydata.key}" class="button_link searchResult">
+        <c:forEach items="${searchResults}" var="result">
+            <a href ="/knox/nordjyske/search?article=${result.sourceDocument}" class="button_link searchResult">
                 <div>
-                    <h1 class="articletitle">${dummydata.value.title} </h1>
-                    <h2 class="articlesub">${dummydata.value.subtitle}</h2>
-                    <p class="author">${dummydata.value.author}</p>
-                    <p class="date">${dummydata.value.date}</p>
-                    <p class="articletext">${dummydata.value.articleText}</p>
-                    <p class="keywods">   </p>
+                    <h1 class="articletitle">${result.documentTitle} </h1>
+                    <h2 class="articlesub">${result.passage}</h2>
                 </div>
             </a>
         </c:forEach>
     </div>
+
 </div>
 
 <!-- Side bar -->

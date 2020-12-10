@@ -1,5 +1,8 @@
-function PostCall (functionName, search) {
-    var json = JSON.stringify({search:search});
+function PostCall (functionName, parameters, callBack) {
+
+    var json = JSON.stringify(parameters);
+
+
     console.log(json);
     $.ajax({
         type: "POST",
@@ -9,12 +12,8 @@ function PostCall (functionName, search) {
         success: function (returnValue) {
             console.log("success");
             console.log(returnValue);
-            if(functionName == "nordjysksearch") {
-                converttohtml(returnValue);
-            }
-            else{
-                converttoHtml(returnValue);
-            }
+
+            callBack(returnValue);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             console.log (XMLHttpRequest);
@@ -22,3 +21,5 @@ function PostCall (functionName, search) {
         }
     });
 }
+
+

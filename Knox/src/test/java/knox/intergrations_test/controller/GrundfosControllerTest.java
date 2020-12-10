@@ -1,6 +1,6 @@
 package knox.intergrations_test.controller;
 
-import knox.frontend.controllers.GrundfosController;
+import knox.frontend.controller.GrundfosController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

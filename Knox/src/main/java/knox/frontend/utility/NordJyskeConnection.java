@@ -25,4 +25,9 @@ public class NordJyskeConnection extends AbstractConnection {
 
         return Request("factcheck",parameters);
     }
+
+    public String Article(String filename){
+        List<NameValuePair> parameters = new ArrayList<>();
+        return Request(filename, parameters);
+    }
 }

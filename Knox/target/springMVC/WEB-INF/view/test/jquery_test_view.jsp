@@ -57,15 +57,19 @@
  </div>
 </body>
 
+
 <script>
     $( "#TEST" ).click(function() {
      console.log("Dude?");
-     PostCall("nordjysksearch","dummydata");
+
+     var search = {search:"narhval"};
+     PostCall("nordjysksearch",search,function callBack(returnValue){ console.log(returnValue);})
     });
 
     $( "#GrundFosTEST" ).click(function() {
      console.log("maDude?");
-     PostCall("grundfossearch","Hallothere");
+     var search = {search:"hval"};
+     PostCall("grundfossearch",search,function callBack(returnValue){ console.log(returnValue);})
     });
 
     $("#btn_dropdown").click(function () {
