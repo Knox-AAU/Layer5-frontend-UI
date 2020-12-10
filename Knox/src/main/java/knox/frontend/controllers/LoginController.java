@@ -31,7 +31,7 @@ public class LoginController {
             return "Neutral/LoginPage";
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET) // This is accessed, when the Url is entered
     public String Login(ModelMap model){
         FileManager fileManager = new FileManager(model);
         fileManager.AddCssFile("login");
