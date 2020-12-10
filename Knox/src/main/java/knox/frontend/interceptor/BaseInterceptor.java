@@ -20,7 +20,7 @@ public class BaseInterceptor implements HandlerInterceptor {
         System.out.println("Post Interceptor");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
         // Added JavaScript files
-        fileManager.AddJSFile("jquery-3.5.1.min").AddJSFile("ajax-post-controller").AddJSFile("Dropdown");
+        fileManager.AddLibraryFile("jquery-3.5.1.min").AddJSFile("ajax-post-controller").AddJSFile("Dropdown").AddJSFile("sidebarhandeling");
         // Added CCS files
         fileManager.AddCssFile("general").AddCssFile("sidebar").AddCssFile("header");
         fileManager.finish();

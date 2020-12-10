@@ -17,7 +17,7 @@ a:hover {
 }
 .maincontent_wrapper{
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .maincontent {
@@ -73,4 +73,7 @@ a:hover {
     transition: max-height 0.2s;
     overflow: hidden;
     height: 50px;
+}
+div#dropdown a {
+    display: block;
 }

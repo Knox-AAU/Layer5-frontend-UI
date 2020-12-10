@@ -25,6 +25,10 @@ public class FileManager {
         jslist.add(new FrontEndFile(filename, FrontEndFile.FILETYPE.JS));
         return this;
     }
+    public FileManager AddLibraryFile (String filename) {
+        jslist.add(new FrontEndFile(filename, FrontEndFile.FILETYPE.LIB));
+        return this;
+    }
 
     public void finish () {
         // Make sure to not over write allready added files

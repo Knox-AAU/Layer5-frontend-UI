@@ -9,7 +9,8 @@ public class FrontEndFile {
 
     public enum FILETYPE {
         CSS,
-        JS
+        JS,
+        LIB,
     }
     public FrontEndFile (String path, FILETYPE filetype) {
        
@@ -19,7 +20,7 @@ public class FrontEndFile {
     private String getFileTypePostfix (){
         switch (filetype){
             case CSS: return ".css";
-            case JS: return ".js";
+            case JS : case LIB : return ".js";
             default: throw new Error("Missing filetype post fix");
         }
     }
@@ -28,6 +29,7 @@ public class FrontEndFile {
         switch (filetype){
             case CSS: return root + "style/";
             case JS: return root + "javascript/";
+            case LIB: return root + "lib/";
             default: throw new Error("Missing filetype post fix");
         }
     }
