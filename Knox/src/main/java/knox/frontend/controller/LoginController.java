@@ -1,5 +1,5 @@
-package knox.frontend.controllers;
-import knox.frontend.models.LoginAttempt;
+package knox.frontend.controller;
+import knox.frontend.model.LoginAttempt;
 import knox.frontend.utility.FileManager;
 import knox.frontend.utility.Uservalidator;
 import org.springframework.stereotype.Controller;
