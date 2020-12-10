@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springTest" />
         <module name="Knox" />
+        <module name="springMVC" />
       </profile>
     </annotationProcessing>
   </component>
