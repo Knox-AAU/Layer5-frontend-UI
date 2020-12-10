@@ -46,16 +46,3 @@ body{
 {
     background-color: var(--scrollbar-thump);
 }
-
-.relatedArtItem{
-    background: var(--sidebar-related-subelement);
-}
-
-/* Containers to map content to one side of the screen, making it available to have content side by side */
-.LeftSidedContent{
-
-}
-
-.RightSidedContent{
-
-}

@@ -15,15 +15,16 @@ public class FileManager {
         jslist = new ArrayList<FrontEndFile>();
     }
 
+
     public FileManager AddCssFile (String filename) {
-        csslist.add(new FrontEndFile("var", filename, FrontEndFile.FILETYPE.CSS));
-        return this;
-    }
-    public FileManager AddJSFile (String filename) {
-        jslist.add(new FrontEndFile("var", filename, FrontEndFile.FILETYPE.JS));
-        return this;
+        csslist.add(new FrontEndFile(filename, FrontEndFile.FILETYPE.CSS));
+        return this; 
     }
 
+    public FileManager AddJSFile (String filename) {
+        jslist.add(new FrontEndFile(filename, FrontEndFile.FILETYPE.JS));
+        return this;
+    }
 
     public void finish () {
         model.addAttribute("CSSFiles",csslist);

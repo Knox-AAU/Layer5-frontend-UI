@@ -2,12 +2,17 @@
 package knox.frontend.utility;
 
 public class FrontEndFile {
+
+    private String path;
+    private FILETYPE filetype;
+
+
     public enum FILETYPE {
         CSS,
         JS
     }
-    public FrontEndFile (String variable, String path, FILETYPE filetype) {
-        setVariable(variable);
+    public FrontEndFile (String path, FILETYPE filetype) {
+       
         setPath(path);
         setFiletype(filetype);
     }
@@ -33,14 +38,7 @@ public class FrontEndFile {
     public void setPath(String path) {
         this.path = path;
     }
-
-    public String getVariable() {
-        return variable;
-    }
-
-    public void setVariable(String variable) {
-        this.variable = variable;
-    }
+    
 
     public FILETYPE getFiletype() {
         return filetype;
@@ -50,7 +48,5 @@ public class FrontEndFile {
         this.filetype = filetype;
     }
 
-    private String variable;
-    private String path;
-    private FILETYPE filetype;
+
 }
