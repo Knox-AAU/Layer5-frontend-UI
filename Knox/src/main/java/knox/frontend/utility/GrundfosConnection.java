@@ -15,7 +15,7 @@ public class GrundfosConnection extends AbstractConnection {
     }
 
     public String Search (String search) {
-        NameValuePair parameter = new BasicNameValuePair("q", search);
+        NameValuePair parameter = new BasicNameValuePair("input", search);
         List<NameValuePair> parameters = new ArrayList<>();
         parameters.add(parameter);
 

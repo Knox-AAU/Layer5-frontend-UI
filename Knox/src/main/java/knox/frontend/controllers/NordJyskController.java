@@ -28,9 +28,9 @@ public class NordJyskController extends AbstractCompanyController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView GetSearchPage(@RequestParam(name = "searched", defaultValue =  "") String object,
-                                      @RequestParam(name = "searched2", defaultValue = "") String subject,
-                                      @RequestParam(name = "searched3", defaultValue = "") String predicate) throws JsonProcessingException {
+    public ModelAndView GetSearchPage(@RequestParam(name = "object", defaultValue =  "") String object,
+                                      @RequestParam(name = "subject", defaultValue = "") String subject,
+                                      @RequestParam(name = "predicate", defaultValue = "") String predicate) throws JsonProcessingException {
 
         Search search = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
         ModelAndView modelAndView = new ModelAndView("Nordjyske/NordjyskeInterface");

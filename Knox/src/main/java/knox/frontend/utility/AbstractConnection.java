@@ -19,24 +19,22 @@ import java.net.http.HttpRequest;
 import java.util.List;
 
 public abstract class AbstractConnection {
-    public String Request (String methodName,List<NameValuePair> parameters)  {
+    public String Request(String methodName, List<NameValuePair> parameters) {
         try {
 
             HttpPost post = new HttpPost(CreateURL(methodName));
 
             // add request parameter, form parameters
             post.setEntity(new UrlEncodedFormEntity(parameters));
-
-
             CloseableHttpClient httpClient = HttpClients.createDefault();
             CloseableHttpResponse response = httpClient.execute(post);
             String returnString = EntityUtils.toString(response.getEntity());
             return returnString;
 
-        } catch (IOException e){
-            throw new Error ("Error occurred while attempting to connect to an API : " + e);
+        } catch (IOException e) {
+            throw new Error("Error occurred while attempting to connect to an API : " + e);
         }
     }
-    public abstract String CreateURL(String methodName);
 
+    public abstract String CreateURL(String methodName);
 }
