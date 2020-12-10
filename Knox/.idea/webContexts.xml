@@ -7,6 +7,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Nordjyske/NordjyskeInterface.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Nordjyske" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/common/header.jspf" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/common" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/search-interface.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/test/jquery_test_view.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/test" />
       </map>
     </option>
   </component>
