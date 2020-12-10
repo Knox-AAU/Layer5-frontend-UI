@@ -9,11 +9,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 
+
+// Most of this class is based on: https://www.baeldung.com/spring-security-login
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
-    public void configureGlobalSecurity( final AuthenticationManagerBuilder auth)
+    public void configureGlobalSecurity( final AuthenticationManagerBuilder auth) // This is where to create users, each with a "WithUser()" statement
             throws Exception {
         System.out.println("GlobalSecurity");
         auth.inMemoryAuthentication().withUser("both").password("both").roles("NordjyskeUser","GrundfosUser", "ADMIN")
@@ -22,7 +24,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure( HttpSecurity http) throws Exception {
+    protected void configure( HttpSecurity http) throws Exception { // This is where to create security protocols
         System.out.println("Security configure");
         http.csrf().disable()
                 .authorizeRequests()
