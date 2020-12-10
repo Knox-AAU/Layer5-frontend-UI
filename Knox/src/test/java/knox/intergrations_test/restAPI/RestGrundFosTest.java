@@ -1,7 +1,7 @@
 package knox.intergrations_test.restAPI;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import knox.frontend.models.DummyData;
+import knox.frontend.model.DummyData;
 import knox.frontend.restcontroller.RestGrundFos;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,7 +1,9 @@
 * {
     list-style-type: none;
 }
-
+p{
+    margin: 0;
+}
 h2{
     color:black;
 }
@@ -9,6 +11,13 @@ h2{
 body{
     font-family: "Arial";
     margin: 0;
+}
+a:hover {
+    cursor: pointer;
+}
+.maincontent_wrapper{
+    display: flex;
+    align-items: flex-start;
 }
 
 .maincontent {
@@ -27,6 +36,9 @@ body{
     padding-left: 0;
     list-style-type: none;
     columns: 2;
+}
+.wrapper {
+    position: relative;
 }
 
 /* Scroll bar related styling */
@@ -47,6 +59,21 @@ body{
     background-color: var(--scrollbar-thump);
 }
 
-.relatedArtItem{
-    background: var(--sidebar-related-subelement)
+
+/* Dropdown CSS code */
+.dropdownopen {
+    max-height: 400px;
+}
+
+.dropdownclosed {
+    max-height: 0;
+}
+
+.dropdown {
+    transition: max-height 0.2s;
+    overflow: hidden;
+    height: 50px;
+}
+div#dropdown a {
+    display: block;
 }

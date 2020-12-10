@@ -15,17 +15,27 @@ public class FileManager {
         jslist = new ArrayList<FrontEndFile>();
     }
 
+
     public FileManager AddCssFile (String filename) {
-        csslist.add(new FrontEndFile("var", filename, FrontEndFile.FILETYPE.CSS));
-        return this;
-    }
-    public FileManager AddJSFile (String filename) {
-        jslist.add(new FrontEndFile("var", filename, FrontEndFile.FILETYPE.JS));
-        return this;
+        csslist.add(new FrontEndFile(filename, FrontEndFile.FILETYPE.CSS));
+        return this; 
     }
 
+    public FileManager AddJSFile (String filename) {
+        jslist.add(new FrontEndFile(filename, FrontEndFile.FILETYPE.JS));
+        return this;
+    }
 
     public void finish () {
+        // Make sure to not over write allready added files
+        if (model.getAttribute("CSSFiles") instanceof java.util.ArrayList){
+            List<FrontEndFile> tempCSSFiles = (List<FrontEndFile>)model.getAttribute("CSSFiles");
+            csslist.addAll(tempCSSFiles);
+        }
+        if (model.getAttribute("JSFiles") instanceof java.util.ArrayList){
+            List<FrontEndFile> tempJSFiles = (List<FrontEndFile>)model.getAttribute("JSFiles");
+            jslist.addAll(tempJSFiles);
+        }
         model.addAttribute("CSSFiles",csslist);
         model.addAttribute("JSFiles",jslist);
     }

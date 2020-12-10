@@ -1,11 +1,12 @@
-
-
 #sidebar{
     width: 20%;
-    position: fixed;
-        right: 0;
-        top: 0;
-        bottom: 0;
+    display: inline-block;
+    height: auto;
+    min-height: 100vh;
+    position: sticky;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background: var(--main-color);
 }
 #relatedSidebar{
@@ -84,4 +85,3 @@
 .sidebar_option_text{
     margin: 0;
 }
-
