@@ -19,6 +19,7 @@ public class NordJyskeInterceptor  implements HandlerInterceptor {
 
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
         fileManager.AddCssFile("nordjyske").finish();
+        modelAndView.addObject("CurrentDatabase","NordJyske");
 
         System.out.println("NordJyske Post Interceptor");
     }

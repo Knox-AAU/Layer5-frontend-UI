@@ -1,5 +1,5 @@
 package knox.frontend.controller;
-import knox.frontend.model.HeaderData;
+import knox.frontend.model.UserData;
 import knox.frontend.model.HubIcon;
 import knox.frontend.utility.FileManager;
 import org.springframework.stereotype.Controller;
@@ -39,8 +39,6 @@ public class HomeController {
         List<HubIcon> hubicons = new ArrayList<>();
         hubicons.add(HubIcon.CreateGrundfosIcon());
         hubicons.add(HubIcon.CreateNordJyskeIcon());
-        modelAndView.addObject("HubIcons", hubicons);
-        modelAndView.addObject("Header", HeaderData.CreateKnoxHeader("UserName"));
 
         // Add files
         FileManager fileManager = new FileManager(modelAndView.getModelMap());

@@ -4,33 +4,57 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 
 // Most of this class is based on: https://www.baeldung.com/spring-security-login
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+    public static class ROLES {
+        public final static String ADMIN = "ADMIN";
+        public final static String NORDJYSKE = "NordjyskeUser";
+        public final static String GRUNDFOS = "GrundfosUser";
+    }
+
     @Autowired
     public void configureGlobalSecurity( final AuthenticationManagerBuilder auth) // This is where to create users, each with a "WithUser()" statement
             throws Exception {
         System.out.println("GlobalSecurity");
-        auth.inMemoryAuthentication().withUser("both").password("both").roles("NordjyskeUser","GrundfosUser", "ADMIN")
-       .and().withUser("grundfos").password("grundfos").roles("GrundfosUser")
-       .and().withUser("nordjyske").password("nordjyske").roles("NordjyskeUser");
+        auth.inMemoryAuthentication().withUser("both").password("both").roles(ROLES.ADMIN, ROLES.GRUNDFOS,ROLES.NORDJYSKE)
+       .and().withUser("grundfos").password("grundfos").roles(ROLES.GRUNDFOS)
+       .and().withUser("nordjyske").password("nordjyske").roles(ROLES.NORDJYSKE);
     }
+
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web
+                .ignoring()
+                .antMatchers("/resources/**")
+                .antMatchers("/publics/**");
+    }
+
 
     @Override
     protected void configure( HttpSecurity http) throws Exception { // This is where to create security protocols
         System.out.println("Security configure");
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/grundfos","/grundfos/search").hasRole("GrundfosUser")
-                .antMatchers("/nordjyske", "/nordjyske/search").hasRole("NordjyskeUser")
                 .antMatchers("/Neutral").permitAll()
+                .antMatchers("/grundfos","/grundfos/search").hasRole(ROLES.NORDJYSKE)
+                .antMatchers("/nordjyske", "/nordjyske/search").hasRole(ROLES.GRUNDFOS)
 
                 .anyRequest().authenticated()
 
@@ -52,11 +76,22 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     public AuthenticationFailureHandler FailureHandler(){
+
         // not implemented yet
-        return null;
+        return new AuthenticationFailureHandler() {
+            @Override
+            public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
+
+            }
+        };
     }
     public LogoutSuccessHandler LogoutHandler(){
         // not implemented yet
-        return null;
+        return new LogoutSuccessHandler() {
+            @Override
+            public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+
+            }
+        };
     }
 }

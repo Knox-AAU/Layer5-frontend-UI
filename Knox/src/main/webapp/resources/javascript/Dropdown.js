@@ -9,7 +9,6 @@ var STATUS = {
 
 function DropDown(id) {
     var dropdown = GetDropDownElementByID(id);
-
     if (dropdown.Status === STATUS.HIDDEN) {
         DropDown_Open(dropdown);
     } else {
@@ -22,7 +21,7 @@ function DropDown_Open (dropdownelement) {
         dropdownelement.onOpen();
     }
     dropdownelement.Status = STATUS.SHOWN;
-    dropdownelement.HTMLElement.style.maxHeight = dropdownelement.Height;
+    dropdownelement.HTMLElement.style.maxHeight = "" + dropdownelement.HTMLElement.scrollHeight;
 }
 function DropDown_Close (dropdownelement) {
     if (dropdownelement.onClose) {
@@ -36,10 +35,8 @@ function DropDown_Close (dropdownelement) {
 function InitiateDropDown (id, wrapper_id) {
     var HtmlElement = document.getElementById(id);
     var WrapperHtmlElement = document.getElementById(wrapper_id);
-    var height = HtmlElement.offsetHeight;
     var DropDownElement = {
         HTMLElement: HtmlElement,
-        Height: height,
         Status: STATUS.HIDDEN,
         Wrapper: WrapperHtmlElement,
         onOpen: null,

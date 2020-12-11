@@ -1,5 +1,6 @@
 package knox.frontend.interceptor;
 
+import knox.frontend.model.UserData;
 import knox.frontend.utility.FileManager;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,6 +25,9 @@ public class BaseInterceptor implements HandlerInterceptor {
         // Added CCS files
         fileManager.AddCssFile("general").AddCssFile("sidebar").AddCssFile("header");
         fileManager.finish();
+
+        // Set up user data
+        modelAndView.addObject("Header", UserData.CreateKnoxHeader());
 
     }
 

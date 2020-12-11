@@ -1,13 +1,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <div class="header">
     <div class="header_content">
         <div class="header_left_side">
-            <div>
+            <a href="/knox/hub">
                 <p class="header_title">${Header.title}</p>
-            </div>
+            </a>
             <!--
             <div id="backbtn">
                 <spring:url value="/resources/icons/arrow-left-solid.svg" var="arrow_left_solid" />
@@ -16,19 +16,20 @@
                 </a>
             </div>
             -->
+            <c:if test="${CurrentDatabase  != null}">
             <div id="database_dropdown_wrapper" class="wrapper">
                 <spring:url value="/resources/icons/databaseIcon.png" var="databaseicon" />
                 <spring:url value="/resources/icons/down_arrow.png" var="downarrowicon" />
                 <a type="button" onclick="DropDown('database_dropdown')" class="database_selector">
                     <div class="">
-                        <p>Grundfos</p>
+                        <p>${CurrentDatabase}</p>
                         <img id="dropdownarrow" src="${downarrowicon}">
                     </div>
                     <img class="databaseicon" src="${databaseicon}">
                 </a>
                 <div id="database_dropdown" class="">
                     <!-- Generate the Database Icons -->
-                    <c:forEach items="${HubIcons}" var="hubicon">
+                    <c:forEach items="${Header.accessibleDatabases}" var="hubicon">
                         <a class="button_link database_dropdown_item" href="${hubicon.link}">
                             <div class="database_dropdown_item_content">
                                 <spring:url value="${hubicon.imagePath}" var="imagePath" />
@@ -39,7 +40,11 @@
                     </c:forEach>
                 </div>
             </div>
+            </c:if>
+
         </div>
+
+
 
         <div class="header_right_side">
             <div class="header_icon_wrapper">
@@ -67,16 +72,18 @@
 
     $('document').ready(function(){
         console.log("Drop down set up");
-        var database_dropdown = InitiateDropDown("database_dropdown","database_dropdown_wrapper");
-        console.log(database_dropdown);
-        database_dropdown.onClose = function () {
-            var arrow = document.getElementById("dropdownarrow");
-            arrow.classList.remove("rotated");
-        };
-        database_dropdown.onOpen = function () {
-            var arrow = document.getElementById("dropdownarrow");
-            arrow.classList.add("rotated");
-        };
+        if (document.getElementById("database_dropdown")){
+            var database_dropdown = InitiateDropDown("database_dropdown","database_dropdown_wrapper");
+            console.log(database_dropdown);
+            database_dropdown.onClose = function () {
+                var arrow = document.getElementById("dropdownarrow");
+                arrow.classList.remove("rotated");
+            };
+            database_dropdown.onOpen = function () {
+                var arrow = document.getElementById("dropdownarrow");
+                arrow.classList.add("rotated");
+            };
+        }
     });
 
 

@@ -19,6 +19,7 @@ public class GrundfosInterceptor implements HandlerInterceptor {
 
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
         fileManager.AddCssFile("grundfos").finish();
+        modelAndView.addObject("CurrentDatabase","Grundfos");
 
         System.out.println("Grundfos Post Interceptor");
     }

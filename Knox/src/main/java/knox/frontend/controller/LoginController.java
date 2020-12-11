@@ -19,7 +19,7 @@ public class LoginController {
     @RequestMapping(method = RequestMethod.POST)
     public String GetLoginPage(@RequestParam String username,@RequestParam String password, ModelMap model){
         FileManager fileManager = new FileManager(model);
-        fileManager.AddCssFile("login");
+        fileManager.AddCssFile("login").AddCssFile("knox");
         fileManager.finish();
 
         if (Uservalidator.ValidateLogin(username, password)) {

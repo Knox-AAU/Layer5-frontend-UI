@@ -14,7 +14,7 @@
 <div class="hubcontent_wrapper">
     <div class="hubcontent">
         <!-- Generate the Database Icons -->
-        <c:forEach items="${HubIcons}" var="hubicon">
+        <c:forEach items="${Header.accessibleDatabases}" var="hubicon">
             <a class="button_link hubicon" href="${hubicon.link}">
                 <spring:url value="${hubicon.imagePath}" var="imagePath" />
                 <img src="${imagePath}">

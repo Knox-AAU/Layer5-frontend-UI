@@ -1,21 +1,14 @@
 package knox.frontend.controller;
 
-import knox.frontend.model.HeaderData;
+import knox.frontend.model.UserData;
 import knox.frontend.model.Search;
 import knox.frontend.utility.FileManager;
 import knox.frontend.utility.GrundfosConnection;
-import knox.frontend.utility.NordJyskeConnection;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 @RequestMapping(value = "/grundfos")
 @Controller
@@ -35,11 +28,11 @@ public class GrundfosController extends  AbstractCompanyController {
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
 
+        /*
         GrundfosConnection gc = new GrundfosConnection();
         String result = gc.Search(searchname);
-
         System.out.println("Result grundfoss for " + searchname + ": " + result);
-        modelAndView.addObject("Header", HeaderData.CreateGrundfosHeader("UserName"));
+        */
 
         return modelAndView;
     }
@@ -54,7 +47,6 @@ public class GrundfosController extends  AbstractCompanyController {
 
         modelAndView.addObject("article", ddHash.get(articleId));
         modelAndView.addObject("ddHash", ddHash);
-        modelAndView.addObject("Header", HeaderData.CreateGrundfosHeader("UserName"));
         return modelAndView;
     }
 }
