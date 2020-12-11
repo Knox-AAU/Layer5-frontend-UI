@@ -14,7 +14,6 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    @RequestMapping(method = RequestMethod.GET)
     public String GetIndexPage(ModelMap model){
 
         model.addAttribute("message","KNOX");
@@ -32,7 +31,8 @@ public class HomeController {
 
         return "test/jquery_test_view" ;
     }
-    @RequestMapping("/hub")
+
+    @RequestMapping({"/hub",""})
     public ModelAndView GetHubPage (){
         ModelAndView modelAndView = new ModelAndView("Hub");
         // Add to model
