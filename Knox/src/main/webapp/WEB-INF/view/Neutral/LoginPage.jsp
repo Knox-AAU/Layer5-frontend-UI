@@ -9,11 +9,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <%@ include file="../common/html_head.jspf"%>
-<head>
-    <title>LoginPage</title>
-    <h1 style="text-align: center">Welcome!</h1>
-</head>
 <body>
+<h1 style="text-align: center">Welcome!</h1>
     <div class="Credentials-table">
         <h3>Please enter credentials</h3>
         <h2 class="userFeedback-Field" id="Feedback" >${UserFeedback}</h2>
