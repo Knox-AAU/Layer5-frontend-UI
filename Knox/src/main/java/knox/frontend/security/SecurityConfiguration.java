@@ -76,22 +76,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     public AuthenticationFailureHandler FailureHandler(){
+        return null;
 
         // not implemented yet
-        return new AuthenticationFailureHandler() {
-            @Override
-            public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
-
-            }
-        };
     }
     public LogoutSuccessHandler LogoutHandler(){
         // not implemented yet
-        return new LogoutSuccessHandler() {
-            @Override
-            public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
-
-            }
-        };
+        return null;
     }
 }
