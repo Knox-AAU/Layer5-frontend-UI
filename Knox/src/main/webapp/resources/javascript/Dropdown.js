@@ -34,10 +34,8 @@ function DropDown_Close (dropdownelement) {
 
 
 function InitiateDropDown (id, wrapper_id) {
-    console.log("ID:" + id);
     var HtmlElement = document.getElementById(id);
     var WrapperHtmlElement = document.getElementById(wrapper_id);
-    console.log(HtmlElement);
     var height = HtmlElement.offsetHeight;
     var DropDownElement = {
         HTMLElement: HtmlElement,
@@ -47,7 +45,6 @@ function InitiateDropDown (id, wrapper_id) {
         onOpen: null,
         onClose: null
     }
-    console.log(DropDownElement);
     DropDownElements.push(DropDownElement);
     DropDownElement.HTMLElement.style.overflow = "hidden";
     DropDownElement.HTMLElement.style.maxHeight = "0";
@@ -73,6 +70,4 @@ $(document).click(function(event) {
             }
         }
     }
-
-    console.log(event.target);
 });
