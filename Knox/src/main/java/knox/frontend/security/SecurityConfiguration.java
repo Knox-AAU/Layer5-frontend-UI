@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
+import org.springframework.web.client.HttpClientErrorException;
 
 
 // Most of this class is based on: https://www.baeldung.com/spring-security-login
@@ -30,15 +31,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/grundfos","/grundfos/search").hasRole("GrundfosUser")
                 .antMatchers("/nordjyske", "/nordjyske/search").hasRole("NordjyskeUser")
+                .antMatchers("/hub").hasAnyRole("GrundfosUser", "NordjyskeUser")
                 .antMatchers("/Neutral").permitAll()
-
                 .anyRequest().authenticated()
 
                 .and()                      // and() seems to break passages apart, distincting them from eachother
                 .formLogin()
                 .loginPage("/Neutral")                      //Link to the view used as login
                 .loginProcessingUrl("/Neutral")           // The url, which handles login
-                .defaultSuccessUrl("/")
+                .defaultSuccessUrl("/hub")
                 .failureUrl("/Neutral")
                 .failureHandler(FailureHandler());
 
@@ -59,4 +60,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         // not implemented yet
         return null;
     }
+
 }
