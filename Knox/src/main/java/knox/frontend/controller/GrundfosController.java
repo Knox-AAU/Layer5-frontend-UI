@@ -24,7 +24,7 @@ public class GrundfosController extends  AbstractCompanyController {
         ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosInterface");
         modelAndView.setViewName("Grundfos/GrundfosInterface");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddCssFile("search-interface").finish();
+        fileManager.AddJSFile("convert-to-html-grundfos").AddCssFile("search-interface").finish();
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
 

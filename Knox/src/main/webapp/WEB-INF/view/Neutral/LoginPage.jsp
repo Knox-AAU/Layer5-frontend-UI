@@ -10,25 +10,30 @@
 <html>
 <%@ include file="../common/html_head.jspf"%>
 <body>
-<h1 style="text-align: center">Welcome!</h1>
-    <div class="Credentials-table">
-        <h3>Please enter credentials</h3>
-        <h2 class="userFeedback-Field" id="Feedback" >${UserFeedback}</h2>
-        <form id="LoginForm" method="post">
-            <table>
-                <tr class="">
-                    <td>Username</td>
-                    <td> <input type="text" class="Credentials-Fields" id="username" name="username"> </td>
-                </tr>
-                <tr class="Credentials-Cell">
-                    <td>Password</td>
-                    <td> <input type="text" class="Credentials-Fields" id="password" name="password"> </td>
-                </tr>
-                <tr>
-                    <td><input type="submit" class="Submit_btn" value="Submit"/></td>
-                </tr>
-            </table>
-        </form>
+
+<%@ include file="../common/header.jspf"%>
+
+<div class="maincontent_wrapper">
+    <div class="maincontent">
+        <h1 class="Login_Welcome" style="text-align: center">Welcome!</h1>
+        <div class="Credentials-table">
+            <h3>Please enter credentials</h3>
+            <h2 class="userFeedback-Field" id="Feedback" >${UserFeedback}</h2>
+            <form id="LoginForm" method="post">
+                <div class="LoginForm_Input_Wrapper">
+                    <p>Username</p>
+                    <input type="text" class="Credentials-Fields" id="username" name="username">
+                </div>
+
+                <div class="LoginForm_Input_Wrapper">
+                    <p>Password</p>
+                    <input type="text" class="Credentials-Fields" id="password" name="password">
+                </div>
+
+                <input type="submit" class="button loginbutton" value="Submit"/>
+            </form>
+        </div>
     </div>
+</div>
 </body>
 </html>

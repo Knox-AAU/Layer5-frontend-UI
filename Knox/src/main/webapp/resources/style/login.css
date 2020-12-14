@@ -1,15 +1,6 @@
 
-.Submit_btn {
-    border-radius: 25px;
-    background: #4473d8;
-    margin: 0px auto;
-    padding: 5px;
-    width: 80px;
-    height: 30px;
-}
 
 .Credentials-Fields{
-    margin: 0px auto;
     padding: 5px;
     width: 100px;
     height: 20px;
@@ -19,10 +10,6 @@
     text-align: center;
 }
 #LoginForm{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
 }
 
 .Credentials-Cell{
@@ -31,16 +18,34 @@
 
 }
 .Credentials-table{
-    width: 100%;
-    align-content: center;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .userFeedback-Field{
     font-size: medium;
     color: #9d2500;
     margin: 0px auto;
+}
+.LoginForm_Input_Wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.Login_Welcome {
+    text-align: center;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 41px;
+}
+
+.loginbutton {
+    background-color: var(--accept-botton);
+    margin: auto;
+    margin-top: 10px;
+}
+.loginbutton:hover {
+    background-color: var(--accept-botton-dark);
 }
 
 

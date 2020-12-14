@@ -20,13 +20,14 @@
             </div>
         </div>
         <div id="searchbar">
-            <form:form action="/knox/grundfos" method="get">
-                <input class="search_input" type="text" name="searched" placeholder="Search..." >
+                <input id="search_input" class="search_input" type="text" name="searched" placeholder="Search..." >
                 <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
-                <input class="search_icon"  type="image" src="${search_solid}" name="submit" value="submit">
-            </form:form>
+                <a id="search_button" class="search_icon button_link">
+                    <img src="${search_solid}">
+                </a>
         </div>
         <div id="searchWrapper">
+            <!--
             <c:forEach items="${ddHash}" var="dummydata">
                 <a href ="/knox/grundfos/search?article=${dummydata.key}" class="button_link searchResult">
                     <div >
@@ -39,8 +40,12 @@
                     </div>
                 </a>
             </c:forEach>
+            -->
         </div>
     </div>
+
+
+
 
     <div id="sidebar" class="grundfos">
         <div class="sidebar_wrapper">
@@ -335,6 +340,27 @@
         </div>
     </div>
 </div>
+<script>
+    var SearchContentWrapper = document.getElementById("searchWrapper")
 
+    $('#search_button').click(function() {
+        var search = {searched:document.getElementById("search_input").value };
+        console.log(search);
+        PostCall("grundfossearch",search, SearchCallBack);
+        console.log("Searching...");
+    });
+
+    function SearchCallBack (result) {
+        console.log("CallBack");
+        console.log(result);
+        var articalElement = convertGrundfosToHtml(result);
+        console.log(articalElement);
+        // Clear current search result
+        SearchContentWrapper.innerHTML = '';
+        // Add search result
+        SearchContentWrapper.appendChild(articalElement);
+
+    }
+</script>
 </body>
 </html>

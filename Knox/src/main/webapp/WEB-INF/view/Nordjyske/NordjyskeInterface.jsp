@@ -25,25 +25,23 @@
         </div>
 
         <div id="searchbar">
-            <form:form action="/knox/nordjyske" method="get">
-                <input class="search_input" type="text" name="object" placeholder="Object..." >
-                <input class="search_input" type="text" name="subject" placeholder="Subject..." >
-                <input class="search_input" type="text" name="predicate" placeholder="Predicate..." >
+                <input id="object" class="search_input" type="text" name="object" placeholder="Object..." >
+                <input id="subject" class="search_input" type="text" name="subject" placeholder="Subject..." >
+                <input id="predicate" class="search_input" type="text" name="predicate" placeholder="Predicate..." >
                 <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
-                <button class="nordjyske_search_button" type="submit">
+                <a id="search_button" class="button nordjyskesearch">
                     <p>
                         Search
                     </p>
                     <img src="${search_solid}">
-                </button>
+                </a>
 
                 <!--<input class="search_icon"   type="image" src="${search_solid}" name="submit" value="submit"> -->
-
-            </form:form>
 
         </div>
 
         <div id="searchWrapper">
+            <!--
             <c:forEach items="${searchResults}" var="result">
                 <a href ="/knox/nordjyske/search?article=${result.sourceDocument}" class="button_link searchResult">
                     <div>
@@ -51,7 +49,7 @@
                         <h2 class="articlesub">${result.passage}</h2>
                     </div>
                 </a>
-            </c:forEach>
+            </c:forEach> -->
         </div>
 
     </div>
@@ -172,5 +170,31 @@
 
 
 </body>
+<script>
+    var SearchContentWrapper = document.getElementById("searchWrapper")
+
+    $('#search_button').click(function() {
+        var object = document.getElementById("object").value;
+        var subject = document.getElementById("subject").value;
+        var predicate = document.getElementById("predicate").value;
+        var search = {object:object,subject:subject, predicate:predicate};
+        console.log(search);
+        PostCall("nordjysksearch",search, SearchCallBack);
+        console.log("Searching...");
+    });
+
+    function SearchCallBack (result) {
+        console.log("CallBack");
+        console.log(result);
+        var articalElement = convertNordjyskeToHtml(result);
+        console.log(articalElement);
+        // Clear current search result
+        SearchContentWrapper.innerHTML = '';
+        // Add search result
+        for (var i = 0; i < articalElement.length; i++){
+            SearchContentWrapper.appendChild(articalElement[i]);
+        }
+    }
+</script>
 
 </html>
