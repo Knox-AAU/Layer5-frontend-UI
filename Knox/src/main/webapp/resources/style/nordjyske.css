@@ -13,25 +13,8 @@
     --scrollbar : #F5F5F5;
 }
 
-.nordjyske_search_button{
-    cursor: pointer;
-    border-radius: 14px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: var(--main-color);
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px 15px;
-    border: 0;
+.nordjyskesearch {
     margin: auto;
-    margin-top: 20px;
-}
-.nordjyske_search_button img {
-    width: 24px;
-    padding-left: 10px;
-}
-.nordjyske_search_button:hover {
-    background-color: var(--main-color-dark);
+    margin-top: 15px;
+    background-color: var(--main-color);
 }

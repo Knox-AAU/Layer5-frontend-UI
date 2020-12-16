@@ -5,7 +5,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -14,13 +13,16 @@ import java.util.List;
 public class UserData {
     private String title;
     private String username;
-    private List<HubIcon> AccessibleDatabases;
+    private List<HubIcon> accessibleDatabases;
+    private boolean loggedIn;
+
 
     public UserData () {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         this.username = authentication.getName();
-        this.AccessibleDatabases = new ArrayList<HubIcon>();
+        this.accessibleDatabases = new ArrayList<HubIcon>();
         Collection<GrantedAuthority> credentials = (Collection<GrantedAuthority>)  authentication.getAuthorities();
+        loggedIn = !(credentials.iterator().next().getAuthority().equals("ROLE_ANONYMOUS"));
         SetAccessibleDatabases(credentials);
     }
 
@@ -34,11 +36,11 @@ public class UserData {
                     break;
                 }
                 case postfix + SecurityConfiguration.ROLES.GRUNDFOS : {
-                    this.AccessibleDatabases.add(HubIcon.CreateGrundfosIcon());
+                    this.accessibleDatabases.add(HubIcon.CreateGrundfosIcon());
                     break;
                 }
                 case postfix + SecurityConfiguration.ROLES.NORDJYSKE : {
-                    this.AccessibleDatabases.add(HubIcon.CreateNordJyskeIcon());
+                    this.accessibleDatabases.add(HubIcon.CreateNordJyskeIcon());
                     break;
                 }
             }
@@ -46,12 +48,19 @@ public class UserData {
     }
 
 
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
     public List<HubIcon> getAccessibleDatabases() {
-        return AccessibleDatabases;
+        return accessibleDatabases;
     }
 
     public void setAccessibleDatabases(List<HubIcon> accessibleDatabases) {
-        AccessibleDatabases = accessibleDatabases;
+        this.accessibleDatabases = accessibleDatabases;
     }
     public String getTitle() {
         return title;

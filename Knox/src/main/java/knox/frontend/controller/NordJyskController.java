@@ -29,17 +29,15 @@ public class NordJyskController extends AbstractCompanyController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView GetSearchPage(@RequestParam(name = "object", defaultValue =  "") String object,
-                                      @RequestParam(name = "subject", defaultValue = "") String subject,
-                                      @RequestParam(name = "predicate", defaultValue = "") String predicate) throws JsonProcessingException {
+    public ModelAndView GetSearchPage() throws JsonProcessingException {
 
         Search search = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
         ModelAndView modelAndView = new ModelAndView("Nordjyske/NordjyskeInterface");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddCssFile("nordjyske").finish();
+        fileManager.AddJSFile("convert-to-html-nordjysk").AddCssFile("nordjyske").finish();
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
-        System.out.println("SEARCH STRINGS: " + object + subject + predicate);
+        /*
 
         if(!object.equals("") || !subject.equals("") || !predicate.equals("")){
             NordJyskeConnection nc = new NordJyskeConnection();
@@ -56,6 +54,8 @@ public class NordJyskController extends AbstractCompanyController {
             modelAndView.addObject("searchResults", searchResults);
 
         }
+        */
+
         return modelAndView;
     }
 

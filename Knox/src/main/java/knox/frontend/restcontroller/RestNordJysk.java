@@ -3,7 +3,15 @@ package knox.frontend.restcontroller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import knox.frontend.model.DummyData;
+import knox.frontend.model.NordjyskeResult;
+import knox.frontend.utility.NordJyskeConnection;
+import knox.frontend.utility.NordJyskeSearchData;
+import org.h2.util.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+import static org.h2.util.json.JSONValue.*;
 
 @RequestMapping("/api")
 @RestController
@@ -16,12 +24,15 @@ public class RestNordJysk {
         System.out.println("Working");
         System.out.println(search);
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        DummyData dummydata = DummyData.CreateDummy(1);
-        String data = objectMapper.writeValueAsString(dummydata);
+        //DummyData dummydata = DummyData.CreateDummy(1);
+        //String data = objectMapper.writeValueAsString(dummydata);
 
+        final ObjectMapper objectMapper = new ObjectMapper();
+        NordJyskeConnection nc = new NordJyskeConnection();
+        NordJyskeSearchData nordJyskeSearchData = objectMapper.readValue(search, NordJyskeSearchData.class);
+        String result = nc.Search(nordJyskeSearchData);
+        System.out.println("Result: " + result);
 
-        return data;
+        return result;
     }
-    
 }

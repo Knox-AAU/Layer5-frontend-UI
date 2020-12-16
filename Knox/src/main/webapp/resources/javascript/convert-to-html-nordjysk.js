@@ -1,7 +1,8 @@
 function convertNordjyskeToHtml(input){
 
-    var article = JSON.parse(input);
-    console.log(article);
+    var articles = JSON.parse(input);
+    var articleElement = [];
+    console.log(articles);
 
     console.log("this is the converter");
 
@@ -11,7 +12,44 @@ function convertNordjyskeToHtml(input){
     document.getElementById("Date").innerHTML = article.date;
     document.getElementById("ArticleText").innerHTML = article.articleText;
 */
+    for (var i = 0; i < articles.length; i++){
+        var article = articles[i];
+        // Create Link
+        var returnElement = document.createElement("a");
+        returnElement.classList.add("button_link");
+        returnElement.classList.add("searchResult");
+        returnElement.href = "/knox/grundfos/search?article=";
+        // Create Wrapper
+        var wrapper = document.createElement("div");
+        returnElement.appendChild(wrapper);
+        // Create Title
+        var title = document.createElement("h1");
+        title.innerHTML = article.documentTitle;
+        title.classList.add("articletitle");
+        wrapper.appendChild(title);
+        // Create Passage
+        var passage = document.createElement("h2");
+        passage.innerHTML = article.passage;
+        passage.classList.add("articlepassage");
+        wrapper.appendChild(passage);
+        // Create Document
+        var documentname = document.createElement("p");
+        documentname.innerHTML = article.sourceDocument;
+        documentname.classList.add("articledocument");
+        wrapper.appendChild(documentname);
+        // Create Score
+        var score = document.createElement("p");
+        score.innerHTML = article.score;
+        score.classList.add("articlescore");
+        wrapper.appendChild(score);
 
+        articleElement.push(returnElement)
+
+    }
+    return articleElement;
+
+
+    /*
     var j = 0;
     var para;
     var node;

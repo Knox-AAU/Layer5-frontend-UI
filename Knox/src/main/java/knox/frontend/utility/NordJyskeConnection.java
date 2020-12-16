@@ -17,11 +17,11 @@ public class NordJyskeConnection extends AbstractConnection {
         return returnString;
     }
 
-    public String Search (String objekt, String subject ,String predicate) {
+    public String Search (NordJyskeSearchData searchData) {
         List<NameValuePair> parameters = new ArrayList<>();
-        parameters.add(new BasicNameValuePair("objekt", objekt));
-        parameters.add(new BasicNameValuePair("subject", subject));
-        parameters.add(new BasicNameValuePair("predicate", predicate));
+        parameters.add(new BasicNameValuePair("objekt", searchData.getObject()));
+        parameters.add(new BasicNameValuePair("subject", searchData.getSubject()));
+        parameters.add(new BasicNameValuePair("predicate", searchData.getPredicate()));
 
         return Request("factcheck",parameters);
     }
