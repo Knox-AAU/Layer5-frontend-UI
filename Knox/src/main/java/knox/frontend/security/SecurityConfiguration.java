@@ -52,18 +52,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         System.out.println("Security configure");
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/Neutral").permitAll()
-                .antMatchers("/grundfos","/grundfos/search").hasRole(ROLES.NORDJYSKE)
-                .antMatchers("/nordjyske", "/nordjyske/search").hasRole(ROLES.GRUNDFOS)
+                .antMatchers("/Login").permitAll()
+                .antMatchers("/grundfos","/grundfos/search").hasRole(ROLES.GRUNDFOS)
+                .antMatchers("/nordjyske", "/nordjyske/search").hasRole(ROLES.NORDJYSKE)
 
                 .anyRequest().authenticated()
 
                 .and()                      // and() seems to break passages apart, distincting them from eachother
                 .formLogin()
-                .loginPage("/Neutral")                      //Link to the view used as login
-                .loginProcessingUrl("/Neutral")           // The url, which handles login
+                .loginPage("/Neutral/LoginPage.jsp")                      //Link to the view used as login
+                .loginProcessingUrl("/Login")           // The url, which handles login
                 .defaultSuccessUrl("/")
-                .failureUrl("/Neutral")
+                .failureUrl("/Login")
                 .failureHandler(FailureHandler());
 
 /*              Since no Logout functionality is currently in place, this part of the code crashes it.

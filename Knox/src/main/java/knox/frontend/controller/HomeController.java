@@ -49,36 +49,12 @@ public class HomeController {
         return modelAndView;
     }
 
-    @RequestMapping("/Neutral")
-    @Controller
-    public static class LoginController {
+    @RequestMapping(value = "/Login", method = RequestMethod.GET) // This is accessed, when the Url is entered
+    public String Login(ModelMap model){
+        FileManager fileManager = new FileManager(model);
+        fileManager.AddCssFile("login");
+        fileManager.finish();
 
-        @RequestMapping(method = RequestMethod.POST)
-        public String GetLoginPage(@RequestParam String username,@RequestParam String password, ModelMap model){
-            FileManager fileManager = new FileManager(model);
-            fileManager.AddCssFile("login");
-            fileManager.finish();
-
-            if (Uservalidator.ValidateLogin(username, password)) {
-                model.addAttribute("UserFeedback","Great success!");
-                return "Neutral/LoginPage";// Move on to next view I.E the HUB
-            }
-            else
-                model.addAttribute("UserFeedback","Incorrect Login, please try again");
-            return "Neutral/LoginPage";
-        }
-
-        @RequestMapping(method = RequestMethod.GET) // This is accessed, when the Url is entered
-        public String Login(ModelMap model){
-            FileManager fileManager = new FileManager(model);
-            fileManager.AddCssFile("login");
-            fileManager.finish();
-
-            return "Neutral/LoginPage";
-        }
+        return "Neutral/LoginPage";
     }
-
-
-
-
 }
