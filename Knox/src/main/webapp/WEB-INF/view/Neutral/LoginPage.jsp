@@ -30,7 +30,7 @@
                     <input type="text" class="Credentials-Fields" id="password" name="password">
                 </div>
 
-                <input type="submit" class="button loginbutton" value="Submit"/>
+                <input type="submit" class="button loginbutton" value="Login"/>
             </form>
         </div>
     </div>
