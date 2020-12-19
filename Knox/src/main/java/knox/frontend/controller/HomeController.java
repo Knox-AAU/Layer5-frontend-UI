@@ -49,7 +49,7 @@ public class HomeController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/Login", method = RequestMethod.GET) // This is accessed, when the Url is entered
+    @RequestMapping(value = "/login", method = RequestMethod.GET) // This is accessed, when the Url is entered
     public String Login(ModelMap model){
         FileManager fileManager = new FileManager(model);
         fileManager.AddCssFile("login");
