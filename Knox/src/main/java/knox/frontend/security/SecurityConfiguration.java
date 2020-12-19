@@ -53,8 +53,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/Neutral").permitAll()
-                .antMatchers("/grundfos","/grundfos/search").hasRole(ROLES.NORDJYSKE)
-                .antMatchers("/nordjyske", "/nordjyske/search").hasRole(ROLES.GRUNDFOS)
+                .antMatchers("/grundfos","/grundfos/search").hasRole(ROLES.GRUNDFOS)
+                .antMatchers("/nordjyske", "/nordjyske/search").hasRole(ROLES.NORDJYSKE)
 
                 .anyRequest().authenticated()
 
