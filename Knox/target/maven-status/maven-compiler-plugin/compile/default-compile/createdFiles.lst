@@ -1,3 +1,5 @@
+knox\frontend\security\SecurityConfiguration$ROLES.class
+knox\frontend\utility\NordJyskeSearchData.class
 knox\frontend\interceptor\NordJyskeInterceptor.class
 knox\frontend\security\SecurityConfiguration.class
 knox\frontend\utility\Uservalidator.class
@@ -5,13 +7,11 @@ knox\frontend\controller\AbstractCompanyController.class
 knox\frontend\model\Search.class
 knox\frontend\interceptor\BaseInterceptor.class
 knox\frontend\model\LoginAttempt.class
-knox\frontend\controller\NordJyskController$1.class
 knox\frontend\utility\FrontEndFile$FILETYPE.class
 knox\frontend\utility\FrontEndFile.class
 knox\frontend\model\NordjyskeResult.class
 knox\frontend\controller\LoginController.class
 knox\frontend\utility\NordJyskeConnection.class
-knox\frontend\model\HeaderData.class
 knox\frontend\controller\GrundfosController.class
 knox\frontend\model\DummyData.class
 knox\frontend\utility\GrundfosConnection.class
@@ -22,6 +22,7 @@ knox\frontend\restcontroller\RestGrundFos.class
 knox\frontend\utility\FrontEndFile$1.class
 knox\frontend\utility\AbstractConnection.class
 knox\frontend\utility\FileManager.class
+knox\frontend\model\UserData.class
 knox\frontend\interceptor\GrundfosInterceptor.class
 knox\frontend\model\DummyDataGrundfos.class
 knox\frontend\restcontroller\RestNordJysk.class

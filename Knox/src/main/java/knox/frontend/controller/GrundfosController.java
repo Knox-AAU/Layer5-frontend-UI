@@ -17,7 +17,7 @@ public class GrundfosController extends  AbstractCompanyController {
     //FileManager fileManager = new FileManager(modelAndView.getModelMap());
 
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView GetSearchPage(@RequestParam(name = "searched", defaultValue = "hello there Theis") String searchname){
+    public ModelAndView GetSearchPage(@RequestParam(name = "searched", defaultValue = "") String searchname){
 
         System.out.println("Grundfos");
         Search search = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "/nordjyske");
@@ -28,11 +28,11 @@ public class GrundfosController extends  AbstractCompanyController {
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
 
-        /*
+/*
         GrundfosConnection gc = new GrundfosConnection();
         String result = gc.Search(searchname);
         System.out.println("Result grundfoss for " + searchname + ": " + result);
-        */
+*/
 
         return modelAndView;
     }

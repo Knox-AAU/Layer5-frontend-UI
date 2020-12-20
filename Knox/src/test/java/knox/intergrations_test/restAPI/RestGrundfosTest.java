@@ -2,7 +2,7 @@ package knox.intergrations_test.restAPI;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import knox.frontend.model.DummyData;
-import knox.frontend.restcontroller.RestGrundFos;
+import knox.frontend.restcontroller.RestGrundfos;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +19,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(RestGrundFos.class)
-@Import(RestGrundFos.class)
-class RestGrundFosTest {
+@WebMvcTest(RestGrundfos.class)
+@Import(RestGrundfos.class)
+class RestGrundfosTest {
     @Autowired
     private MockMvc mvc;
 

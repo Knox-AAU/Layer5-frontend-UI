@@ -15,7 +15,7 @@ import static org.h2.util.json.JSONValue.*;
 
 @RequestMapping("/api")
 @RestController
-public class RestNordJysk {
+public class RestNordjyske {
 
 
     @PostMapping(value = "/nordjysksearch", consumes = "application/json")

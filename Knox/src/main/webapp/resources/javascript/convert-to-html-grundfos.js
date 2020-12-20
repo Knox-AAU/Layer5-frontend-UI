@@ -2,45 +2,45 @@
 
 function convertGrundfosToHtml(input){
 
-    var pdfpage = JSON.parse(input);
-    console.log(pdfpage);
+    var manuals = JSON.parse(input).result;
+    var manualElement = [];
 
-    console.log("this is the converter");
-    // Create Link
-    var returnElement = document.createElement("a");
-    returnElement.classList.add("button_link");
-    returnElement.classList.add("searchResult");
-    returnElement.href = "/knox/grundfos/search?article=" + pdfpage.uniqueId;
-    // Create Wrapper
-    var wrapper = document.createElement("div");
-    returnElement.appendChild(wrapper);
-    // Create Title
-    var title = document.createElement("h1");
-    title.innerHTML = pdfpage.title;
-    title.classList.add("articletitle");
-    wrapper.appendChild(title);
-    // Create SubTitle
-    var subTitle = document.createElement("h2");
-    subTitle.innerHTML = pdfpage.subtitle;
-    subTitle.classList.add("articlesub");
-    wrapper.appendChild(subTitle);
-    // Create Author
-    var author = document.createElement("p");
-    author.innerHTML = pdfpage.author;
-    author.classList.add("author");
-    wrapper.appendChild(author);
-    // Create Date
-    var date = document.createElement("p");
-    date.innerHTML = pdfpage.date;
-    date.classList.add("date");
-    wrapper.appendChild(date);
-    // Create Article Text
-    var articleText = document.createElement("p");
-    articleText.innerHTML = pdfpage.articleText;
-    articleText.classList.add("articletext");
-    wrapper.appendChild(articleText);
+    for(var i = 0; i < manuals.length; i++){
+        var pdfpage = manuals[i];
+        console.log(pdfpage);
 
-    return returnElement;
+        console.log("this is the converter");
+        // Create Link
+        var returnElement = document.createElement("a");
+        returnElement.classList.add("button_link");
+        returnElement.classList.add("searchResult");
+        returnElement.href = "/knox/grundfos/search?article=" + pdfpage.uniqueId;
+        // Create Wrapper
+        var wrapper = document.createElement("div");
+        returnElement.appendChild(wrapper);
+        // Create Title
+        var title = document.createElement("h1");
+        title.innerHTML = pdfpage.title;
+        title.classList.add("articletitle");
+        wrapper.appendChild(title);
+        // Create SubTitle
+        var score = document.createElement("h2");
+        score.innerHTML = pdfpage.score;
+        score.classList.add("score");
+        wrapper.appendChild(score);
+        // Create Author
+        var filepath = document.createElement("p");
+        filepath.innerHTML = pdfpage.filepath;
+        filepath.classList.add("filepath");
+        wrapper.appendChild(filepath);
+
+        manualElement.push(returnElement);
+
+    }
+    console.log("manualElement: ");
+
+    console.log(manualElement);
+    return manualElement;
 
     /*
                 <a href ="/knox/grundfos/search?article=${dummydata.key}" class="button_link searchResult">

@@ -2,7 +2,7 @@ package knox.intergrations_test.restAPI;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import knox.frontend.model.DummyData;
-import knox.frontend.restcontroller.RestNordJysk;
+import knox.frontend.restcontroller.RestNordjyske;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +20,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(RestNordJysk.class)
-@Import(RestNordJysk.class)
-class RestNordJyskTest {
+@WebMvcTest(RestNordjyske.class)
+@Import(RestNordjyske.class)
+class RestNordjyskeTest {
     @Autowired
     private MockMvc mvc;
 
