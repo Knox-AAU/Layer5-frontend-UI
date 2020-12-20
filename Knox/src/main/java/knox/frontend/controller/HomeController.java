@@ -2,10 +2,13 @@ package knox.frontend.controller;
 import knox.frontend.model.UserData;
 import knox.frontend.model.HubIcon;
 import knox.frontend.utility.FileManager;
+import knox.frontend.utility.Uservalidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import knox.frontend.model.LoginAttempt;
+import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,5 +49,12 @@ public class HomeController {
         return modelAndView;
     }
 
+    @RequestMapping(value = "/login", method = RequestMethod.GET) // This is accessed, when the Url is entered
+    public String Login(ModelMap model){
+        FileManager fileManager = new FileManager(model);
+        fileManager.AddCssFile("login");
+        fileManager.finish();
 
+        return "Neutral/LoginPage";
+    }
 }
