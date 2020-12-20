@@ -52,7 +52,7 @@ public class HomeController {
     @RequestMapping(value = "/login", method = RequestMethod.GET) // This is accessed, when the Url is entered
     public String Login(ModelMap model){
         FileManager fileManager = new FileManager(model);
-        fileManager.AddCssFile("login");
+        fileManager.AddCssFile("knox").AddCssFile("login");
         fileManager.finish();
 
         return "Neutral/LoginPage";
