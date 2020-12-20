@@ -5,13 +5,10 @@ knox\frontend\controller\AbstractCompanyController.class
 knox\frontend\model\Search.class
 knox\frontend\interceptor\BaseInterceptor.class
 knox\frontend\model\LoginAttempt.class
-knox\frontend\controller\NordJyskController$1.class
 knox\frontend\utility\FrontEndFile$FILETYPE.class
 knox\frontend\utility\FrontEndFile.class
 knox\frontend\model\NordjyskeResult.class
-knox\frontend\controller\LoginController.class
 knox\frontend\utility\NordJyskeConnection.class
-knox\frontend\model\HeaderData.class
 knox\frontend\controller\GrundfosController.class
 knox\frontend\model\DummyData.class
 knox\frontend\utility\GrundfosConnection.class
