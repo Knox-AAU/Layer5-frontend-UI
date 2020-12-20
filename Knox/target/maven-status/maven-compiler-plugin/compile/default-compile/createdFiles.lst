@@ -1,3 +1,5 @@
+knox\frontend\security\SecurityConfiguration$ROLES.class
+knox\frontend\utility\NordJyskeSearchData.class
 knox\frontend\interceptor\NordJyskeInterceptor.class
 knox\frontend\security\SecurityConfiguration.class
 knox\frontend\utility\Uservalidator.class
@@ -19,6 +21,7 @@ knox\frontend\restcontroller\RestGrundFos.class
 knox\frontend\utility\FrontEndFile$1.class
 knox\frontend\utility\AbstractConnection.class
 knox\frontend\utility\FileManager.class
+knox\frontend\model\UserData.class
 knox\frontend\interceptor\GrundfosInterceptor.class
 knox\frontend\model\DummyDataGrundfos.class
 knox\frontend\restcontroller\RestNordJysk.class

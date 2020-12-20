@@ -14,8 +14,8 @@ public class GrundfosConnection extends AbstractConnection {
         return "http://" + ip +":"+ port +"/" + methodName;
     }
 
-    public String Search (String search) {
-        NameValuePair parameter = new BasicNameValuePair("input", search);
+    public String Search (GrundfosSearchData search) {
+        NameValuePair parameter = new BasicNameValuePair("input", search.getSearch());
         List<NameValuePair> parameters = new ArrayList<>();
         parameters.add(parameter);
 

@@ -344,7 +344,7 @@
     var SearchContentWrapper = document.getElementById("searchWrapper")
 
     $('#search_button').click(function() {
-        var search = {searched:document.getElementById("search_input").value };
+        var search = {search:document.getElementById("search_input").value };
         console.log(search);
         PostCall("grundfossearch",search, SearchCallBack);
         console.log("Searching...");
@@ -353,12 +353,15 @@
     function SearchCallBack (result) {
         console.log("CallBack");
         console.log(result);
-        var articalElement = convertGrundfosToHtml(result);
-        console.log(articalElement);
+        var manualElements = convertGrundfosToHtml(result);
+        console.log(manualElements);
         // Clear current search result
         SearchContentWrapper.innerHTML = '';
         // Add search result
-        SearchContentWrapper.appendChild(articalElement);
+        for(var i = 0; i < manualElements.length; i++){
+            SearchContentWrapper.appendChild(manualElements[i]);
+        }
+
 
     }
 </script>
