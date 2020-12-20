@@ -14,7 +14,7 @@ function convertGrundfosToHtml(input){
         var returnElement = document.createElement("a");
         returnElement.classList.add("button_link");
         returnElement.classList.add("searchResult");
-        returnElement.href = "/knox/grundfos/search?article=" + pdfpage.uniqueId;
+        returnElement.href = "/knox/grundfos/search?article=";
         // Create Wrapper
         var wrapper = document.createElement("div");
         returnElement.appendChild(wrapper);
