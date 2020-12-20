@@ -64,37 +64,37 @@
                     <ul class="nobullets">
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHesadasdasdasasdsdffsdfsdfdjej</p>
+                                <p class="sidebar_option_text">Option1</p>
                                 <input type="radio" id="sdfg" name="sorting">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHesadasdasdasasdsdffsdfsdfdjej</p>
+                                <p class="sidebar_option_text">Option2</p>
                                 <input type="radio" id="sdf" name="sorting">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHesadasdasdasasdsdffsdfsdfdjej</p>
+                                <p class="sidebar_option_text">Option3</p>
                                 <input type="radio" id="sdg" name="sorting">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHesadasdasdasasdsdffsdfsdfdjej</p>
+                                <p class="sidebar_option_text">Option4</p>
                                 <input type="radio" id="sfg" name="sorting">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHesadasdasdasasdsdffsdfsdfdjej</p>
+                                <p class="sidebar_option_text">Option5</p>
                                 <input type="radio" id="dfrag" name="sorting">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHesadasdasdasasdsdffsdfsdfdjej</p>
+                                <p class="sidebar_option_text">Option6</p>
                                 <input type="radio" id="sg" name="sorting">
                             </label>
                         </li>
@@ -108,55 +108,55 @@
                     <ul class="nobullets">
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHesadasdasdasasdsdffsdfsdfdjej</p>
+                                <p class="sidebar_option_text">Option1</p>
                                 <input type="checkbox" id="foo">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">Hej</p>
+                                <p class="sidebar_option_text">Option2</p>
                                 <input type="checkbox" id="bar">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">Hej</p>
+                                <p class="sidebar_option_text">Option3</p>
                                 <input type="checkbox" id="baz">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">Hej</p>
+                                <p class="sidebar_option_text">Option4</p>
                                 <input type="checkbox" id="dfvg">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">Hej</p>
+                                <p class="sidebar_option_text">Option5</p>
                                 <input type="checkbox" id="dfg">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHejHej</p>
+                                <p class="sidebar_option_text">Option6</p>
                                 <input type="checkbox" id="cvbcvb">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHejHej</p>
+                                <p class="sidebar_option_text">Option7</p>
                                 <input type="checkbox" id="b">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHejHej</p>
+                                <p class="sidebar_option_text">Option8</p>
                                 <input type="checkbox" id="csdsdb">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">HejHejHejHej</p>
+                                <p class="sidebar_option_text">Option9</p>
                                 <input type="checkbox" id="casasb">
                             </label>
                         </li>
