@@ -34,7 +34,7 @@ public class NordJyskController extends AbstractCompanyController {
         Search search = new Search("Nordjyske search engine", "Nordjyske", "Grundfos", "/grundfos");
         ModelAndView modelAndView = new ModelAndView("Nordjyske/NordjyskeInterface");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddJSFile("convert-to-html-nordjysk").AddCssFile("nordjyske").finish();
+        fileManager.AddJSFile("convert-to-html-nordjysk").AddCssFile("search-interface").AddCssFile("nordjyske").finish();
         modelAndView.addObject("search", search);
         modelAndView.addObject("ddHash", ddHash);
         /*

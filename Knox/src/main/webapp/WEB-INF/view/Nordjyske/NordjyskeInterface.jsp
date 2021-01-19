@@ -25,9 +25,9 @@
         </div>
 
         <div id="searchbar">
-                <input id="object" class="search_input" type="text" name="object" placeholder="Object..." >
-                <input id="subject" class="search_input" type="text" name="subject" placeholder="Subject..." >
-                <input id="predicate" class="search_input" type="text" name="predicate" placeholder="Predicate..." >
+                <input id="object" class="search_input_split" type="text" name="object" placeholder="Object..." >
+                <input id="subject" class="search_input_split" type="text" name="subject" placeholder="Subject..." >
+                <input id="predicate" class="search_input_split" type="text" name="predicate" placeholder="Predicate..." >
                 <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
                 <a id="search_button" class="button nordjyskesearch">
                     <p>
