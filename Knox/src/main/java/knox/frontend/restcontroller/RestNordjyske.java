@@ -6,12 +6,10 @@ import knox.frontend.model.DummyData;
 import knox.frontend.model.NordjyskeResult;
 import knox.frontend.utility.NordJyskeConnection;
 import knox.frontend.utility.NordJyskeSearchData;
-import org.h2.util.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static org.h2.util.json.JSONValue.*;
 
 @RequestMapping("/api")
 @RestController

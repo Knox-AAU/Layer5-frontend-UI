@@ -8,7 +8,6 @@ import knox.frontend.model.NordjyskeResult;
 import knox.frontend.model.Search;
 import knox.frontend.utility.FileManager;
 import knox.frontend.utility.NordJyskeConnection;
-import org.apache.tools.ant.util.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
