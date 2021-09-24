@@ -167,6 +167,14 @@
         console.log("Searching...");
     });
 
+    $(document).keyup(function (e) {
+        if ($('.search_input').is(":focus") && (e.keyCode == 13)) {
+            var search = {search:document.getElementById("search_input").value };
+            console.log(search);
+            PostCall("grundfossearch",search, SearchCallBack);
+            console.log("Searching...");
+        }
+    });
     function SearchCallBack (result) {
         console.log("CallBack");
         console.log(result);

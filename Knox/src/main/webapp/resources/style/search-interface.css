@@ -59,4 +59,5 @@
     width: 24px;
     height: 24px;
     outline: none;
+    filter: invert(0.4);
 }
