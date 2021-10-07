@@ -49,49 +49,6 @@
 
     <div id="sidebar" class="grundfos">
         <div class="sidebar_wrapper">
-            <div class="sidebar_component">
-                <h2> Sort by</h2>
-                <div class="checkbox">
-                    <ul class="nobullets">
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option1</p>
-                                <input type="radio" id="sdfg" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option2</p>
-                                <input type="radio" id="sdf" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option3</p>
-                                <input type="radio" id="sdg" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option4</p>
-                                <input type="radio" id="sfg" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option5</p>
-                                <input type="radio" id="dfrag" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option6</p>
-                                <input type="radio" id="sg" name="sorting">
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
             <div class="sidebar_component">
                 <h2 > Filter by</h2>
@@ -100,13 +57,13 @@
                         <li>
                             <label>
                                 <p class="sidebar_option_text">Grundfos</p>
-                                <input type="checkbox" id="option1" name="filters">
+                                <input type="checkbox" id="option0" name="filters" onClick="CheckFilters(0)">
                             </label>
                         </li>
                         <li>
                             <label>
                                 <p class="sidebar_option_text">Nordjyske</p>
-                                <input type="checkbox" id="option2" name="filters">
+                                <input type="checkbox" id="option1" name="filters" onClick="CheckFilters(1)">
                             </label>
                         </li>
                     </ul>
@@ -117,6 +74,8 @@
 </div>
 <script>
     var SearchContentWrapper = document.getElementById("searchWrapper")
+    var checkboxes = [false,false];
+
 
     $('#search_button').click(function() {
         var search = {search:document.getElementById("search_input").value };
@@ -131,7 +90,7 @@
             console.log(search);
             PostCall("grundfossearch",search, SearchCallBack);
             console.log("Searching...");
-            CheckFilters();
+            alert(checkboxes);
         }
     });
     function SearchCallBack (result) {
@@ -146,11 +105,14 @@
             SearchContentWrapper.appendChild(manualElements[i]);
         }
     }
-    function CheckFilters(){
-        var checkedValue = document.getElementById("option1").value;
-
-            console.log("Here is checked:" + checkedValue);
-       
+    function CheckFilters(i){
+        var checkbox = document.getElementById("option" + i);
+        if(checkbox.checked == true){
+            checkboxes[i]=true;
+        }
+        else{
+            checkboxes[i]=false;
+        }
     }
 </script>
 </body>
