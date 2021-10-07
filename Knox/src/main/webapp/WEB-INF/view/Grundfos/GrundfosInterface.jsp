@@ -99,56 +99,14 @@
                     <ul class="nobullets">
                         <li>
                             <label>
-                                <p class="sidebar_option_text">Option1</p>
-                                <input type="checkbox" id="foo">
+                                <p class="sidebar_option_text">Grundfos</p>
+                                <input type="checkbox" id="option1" name="filters">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">Option2</p>
-                                <input type="checkbox" id="bar">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option3</p>
-                                <input type="checkbox" id="baz">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option4</p>
-                                <input type="checkbox" id="dfvg">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option5</p>
-                                <input type="checkbox" id="dfg">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option6</p>
-                                <input type="checkbox" id="cvbcvb">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option7</p>
-                                <input type="checkbox" id="b">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option8</p>
-                                <input type="checkbox" id="csdsdb">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option9</p>
-                                <input type="checkbox" id="casasb">
+                                <p class="sidebar_option_text">Nordjyske</p>
+                                <input type="checkbox" id="option2" name="filters">
                             </label>
                         </li>
                     </ul>
@@ -173,6 +131,7 @@
             console.log(search);
             PostCall("grundfossearch",search, SearchCallBack);
             console.log("Searching...");
+            CheckFilters();
         }
     });
     function SearchCallBack (result) {
@@ -186,8 +145,12 @@
         for(var i = 0; i < manualElements.length; i++){
             SearchContentWrapper.appendChild(manualElements[i]);
         }
+    }
+    function CheckFilters(){
+        var checkedValue = document.getElementById("option1").value;
 
-
+            console.log("Here is checked:" + checkedValue);
+       
     }
 </script>
 </body>
