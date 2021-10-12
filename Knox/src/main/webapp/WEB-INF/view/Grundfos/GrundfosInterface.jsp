@@ -49,49 +49,6 @@
 
     <div id="sidebar" class="grundfos">
         <div class="sidebar_wrapper">
-            <div class="sidebar_component">
-                <h2> Sort by</h2>
-                <div class="checkbox">
-                    <ul class="nobullets">
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option1</p>
-                                <input type="radio" id="sdfg" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option2</p>
-                                <input type="radio" id="sdf" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option3</p>
-                                <input type="radio" id="sdg" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option4</p>
-                                <input type="radio" id="sfg" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option5</p>
-                                <input type="radio" id="dfrag" name="sorting">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option6</p>
-                                <input type="radio" id="sg" name="sorting">
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
             <div class="sidebar_component">
                 <h2 > Filter by</h2>
@@ -99,56 +56,14 @@
                     <ul class="nobullets">
                         <li>
                             <label>
-                                <p class="sidebar_option_text">Option1</p>
-                                <input type="checkbox" id="foo">
+                                <p class="sidebar_option_text">Grundfos</p>
+                                <input type="checkbox" id="option0" name="filters" onClick="CheckFilters(0)">
                             </label>
                         </li>
                         <li>
                             <label>
-                                <p class="sidebar_option_text">Option2</p>
-                                <input type="checkbox" id="bar">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option3</p>
-                                <input type="checkbox" id="baz">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option4</p>
-                                <input type="checkbox" id="dfvg">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option5</p>
-                                <input type="checkbox" id="dfg">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option6</p>
-                                <input type="checkbox" id="cvbcvb">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option7</p>
-                                <input type="checkbox" id="b">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option8</p>
-                                <input type="checkbox" id="csdsdb">
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <p class="sidebar_option_text">Option9</p>
-                                <input type="checkbox" id="casasb">
+                                <p class="sidebar_option_text">Nordjyske</p>
+                                <input type="checkbox" id="option1" name="filters" onClick="CheckFilters(1)">
                             </label>
                         </li>
                     </ul>
@@ -159,6 +74,8 @@
 </div>
 <script>
     var SearchContentWrapper = document.getElementById("searchWrapper")
+    var checkboxes = [false,false];
+
 
     $('#search_button').click(function() {
         var search = {search:document.getElementById("search_input").value };
@@ -173,6 +90,7 @@
             console.log(search);
             PostCall("grundfossearch",search, SearchCallBack);
             console.log("Searching...");
+            alert(checkboxes);
         }
     });
     function SearchCallBack (result) {
@@ -186,8 +104,15 @@
         for(var i = 0; i < manualElements.length; i++){
             SearchContentWrapper.appendChild(manualElements[i]);
         }
-
-
+    }
+    function CheckFilters(i){
+        var checkbox = document.getElementById("option" + i);
+        if(checkbox.checked == true){
+            checkboxes[i]=true;
+        }
+        else{
+            checkboxes[i]=false;
+        }
     }
 </script>
 </body>
