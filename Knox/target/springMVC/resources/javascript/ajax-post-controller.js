@@ -22,4 +22,19 @@ function PostCall (functionName, parameters, callBack) {
     });
 }
 
+function GetRequest (searchOptions) {
 
+    $.ajax({
+        type: "GET",
+        url: "127.0.0.1:8081/" + "search?input=test&sources=" + searchOptions
+    });
+}
+
+function searchOptions(options) {
+    let result = "";
+    options.forEach(options => {
+        result += options + ",";
+    });
+
+    return result.substr(0,result.length-1);
+}

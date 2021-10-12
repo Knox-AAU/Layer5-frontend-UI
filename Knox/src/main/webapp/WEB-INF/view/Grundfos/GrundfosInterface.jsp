@@ -57,13 +57,13 @@
                         <li>
                             <label>
                                 <p class="sidebar_option_text">Grundfos</p>
-                                <input type="checkbox" id="option0" name="filters" onClick="CheckFilters(0)">
+                                <input type="checkbox" id="option0" name="Grundfos">
                             </label>
                         </li>
                         <li>
                             <label>
                                 <p class="sidebar_option_text">Nordjyske</p>
-                                <input type="checkbox" id="option1" name="filters" onClick="CheckFilters(1)">
+                                <input type="checkbox" id="option1" name="Nordjyske"">
                             </label>
                         </li>
                     </ul>
@@ -74,12 +74,14 @@
 </div>
 <script>
     var SearchContentWrapper = document.getElementById("searchWrapper")
-    var checkboxes = [false,false];
+    let NumberOfDatasets = 2;
 
 
     $('#search_button').click(function() {
         var search = {search:document.getElementById("search_input").value };
         console.log(search);
+        console.log(search1);
+        console.log(search2);
         PostCall("grundfossearch",search, SearchCallBack);
         console.log("Searching...");
     });
@@ -87,10 +89,8 @@
     $(document).keyup(function (e) {
         if ($('.search_input').is(":focus") && (e.keyCode == 13)) {
             var search = {search:document.getElementById("search_input").value };
-            console.log(search);
-            PostCall("grundfossearch",search, SearchCallBack);
-            console.log("Searching...");
-            alert(checkboxes);
+            //GetRequest(SearchOptions(search));
+            CheckBoxes();
         }
     });
     function SearchCallBack (result) {
@@ -105,15 +105,21 @@
             SearchContentWrapper.appendChild(manualElements[i]);
         }
     }
-    function CheckFilters(i){
-        var checkbox = document.getElementById("option" + i);
-        if(checkbox.checked == true){
-            checkboxes[i]=true;
+
+    function CheckBoxes(){
+        var dict = [];
+
+        for(var i = 0; i<NumberOfDatasets; i++) { //Number of datasets is defined at the top of the script, but should probably be dynamicly calculated in the future
+            let tempobj = document.getElementById("option"+i);
+            dict.push({
+                key: tempobj.getAttribute("name"),
+                value: tempobj.checked
+            });
         }
-        else{
-            checkboxes[i]=false;
-        }
+        console.log(dict);
     }
+
+
 </script>
 </body>
 </html>
