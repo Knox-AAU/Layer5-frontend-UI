@@ -22,19 +22,17 @@ function PostCall (functionName, parameters, callBack) {
     });
 }
 
-function GetRequest (searchOptions) {
+function GetRequest(searchQuery,searchOptions) {
 
     $.ajax({
         type: "GET",
-        url: "127.0.0.1:8081/" + "search?input=test&sources=" + searchOptions
+        url: "127.0.0.1:8081/api/" + "search?input="+searchQuery + "&sources=" + searchOptions,
+        success: function (returnValue) {
+            console.log("success");
+            console.log(returnValue);
+
+            callBack(returnValue);
+        }
     });
 }
 
-function searchOptions(options) {
-    let result = "";
-    options.forEach(options => {
-        result += options + ",";
-    });
-
-    return result.substr(0,result.length-1);
-}
