@@ -60,3 +60,11 @@
     outline: none;
     filter: invert(0.4);
 }
+
+.articletitle{
+    font-size: 2em;
+}
+
+.articletitle:hover{
+    text-decoration:underline;
+}
