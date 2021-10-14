@@ -46,9 +46,9 @@
 
             <!--AUTHOR SKAL MÅSKE SLETTES?-->
             <div class="sidebar_component">
-                <h2>Author: </h2>
-                <p>${article.author}</p>
-            </div>
+            <h2>Author: </h2>
+            <p>${article.author}</p>
+        </div>
 
             <div class="sidebar_component">
                 <h2>Model: </h2>

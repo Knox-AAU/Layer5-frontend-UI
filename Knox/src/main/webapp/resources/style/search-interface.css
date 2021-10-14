@@ -15,9 +15,8 @@
 }
 .searchResult{
     width: 70%;
-    height: 400px;
+    height: auto;
     overflow: hidden;
-    background: linear-gradient(0deg, rgb(191, 191, 191) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%);
     margin-top: 100px;
     display: block;
 }

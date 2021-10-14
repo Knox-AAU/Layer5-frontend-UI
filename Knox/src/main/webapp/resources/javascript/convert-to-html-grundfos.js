@@ -11,30 +11,32 @@ function convertGrundfosToHtml(input){
 
         console.log("this is the converter");
         // Create Link
-        var returnElement = document.createElement("a");
+ /*       var returnElement = document.createElement("a");
         returnElement.classList.add("button_link");
-        returnElement.classList.add("searchResult");
-        returnElement.href = "/knox/grundfos/search?article=";
+        returnElement.classList.add("searchResult");*/
         // Create Wrapper
         var wrapper = document.createElement("div");
-        returnElement.appendChild(wrapper);
+        wrapper.classList.add("button_link");
+        wrapper.classList.add("searchResult");
+        //returnElement.appendChild(wrapper);
         // Create Title
-        var title = document.createElement("h1");
+        var title = document.createElement("a");
         title.innerHTML = pdfpage.title;
         title.classList.add("articletitle");
+        title.href = "/knox/grundfos/search?article=";
         wrapper.appendChild(title);
         // Create SubTitle
-        var score = document.createElement("h2");
+       /* var score = document.createElement("h2");
         score.innerHTML = pdfpage.score;
         score.classList.add("score");
-        wrapper.appendChild(score);
+        wrapper.appendChild(score);*/
         // Create Author
         var filepath = document.createElement("p");
         filepath.innerHTML = pdfpage.filepath;
         filepath.classList.add("filepath");
         wrapper.appendChild(filepath);
 
-        manualElement.push(returnElement);
+        manualElement.push(wrapper);
 
     }
     console.log("manualElement: ");

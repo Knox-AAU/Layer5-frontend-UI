@@ -16,7 +16,7 @@
     <div class="maincontent">
         <div id="headlineWrapper">
             <div id="headline">
-                <h1>Grundfos</h1>
+                <h1>Search Engine</h1>
             </div>
         </div>
         <div id="searchbar">
@@ -51,7 +51,7 @@
         <div class="sidebar_wrapper">
 
             <div class="sidebar_component">
-                <h2 > Filter by</h2>
+                <h2 > Filter Datasets</h2>
                 <div class="checkbox">
                     <ul class="nobullets">
                         <li>
@@ -89,9 +89,8 @@
         if ($('.search_input').is(":focus") && (e.keyCode == 13)) {
             var search = {search:document.getElementById("search_input").value };
             var CheckBoxResults = CheckBoxes();
-            alert(CheckBoxResults);
             console.log(CheckBoxResults);
-            GetRequest(search,CheckBoxResults);
+            GetRequest(search,CheckBoxResults,SearchCallBack);
         }
     });
 

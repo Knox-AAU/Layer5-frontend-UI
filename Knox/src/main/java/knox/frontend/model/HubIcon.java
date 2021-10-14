@@ -36,13 +36,13 @@ public class HubIcon {
     }
     public static HubIcon CreateGrundfosIcon (){
         String imagePath = "/resources/icons/Grundfos.png";
-        String title = "Grundfos";
+        String title = "Search Engine";
         String link = "grundfos";
         return new HubIcon(imagePath,title,link);
     }
     public static HubIcon CreateNordJyskeIcon (){
         String imagePath = "/resources/icons/NordJyske2.png";
-        String title = "Nordjyske";
+        String title = "Fact Checker";
         String link = "nordjyske";
         return new HubIcon(imagePath,title,link);
     }

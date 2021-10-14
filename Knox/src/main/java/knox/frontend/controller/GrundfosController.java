@@ -20,7 +20,7 @@ public class GrundfosController extends  AbstractCompanyController {
     public ModelAndView GetSearchPage(@RequestParam(name = "searched", defaultValue = "") String searchname){
 
         System.out.println("Grundfos");
-        Search search = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "/nordjyske");
+        Search search = new Search("search engine", "Search Engine", "Nordjyske", "/nordjyske");
         ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosInterface");
         modelAndView.setViewName("Grundfos/GrundfosInterface");
         FileManager fileManager = new FileManager(modelAndView.getModelMap());

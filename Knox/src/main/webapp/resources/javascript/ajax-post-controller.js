@@ -22,8 +22,7 @@ function PostCall (functionName, parameters, callBack) {
     });
 }
 
-function GetRequest(searchQuery,searchOptions) {
-
+function GetRequest(searchQuery,searchOptions, callBack) {
     $.ajax({
         type: "GET",
         url: "127.0.0.1:8081/api/" + "search?input="+searchQuery + "&sources=" + searchOptions,
@@ -32,6 +31,10 @@ function GetRequest(searchQuery,searchOptions) {
             console.log(returnValue);
 
             callBack(returnValue);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log (XMLHttpRequest);
+            alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
         }
     });
 }
