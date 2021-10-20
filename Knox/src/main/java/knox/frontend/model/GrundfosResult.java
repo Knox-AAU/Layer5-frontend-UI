@@ -1,4 +1,3 @@
 package knox.frontend.model;
 
-public class GrundfosResult {
-}
+public class GrundfosResult {}

@@ -1,4 +1,4 @@
-:root{
+:root {
     --main-color: #acacff;
     --main-color-dark: #7777bc;
     --secondary-color: #c1c1c1;
@@ -9,6 +9,6 @@
     --sidebar-keyword-hover: #a7a7a7;
 
 
-    --scrollbar-thump : #152d60;
-    --scrollbar : #6e87ec;
+    --scrollbar-thump: #152d60;
+    --scrollbar: #6e87ec;
 }

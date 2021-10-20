@@ -7,18 +7,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GrundfosConnection extends AbstractConnection {
-    String ip = "localhost";
-    String port = "8081";
-    @Override
-    public String CreateURL(String methodName) {
-        return "http://" + ip +":"+ port +"/" + methodName;
-    }
+  String ip = "localhost";
+  String port = "8081";
 
-    public String Search (GrundfosSearchData search) {
-        NameValuePair parameter = new BasicNameValuePair("input", search.getSearch());
-        List<NameValuePair> parameters = new ArrayList<>();
-        parameters.add(parameter);
+  @Override
+  public String CreateURL(String methodName) {
+    return "http://" + ip + ":" + port + "/" + methodName;
+  }
 
-        return Request("search",parameters);
-    }
+  public String Search(GrundfosSearchData search) {
+    NameValuePair parameter = new BasicNameValuePair("input", search.getSearch());
+    List<NameValuePair> parameters = new ArrayList<>();
+    parameters.add(parameter);
+
+    return Request("search", parameters);
+  }
 }

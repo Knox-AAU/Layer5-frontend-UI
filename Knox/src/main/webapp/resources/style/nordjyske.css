@@ -1,4 +1,4 @@
-:root{
+:root {
     --main-color: #FC975E;
     --main-color-dark: #a9653d;
     --secondary-color: #c1c1c1;
@@ -9,8 +9,8 @@
     --sidebar-keyword-hover: #a7a7a7;
 
 
-    --scrollbar-thump : #9d4500;
-    --scrollbar : #F5F5F5;
+    --scrollbar-thump: #9d4500;
+    --scrollbar: #F5F5F5;
 }
 
 .nordjyskesearch {

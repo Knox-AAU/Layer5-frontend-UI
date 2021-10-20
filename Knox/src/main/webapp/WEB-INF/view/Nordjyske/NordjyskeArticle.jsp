@@ -9,9 +9,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@ include file="../common/html_head.jspf"%>
+<%@ include file="../common/html_head.jspf" %>
 <body>
-<%@ include file="../common/header.jspf"%>
+<%@ include file="../common/header.jspf" %>
 
 <div id="articleWrapper">
     <div id="article">
@@ -25,15 +25,15 @@
 
 <div id="sidebar" class="nordjyske">
 
-    <div id="relatedSidebar"  class="sidebar_component">
+    <div id="relatedSidebar" class="sidebar_component">
         <h2>Related articles: </h2>
 
         <c:forEach items="${article.relatedArticles}" var="relatedArtId">
-            <a href ="/knox/nordjyske/search?article=${relatedArtId}" class="button_link relatedArtItem">
-            <div>
-                <h3>${ddHash.get(relatedArtId).title}</h3>
-                <p>${ddHash.get(relatedArtId).subtitle}</p>
-            </div>
+            <a href="/knox/nordjyske/search?article=${relatedArtId}" class="button_link relatedArtItem">
+                <div>
+                    <h3>${ddHash.get(relatedArtId).title}</h3>
+                    <p>${ddHash.get(relatedArtId).subtitle}</p>
+                </div>
 
             </a>
 
@@ -42,17 +42,16 @@
     </div>
 
 
-
-    <div id="authorSidebar"  class="sidebar_component">
+    <div id="authorSidebar" class="sidebar_component">
         <h2>Author: </h2>
         <p>${article.author}</p>
     </div>
     <div class="keywords sidebar_component">
-            <h2>Keyword: </h2>
-            <c:forEach items="${article.keywords}" var="keyword">
-                <p>${keyword}</p>
-            </c:forEach>
-        </div>
+        <h2>Keyword: </h2>
+        <c:forEach items="${article.keywords}" var="keyword">
+            <p>${keyword}</p>
+        </c:forEach>
+    </div>
 </div>
 
 </body>

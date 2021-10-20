@@ -18,18 +18,18 @@
     <mvc:resources mapping="/resources/**" location="/resources/"
                    cache-period="31556926"/>
 
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
     <!-- Set up intercepters-->
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/grundfos"/>
             <mvc:mapping path="/grundfos/*"/>
-            <bean  id="GrundfosInterceptor" class="knox.frontend.interceptor.GrundfosInterceptor"/>
+            <bean id="GrundfosInterceptor" class="knox.frontend.interceptor.GrundfosInterceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/nordjyske*"/>
-            <bean  id="NordJyskeInterceptor" class="knox.frontend.interceptor.NordJyskeInterceptor"/>
+            <bean id="NordJyskeInterceptor" class="knox.frontend.interceptor.NordJyskeInterceptor"/>
         </mvc:interceptor>
         <bean id="BaseInterceptor" class="knox.frontend.interceptor.BaseInterceptor"/>
     </mvc:interceptors>

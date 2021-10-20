@@ -16,14 +16,15 @@ function DropDown(id) {
     }
 }
 
-function DropDown_Open (dropdownelement) {
+function DropDown_Open(dropdownelement) {
     if (dropdownelement.onOpen) {
         dropdownelement.onOpen();
     }
     dropdownelement.Status = STATUS.SHOWN;
     dropdownelement.HTMLElement.style.maxHeight = "" + dropdownelement.HTMLElement.scrollHeight;
 }
-function DropDown_Close (dropdownelement) {
+
+function DropDown_Close(dropdownelement) {
     if (dropdownelement.onClose) {
         dropdownelement.onClose();
     }
@@ -32,7 +33,7 @@ function DropDown_Close (dropdownelement) {
 }
 
 
-function InitiateDropDown (id, wrapper_id) {
+function InitiateDropDown(id, wrapper_id) {
     var HtmlElement = document.getElementById(id);
     var WrapperHtmlElement = document.getElementById(wrapper_id);
     var DropDownElement = {
@@ -49,20 +50,21 @@ function InitiateDropDown (id, wrapper_id) {
     return DropDownElement;
 }
 
-function GetDropDownElementByID (id) {
-    for (var i = 0; i < DropDownElements.length; i ++){
+function GetDropDownElementByID(id) {
+    for (var i = 0; i < DropDownElements.length; i++) {
         var Element = DropDownElements[i];
-        if (id === Element.HTMLElement.id){
+        if (id === Element.HTMLElement.id) {
             return Element;
         }
     }
 }
-$(document).click(function(event) {
+
+$(document).click(function (event) {
     var pressedElement = event.target;
-    for (var i = 0; i < DropDownElements.length; i ++){
+    for (var i = 0; i < DropDownElements.length; i++) {
         var DropDownElement = DropDownElements[i];
-        if (DropDownElement.Status === STATUS.SHOWN){
-            if (!DropDownElement.Wrapper.contains(pressedElement)){
+        if (DropDownElement.Status === STATUS.SHOWN) {
+            if (!DropDownElement.Wrapper.contains(pressedElement)) {
                 DropDown_Close(DropDownElement);
             }
         }

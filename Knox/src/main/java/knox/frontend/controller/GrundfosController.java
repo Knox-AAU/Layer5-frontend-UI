@@ -12,41 +12,42 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RequestMapping(value = "/grundfos")
 @Controller
-public class GrundfosController extends  AbstractCompanyController {
-    //ModelAndView modelAndView = new ModelAndView();
-    //FileManager fileManager = new FileManager(modelAndView.getModelMap());
+public class GrundfosController extends AbstractCompanyController {
+  // ModelAndView modelAndView = new ModelAndView();
+  // FileManager fileManager = new FileManager(modelAndView.getModelMap());
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView GetSearchPage(@RequestParam(name = "searched", defaultValue = "") String searchname){
+  @RequestMapping(method = RequestMethod.GET)
+  public ModelAndView GetSearchPage(
+      @RequestParam(name = "searched", defaultValue = "") String searchname) {
 
-        System.out.println("Grundfos");
-        Search search = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "/nordjyske");
-        ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosInterface");
-        modelAndView.setViewName("Grundfos/GrundfosInterface");
-        FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddJSFile("convert-to-html-grundfos").AddCssFile("search-interface").finish();
-        modelAndView.addObject("search", search);
-        modelAndView.addObject("ddHash", ddHash);
+    System.out.println("Grundfos");
+    Search search = new Search("Grundfos search engine", "Grundfos", "Nordjyske", "/nordjyske");
+    ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosInterface");
+    modelAndView.setViewName("Grundfos/GrundfosInterface");
+    FileManager fileManager = new FileManager(modelAndView.getModelMap());
+    fileManager.AddJSFile("convert-to-html-grundfos").AddCssFile("search-interface").finish();
+    modelAndView.addObject("search", search);
+    modelAndView.addObject("ddHash", ddHash);
 
-/*
-        GrundfosConnection gc = new GrundfosConnection();
-        String result = gc.Search(searchname);
-        System.out.println("Result grundfoss for " + searchname + ": " + result);
-*/
+    /*
+            GrundfosConnection gc = new GrundfosConnection();
+            String result = gc.Search(searchname);
+            System.out.println("Result grundfoss for " + searchname + ": " + result);
+    */
 
-        return modelAndView;
-    }
+    return modelAndView;
+  }
 
-    @RequestMapping(value = "/search")
-    public ModelAndView GetArticlePage(@RequestParam(name = "article") int articleId){
-        System.out.println("Hello there, Grundfos. Article id: " + articleId);
-        ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosArticle");
+  @RequestMapping(value = "/search")
+  public ModelAndView GetArticlePage(@RequestParam(name = "article") int articleId) {
+    System.out.println("Hello there, Grundfos. Article id: " + articleId);
+    ModelAndView modelAndView = new ModelAndView("Grundfos/GrundfosArticle");
 
-        FileManager fileManager = new FileManager(modelAndView.getModelMap());
-        fileManager.AddCssFile("article").finish();
+    FileManager fileManager = new FileManager(modelAndView.getModelMap());
+    fileManager.AddCssFile("article").finish();
 
-        modelAndView.addObject("article", ddHash.get(articleId));
-        modelAndView.addObject("ddHash", ddHash);
-        return modelAndView;
-    }
+    modelAndView.addObject("article", ddHash.get(articleId));
+    modelAndView.addObject("ddHash", ddHash);
+    return modelAndView;
+  }
 }

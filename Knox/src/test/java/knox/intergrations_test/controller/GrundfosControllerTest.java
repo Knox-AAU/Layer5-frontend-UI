@@ -17,13 +17,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(GrundfosController.class)
 @Import(GrundfosController.class)
 class GrundfosControllerTest {
-    @Autowired
-    private MockMvc mvc;
+  @Autowired private MockMvc mvc;
 
-    @Test
-    void GrundfosPageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/grundfos");
-        // Make Request
-        mvc.perform(request).andExpect(status().isOk());
-    }
+  @Test
+  void GrundfosPageAccessible() throws Exception {
+    MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/grundfos");
+    // Make Request
+    mvc.perform(request).andExpect(status().isOk());
+  }
 }

@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 @RestController
 public class RestGrundfos {
-    @PostMapping(value = "/grundfossearch", consumes = "application/json")
-    @ResponseBody
-    public String search(@RequestBody String search) throws JsonProcessingException {
-        final ObjectMapper objectMapper = new ObjectMapper();
-        GrundfosConnection gc = new GrundfosConnection();
-        GrundfosSearchData grundfosSearchData = objectMapper.readValue(search, GrundfosSearchData.class);
-        String result = gc.Search(grundfosSearchData);
-        return result;
-    }
+  @PostMapping(value = "/grundfossearch", consumes = "application/json")
+  @ResponseBody
+  public String search(@RequestBody String search) throws JsonProcessingException {
+    final ObjectMapper objectMapper = new ObjectMapper();
+    GrundfosConnection gc = new GrundfosConnection();
+    GrundfosSearchData grundfosSearchData =
+        objectMapper.readValue(search, GrundfosSearchData.class);
+    String result = gc.Search(grundfosSearchData);
+    return result;
+  }
 }

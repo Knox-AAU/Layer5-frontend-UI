@@ -17,71 +17,81 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
 // Most of this class is based on: https://www.baeldung.com/spring-security-login
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-    public static class ROLES {
-        public final static String ADMIN = "ADMIN";
-        public final static String NORDJYSKE = "NordjyskeUser";
-        public final static String GRUNDFOS = "GrundfosUser";
-    }
+  public static class ROLES {
+    public static final String ADMIN = "ADMIN";
+    public static final String NORDJYSKE = "NordjyskeUser";
+    public static final String GRUNDFOS = "GrundfosUser";
+  }
 
-    @Autowired
-    public void configureGlobalSecurity( final AuthenticationManagerBuilder auth) // This is where to create users, each with a "WithUser()" statement
-            throws Exception {
-        System.out.println("GlobalSecurity");
-        auth.inMemoryAuthentication().withUser("both").password("both").roles(ROLES.ADMIN, ROLES.GRUNDFOS,ROLES.NORDJYSKE)
-       .and().withUser("grundfos").password("grundfos").roles(ROLES.GRUNDFOS)
-       .and().withUser("nordjyske").password("nordjyske").roles(ROLES.NORDJYSKE);
-    }
+  @Autowired
+  public void configureGlobalSecurity(
+      final AuthenticationManagerBuilder
+          auth) // This is where to create users, each with a "WithUser()" statement
+      throws Exception {
+    System.out.println("GlobalSecurity");
+    auth.inMemoryAuthentication()
+        .withUser("both")
+        .password("both")
+        .roles(ROLES.ADMIN, ROLES.GRUNDFOS, ROLES.NORDJYSKE)
+        .and()
+        .withUser("grundfos")
+        .password("grundfos")
+        .roles(ROLES.GRUNDFOS)
+        .and()
+        .withUser("nordjyske")
+        .password("nordjyske")
+        .roles(ROLES.NORDJYSKE);
+  }
 
+  @Override
+  public void configure(WebSecurity web) throws Exception {
+    web.ignoring().antMatchers("/resources/**").antMatchers("/publics/**");
+  }
 
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web
-                .ignoring()
-                .antMatchers("/resources/**")
-                .antMatchers("/publics/**");
-    }
+  @Override
+  protected void configure(HttpSecurity http)
+      throws Exception { // This is where to create security protocols
+    System.out.println("Security configure");
+    http.csrf()
+        .disable()
+        .authorizeRequests()
+        .antMatchers("/login")
+        .permitAll()
+        .antMatchers("/grundfos", "/grundfos/search")
+        .hasRole(ROLES.GRUNDFOS)
+        .antMatchers("/nordjyske", "/nordjyske/search")
+        .hasRole(ROLES.NORDJYSKE)
+        .anyRequest()
+        .authenticated()
+        .and() // and() seems to break passages apart, distincting them from eachother
+        .formLogin()
+        .loginPage("/login") // Link to the view used as login
+        .loginProcessingUrl("/login") // The url, which handles login
+        .defaultSuccessUrl("/")
+        .failureUrl("/login")
+        .failureHandler(FailureHandler());
 
+    /*              Since no Logout functionality is currently in place, this part of the code crashes it.
+                    .and()
+                    .logout() // Currently not implemented
+                    .logoutUrl("/Logout")
+                    .deleteCookies("JSESSIONID")
+                    .logoutSuccessHandler(LogoutHandler());
+    */
+  }
 
-    @Override
-    protected void configure( HttpSecurity http) throws Exception { // This is where to create security protocols
-        System.out.println("Security configure");
-        http.csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/login").permitAll()
-                .antMatchers("/grundfos","/grundfos/search").hasRole(ROLES.GRUNDFOS)
-                .antMatchers("/nordjyske", "/nordjyske/search").hasRole(ROLES.NORDJYSKE)
+  public AuthenticationFailureHandler FailureHandler() {
+    return null;
 
-                .anyRequest().authenticated()
+    // not implemented yet
+  }
 
-                .and()                      // and() seems to break passages apart, distincting them from eachother
-                .formLogin()
-                .loginPage("/login")                      //Link to the view used as login
-                .loginProcessingUrl("/login")           // The url, which handles login
-                .defaultSuccessUrl("/")
-                .failureUrl("/login")
-                .failureHandler(FailureHandler());
-
-/*              Since no Logout functionality is currently in place, this part of the code crashes it.
-                .and()
-                .logout() // Currently not implemented
-                .logoutUrl("/Logout")
-                .deleteCookies("JSESSIONID")
-                .logoutSuccessHandler(LogoutHandler());
-*/
-    }
-
-    public AuthenticationFailureHandler FailureHandler(){
-        return null;
-
-        // not implemented yet
-    }
-    public LogoutSuccessHandler LogoutHandler(){
-        // not implemented yet
-        return null;
-    }
+  public LogoutSuccessHandler LogoutHandler() {
+    // not implemented yet
+    return null;
+  }
 }

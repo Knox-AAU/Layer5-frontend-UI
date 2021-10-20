@@ -6,19 +6,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
-<%@ include file="../common/html_head.jspf"%>
+<%@ include file="../common/html_head.jspf" %>
 <body>
 
-<%@ include file="../common/header.jspf"%>
+<%@ include file="../common/header.jspf" %>
 
 <div class="maincontent_wrapper">
     <div class="maincontent">
         <h1 class="Login_Welcome" style="text-align: center">Welcome!</h1>
         <div class="Credentials-table">
             <h3>Please enter credentials</h3>
-            <h2 class="userFeedback-Field" id="Feedback" >${UserFeedback}</h2>
+            <h2 class="userFeedback-Field" id="Feedback">${UserFeedback}</h2>
             <form id="LoginForm" method="post">
                 <div class="LoginForm_Input_Wrapper">
                     <p>Username</p>

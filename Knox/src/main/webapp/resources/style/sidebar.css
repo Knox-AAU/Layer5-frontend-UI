@@ -1,4 +1,4 @@
-#sidebar{
+#sidebar {
     width: 20%;
     display: inline-block;
     height: auto;
@@ -10,15 +10,17 @@
     bottom: 0; */
     background: var(--main-color);
 }
+
 .sidebar_wrapper {
     margin-bottom: 20px;
 }
-#relatedSidebar{
+
+#relatedSidebar {
     height: 50%;
     overflow-y: auto;
 }
 
-.sidebar_component{
+.sidebar_component {
 
     margin: auto;
     margin-top: 20px;
@@ -32,13 +34,14 @@
 
     position: relative;
 }
-.sidebar_component h2{
+
+.sidebar_component h2 {
     margin-top: 10px;
     color: var(--text-h2);
 }
-.sidebar_component p{
-}
 
+.sidebar_component p {
+}
 
 
 .checkbox label {
@@ -56,8 +59,7 @@
 }
 
 
-
-.relatedArtItem{
+.relatedArtItem {
     border-radius: 10px;
     padding: 7px;
     margin-bottom: 7px;
@@ -65,15 +67,13 @@
     background: var(--secondary-color);
 }
 
-#relatedSidebar h3{
+#relatedSidebar h3 {
     font-size: larger;
     margin: 0px;
 }
 
 
-
-
-.keywords p{
+.keywords p {
     background: var(--secondary-color);
     display: inline-block;
     border-radius: 10px;
@@ -81,11 +81,11 @@
     margin: 3px;
 }
 
-.keywords p:hover{
+.keywords p:hover {
     background: var(--sidebar-keyword-hover);
     cursor: default;
 }
 
-.sidebar_option_text{
+.sidebar_option_text {
     margin: 0;
 }

@@ -1,11 +1,9 @@
-
-
-function convertGrundfosToHtml(input){
+function convertGrundfosToHtml(input) {
 
     var manuals = JSON.parse(input).result;
     var manualElement = [];
 
-    for(var i = 0; i < manuals.length; i++){
+    for (var i = 0; i < manuals.length; i++) {
         var pdfpage = manuals[i];
         console.log(pdfpage);
 

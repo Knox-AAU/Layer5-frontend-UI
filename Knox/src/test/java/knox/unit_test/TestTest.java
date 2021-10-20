@@ -10,9 +10,9 @@ import static org.junit.Assert.assertThat;
 @RunWith(SpringRunner.class)
 public class TestTest {
 
-    @Test
-    public void TestTesting () {
-        boolean test = true;
-        assertEquals(test,true);
-    }
+  @Test
+  public void TestTesting() {
+    boolean test = true;
+    assertEquals(test, true);
+  }
 }

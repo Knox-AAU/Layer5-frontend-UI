@@ -9,10 +9,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@ include file="../common/html_head.jspf"%>
+<%@ include file="../common/html_head.jspf" %>
 
 <body>
-<%@ include file="../common/header.jspf"%>
+<%@ include file="../common/header.jspf" %>
 
 <!-- Main content of the page -->
 
@@ -25,18 +25,18 @@
         </div>
 
         <div id="searchbar">
-                <input id="object" class="search_input_split" type="text" name="object" placeholder="Object..." >
-                <input id="subject" class="search_input_split" type="text" name="subject" placeholder="Subject..." >
-                <input id="predicate" class="search_input_split" type="text" name="predicate" placeholder="Predicate..." >
-                <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
-                <a id="search_button" class="button nordjyskesearch">
-                    <p>
-                        Search
-                    </p>
-                    <img src="${search_solid}">
-                </a>
+            <input id="object" class="search_input_split" type="text" name="object" placeholder="Object...">
+            <input id="subject" class="search_input_split" type="text" name="subject" placeholder="Subject...">
+            <input id="predicate" class="search_input_split" type="text" name="predicate" placeholder="Predicate...">
+            <spring:url value="/resources/icons/search-solid.svg" var="search_solid"/>
+            <a id="search_button" class="button nordjyskesearch">
+                <p>
+                    Search
+                </p>
+                <img src="${search_solid}">
+            </a>
 
-                <!--<input class="search_icon"   type="image" src="${search_solid}" name="submit" value="submit"> -->
+            <!--<input class="search_icon"   type="image" src="${search_solid}" name="submit" value="submit"> -->
 
         </div>
 
@@ -59,7 +59,7 @@
     <div id="sidebar" class="nordjyske">
         <div class="sidebar_wrapper">
             <div class="sidebar_component">
-                <h2 > Sort by</h2>
+                <h2> Sort by</h2>
                 <div class="checkbox">
                     <ul class="nobullets">
                         <li>
@@ -103,7 +103,7 @@
             </div>
 
             <div class="sidebar_component">
-                <h2 > Filter by</h2>
+                <h2> Filter by</h2>
                 <div class="checkbox">
                     <ul class="nobullets">
                         <li>
@@ -168,22 +168,21 @@
 </div>
 
 
-
 </body>
 <script>
     var SearchContentWrapper = document.getElementById("searchWrapper")
 
-    $('#search_button').click(function() {
+    $('#search_button').click(function () {
         var object = document.getElementById("object").value;
         var subject = document.getElementById("subject").value;
         var predicate = document.getElementById("predicate").value;
-        var search = {object:object,subject:subject, predicate:predicate};
+        var search = {object: object, subject: subject, predicate: predicate};
         console.log(search);
-        PostCall("nordjysksearch",search, SearchCallBack);
+        PostCall("nordjysksearch", search, SearchCallBack);
         console.log("Searching...");
     });
 
-    function SearchCallBack (result) {
+    function SearchCallBack(result) {
         console.log("CallBack");
         console.log(result);
         var articalElement = convertNordjyskeToHtml(result);
@@ -191,7 +190,7 @@
         // Clear current search result
         SearchContentWrapper.innerHTML = '';
         // Add search result
-        for (var i = 0; i < articalElement.length; i++){
+        for (var i = 0; i < articalElement.length; i++) {
             SearchContentWrapper.appendChild(articalElement[i]);
         }
     }

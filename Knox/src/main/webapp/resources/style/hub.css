@@ -18,25 +18,29 @@
     height: fit-content;
     position: relative;
 }
-    .hubicon img {
-        width: 100%;
-    }
-    .hubicon div {
-        width: 100%;
-        max-height: 0;
-        position: absolute;
-        bottom: 0;
-        overflow: hidden;
-        background-color: rgba(191, 191, 191, 0.71);
-        transition: max-height 0.2s;
-        color: white;
-    }
-        .hubicon:hover div {
-            max-height: 200px;
-        }
-    .hubicon div p {
-        text-align: center;
-        font-weight: bold;
-        font-size: 20px;
-        margin:  5px auto;
-    }
+
+.hubicon img {
+    width: 100%;
+}
+
+.hubicon div {
+    width: 100%;
+    max-height: 0;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    background-color: rgba(191, 191, 191, 0.71);
+    transition: max-height 0.2s;
+    color: white;
+}
+
+.hubicon:hover div {
+    max-height: 200px;
+}
+
+.hubicon div p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px auto;
+}

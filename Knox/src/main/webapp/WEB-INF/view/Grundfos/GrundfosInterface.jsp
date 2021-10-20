@@ -9,9 +9,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@ include file="../common/html_head.jspf"%>
+<%@ include file="../common/html_head.jspf" %>
 <body>
-<%@ include file="../common/header.jspf"%>
+<%@ include file="../common/header.jspf" %>
 <div class="maincontent_wrapper">
     <div class="maincontent">
         <div id="headlineWrapper">
@@ -20,11 +20,11 @@
             </div>
         </div>
         <div id="searchbar">
-                <input id="search_input" class="search_input" type="text" name="searched" placeholder="Search..." >
-                <spring:url value="/resources/icons/search-solid.svg" var="search_solid" />
-                <a id="search_button" class="search_icon button_link">
-                    <img src="${search_solid}">
-                </a>
+            <input id="search_input" class="search_input" type="text" name="searched" placeholder="Search...">
+            <spring:url value="/resources/icons/search-solid.svg" var="search_solid"/>
+            <a id="search_button" class="search_icon button_link">
+                <img src="${search_solid}">
+            </a>
         </div>
         <div id="searchWrapper">
             <!--
@@ -43,8 +43,6 @@
             -->
         </div>
     </div>
-
-
 
 
     <div id="sidebar" class="grundfos">
@@ -94,7 +92,7 @@
             </div>
 
             <div class="sidebar_component">
-                <h2 > Filter by</h2>
+                <h2> Filter by</h2>
                 <div class="checkbox">
                     <ul class="nobullets">
                         <li>
@@ -160,22 +158,23 @@
 <script>
     var SearchContentWrapper = document.getElementById("searchWrapper")
 
-    $('#search_button').click(function() {
-        var search = {search:document.getElementById("search_input").value };
+    $('#search_button').click(function () {
+        var search = {search: document.getElementById("search_input").value};
         console.log(search);
-        PostCall("grundfossearch",search, SearchCallBack);
+        PostCall("grundfossearch", search, SearchCallBack);
         console.log("Searching...");
     });
 
     $(document).keyup(function (e) {
         if ($('.search_input').is(":focus") && (e.keyCode == 13)) {
-            var search = {search:document.getElementById("search_input").value };
+            var search = {search: document.getElementById("search_input").value};
             console.log(search);
-            PostCall("grundfossearch",search, SearchCallBack);
+            PostCall("grundfossearch", search, SearchCallBack);
             console.log("Searching...");
         }
     });
-    function SearchCallBack (result) {
+
+    function SearchCallBack(result) {
         console.log("CallBack");
         console.log(result);
         var manualElements = convertGrundfosToHtml(result);
@@ -183,7 +182,7 @@
         // Clear current search result
         SearchContentWrapper.innerHTML = '';
         // Add search result
-        for(var i = 0; i < manualElements.length; i++){
+        for (var i = 0; i < manualElements.length; i++) {
             SearchContentWrapper.appendChild(manualElements[i]);
         }
 

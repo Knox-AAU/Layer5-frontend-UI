@@ -1,4 +1,4 @@
-function convertNordjyskeToHtml(input){
+function convertNordjyskeToHtml(input) {
 
     var articles = JSON.parse(input);
     var articleElement = [];
@@ -12,7 +12,7 @@ function convertNordjyskeToHtml(input){
     document.getElementById("Date").innerHTML = article.date;
     document.getElementById("ArticleText").innerHTML = article.articleText;
 */
-    for (var i = 0; i < articles.length; i++){
+    for (var i = 0; i < articles.length; i++) {
         var article = articles[i];
         // Create Link
         var returnElement = document.createElement("a");

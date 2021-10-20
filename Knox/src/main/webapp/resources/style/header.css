@@ -1,5 +1,5 @@
 
-#backbtn{
+#backbtn {
     width: 40px;
     margin-left: 20px;
 }
@@ -12,16 +12,18 @@
     top: 0;
     z-index: 1000;
 
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .header_content {
     max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
 }
+
 .header_left_side, .header_right_side {
     display: flex;
     align-items: center;
@@ -34,11 +36,13 @@
     margin: 0;
     margin-right: 20px;
 }
+
 .header_username {
     color: white;
     font-size: 20px;
     margin: 0;
 }
+
 .header_username_wrapper {
     border-width: 0px;
     border-left-width: 3px;
@@ -47,7 +51,7 @@
     border-color: white;
 }
 
-.header_icon_wrapper{
+.header_icon_wrapper {
     margin-right: 15px;
 }
 
@@ -58,11 +62,13 @@
     /* justify-content: center; */
     align-items: center;
 }
-.databaseicon{
+
+.databaseicon {
     height: 25px;
     width: auto;
     padding: 5px;
 }
+
 .database_selector div {
 
     padding: 5px;
@@ -72,17 +78,21 @@
     display: flex;
     align-items: center;
 }
-.database_selector div:hover{
+
+.database_selector div:hover {
     background-color: var(--main-color-dark);
 }
+
 .database_selector div p {
     margin: 0;
 }
+
 #dropdownarrow {
     width: 16px;
     height: auto;
     padding: 5px;
 }
+
 #database_dropdown {
     position: absolute;
     top: 40px;
@@ -91,13 +101,15 @@
     border-radius: 1px;
 
     display: inline-block;
-    -webkit-box-shadow: 4px 4px 10px -4px rgba(99,99,99,1);
-    -moz-box-shadow: 4px 4px 10px -4px rgba(99,99,99,1);
-    box-shadow: 4px 4px 10px -4px rgba(99,99,99,1);
+    -webkit-box-shadow: 4px 4px 10px -4px rgba(99, 99, 99, 1);
+    -moz-box-shadow: 4px 4px 10px -4px rgba(99, 99, 99, 1);
+    box-shadow: 4px 4px 10px -4px rgba(99, 99, 99, 1);
 }
+
 .rotated {
     transform: rotate(0.5turn);
 }
+
 .database_dropdown_item {
     background-color: var(--main-color);
     display: block;
@@ -105,13 +117,16 @@
     border-radius: 2px;
     color: white;
 }
-.database_dropdown_item p{
+
+.database_dropdown_item p {
     margin-left: 5px;
 }
+
 .database_dropdown_item_content {
     display: flex;
     align-items: center;
 }
+
 .database_dropdown_item_content:hover {
     background-color: var(--main-color-dark);
 

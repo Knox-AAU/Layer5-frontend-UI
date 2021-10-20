@@ -1,37 +1,41 @@
 
-
-.Credentials-Fields{
+.Credentials-Fields {
     padding: 5px;
     width: 100px;
     height: 20px;
 }
-.FormDiv{
+
+.FormDiv {
     display: block;
     text-align: center;
 }
-#LoginForm{
+
+#LoginForm {
 }
 
-.Credentials-Cell{
+.Credentials-Cell {
     align-content: center;
     width: 100%;
 
 }
-.Credentials-table{
+
+.Credentials-table {
     display: flex;
     flex-direction: column;
 }
 
-.userFeedback-Field{
+.userFeedback-Field {
     font-size: medium;
     color: #9d2500;
     margin: 0px auto;
 }
+
 .LoginForm_Input_Wrapper {
     display: flex;
     justify-content: space-between;
     padding: 5px;
 }
+
 .Login_Welcome {
     text-align: center;
     color: var(--main-color);
@@ -44,6 +48,7 @@
     margin: auto;
     margin-top: 10px;
 }
+
 .loginbutton:hover {
     background-color: var(--accept-botton-dark);
 }

@@ -17,20 +17,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(HomeController.class)
 @Import(HomeController.class)
 class HelloControllerTest {
-    @Autowired
-    private MockMvc mvc;
+  @Autowired private MockMvc mvc;
 
-    @Test
-    void HomePageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/");
-        // Make Request
-        mvc.perform(request).andExpect(status().isOk());
-    }
+  @Test
+  void HomePageAccessible() throws Exception {
+    MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/");
+    // Make Request
+    mvc.perform(request).andExpect(status().isOk());
+  }
 
-    @Test
-    void TestPageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/test");
-        // Make Request
-        mvc.perform(request).andExpect(status().isOk());
-    }
+  @Test
+  void TestPageAccessible() throws Exception {
+    MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/test");
+    // Make Request
+    mvc.perform(request).andExpect(status().isOk());
+  }
 }

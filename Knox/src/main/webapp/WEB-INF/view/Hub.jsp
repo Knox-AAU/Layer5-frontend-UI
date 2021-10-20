@@ -8,15 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-<%@ include file="common/html_head.jspf"%>
+<%@ include file="common/html_head.jspf" %>
 <body>
-<%@ include file="common/header.jspf"%>
+<%@ include file="common/header.jspf" %>
 <div class="hubcontent_wrapper">
     <div class="hubcontent">
         <!-- Generate the Database Icons -->
         <c:forEach items="${Header.accessibleDatabases}" var="hubicon">
             <a class="button_link hubicon" href="${hubicon.link}">
-                <spring:url value="${hubicon.imagePath}" var="imagePath" />
+                <spring:url value="${hubicon.imagePath}" var="imagePath"/>
                 <img src="${imagePath}">
                 <div>
                     <p>${hubicon.title} </p>

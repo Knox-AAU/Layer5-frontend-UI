@@ -9,9 +9,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@ include file="../common/html_head.jspf"%>
+<%@ include file="../common/html_head.jspf" %>
 <body>
-<%@ include file="../common/header.jspf"%>
+<%@ include file="../common/header.jspf" %>
 
 
 <div class="maincontent_wrapper">
@@ -32,8 +32,8 @@
                 <h2>Related articles: </h2>
 
                 <c:forEach items="${article.relatedArticles}" var="relatedArtId">
-                    <a href ="/knox/grundfos/search?article=${relatedArtId}" class="button_link relatedArtItem">
-                        <div >
+                    <a href="/knox/grundfos/search?article=${relatedArtId}" class="button_link relatedArtItem">
+                        <div>
                             <h3>${ddHash.get(relatedArtId).title}</h3>
                             <p>${ddHash.get(relatedArtId).subtitle}</p>
                         </div>

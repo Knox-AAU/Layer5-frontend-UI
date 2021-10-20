@@ -4,15 +4,14 @@
     <title>Knox ${search.databaseName}</title>
 
     <c:forEach items="${CSSFiles}" var="file">
-        <spring:url value="${file.path}" var="temp" />
+        <spring:url value="${file.path}" var="temp"/>
         <link rel="stylesheet" href="${temp}">
     </c:forEach>
 
     <c:forEach items="${JSFiles}" var="file">
-        <spring:url value="${file.path}" var="temp" />
-        <script src="${temp}" ></script>
+        <spring:url value="${file.path}" var="temp"/>
+        <script src="${temp}"></script>
     </c:forEach>
-
 
 
 </head>

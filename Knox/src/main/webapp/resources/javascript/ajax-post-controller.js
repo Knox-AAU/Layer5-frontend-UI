@@ -1,4 +1,4 @@
-function PostCall (functionName, parameters, callBack) {
+function PostCall(functionName, parameters, callBack) {
 
     var json = JSON.stringify(parameters);
 
@@ -16,7 +16,7 @@ function PostCall (functionName, parameters, callBack) {
             callBack(returnValue);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            console.log (XMLHttpRequest);
+            console.log(XMLHttpRequest);
             alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
         }
     });

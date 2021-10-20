@@ -12,10 +12,10 @@
 
 <html>
 
-<%@ include file="../main/webapp/WEB-INF/view/common/html_head.jspf"%>
+<%@ include file="../main/webapp/WEB-INF/view/common/html_head.jspf" %>
 
 <form:form action="/knox" method="get">
-    <input type="submit" value = "Home">
+    <input type="submit" value="Home">
 </form:form>
 
 <h1>${search.pageTitle}</h1>
@@ -30,13 +30,11 @@
 </form:form>
 
 <form:form action="${search.buttonUrl}">
-    <input type="submit" value = "${search.buttonName}">
+    <input type="submit" value="${search.buttonName}">
 </form:form>
 
 
-
-
 </body>
-<spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter" />
+<spring:url value="/resources/javascript/convert-to-html-nordjysk.js" var="converter"/>
 <script src="${converter}"></script>
 </html>

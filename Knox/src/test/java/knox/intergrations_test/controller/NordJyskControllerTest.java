@@ -17,13 +17,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(NordJyskController.class)
 @Import(NordJyskController.class)
 class NordJyskControllerTest {
-    @Autowired
-    private MockMvc mvc;
+  @Autowired private MockMvc mvc;
 
-    @Test
-    void NordJyskePageAccessible() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/nordjyske");
-        // Make Request
-        mvc.perform(request).andExpect(status().isOk());
-    }
+  @Test
+  void NordJyskePageAccessible() throws Exception {
+    MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/nordjyske");
+    // Make Request
+    mvc.perform(request).andExpect(status().isOk());
+  }
 }
