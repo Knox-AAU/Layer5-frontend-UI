@@ -1,9 +1,7 @@
 package knox.frontend.controller;
 
-import knox.frontend.model.UserData;
 import knox.frontend.model.Search;
 import knox.frontend.utility.FileManager;
-import knox.frontend.utility.GrundfosConnection;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -1,15 +1,11 @@
 package knox.frontend.controller;
 
-import knox.frontend.model.UserData;
 import knox.frontend.model.HubIcon;
 import knox.frontend.utility.FileManager;
-import knox.frontend.utility.Uservalidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import knox.frontend.model.LoginAttempt;
-import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.List;

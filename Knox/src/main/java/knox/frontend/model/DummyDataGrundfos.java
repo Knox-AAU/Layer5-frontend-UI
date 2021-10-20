@@ -28,9 +28,11 @@ public class DummyDataGrundfos {
             + "power factor (PF) appear on the motor nameplate.\n"
             + "The required voltage for Grundfos submersible MS 3\n"
             + "and MSE 3 motors, measured at the motor terminals,\n"
-            + "is –10%/+6% of the nominal voltage during continuous operation (including variation in the supply voltage and losses in cables).\n"
+            + "is –10%/+6% of the nominal voltage during continuous operation (including variation"
+            + " in the supply voltage and losses in cables).\n"
             + "If the pump is connected to an installation where a\n"
-            + "Ground Fault circuit breaker (GFI) is used as additional protection, this circuit breaker must trip out\n"
+            + "Ground Fault circuit breaker (GFI) is used as additional protection, this circuit"
+            + " breaker must trip out\n"
             + "when ground fault currents with DC content\n"
             + "(pulsating DC) occur");
     subsections.add("Supply voltage");
@@ -75,7 +77,8 @@ public class DummyDataGrundfos {
     subsections.add("WARNING:");
     subsectioncontent.add(
         "Reduced risk of electric shock during\n"
-            + "operation of this pump requires the provision of acceptable grounding. If the means\n"
+            + "operation of this pump requires the provision of acceptable grounding. If the"
+            + " means\n"
             + "of connection to the supply connected box\n"
             + "is other than grounded metal conduit,\n"
             + "ground the pump back to the service by\n"

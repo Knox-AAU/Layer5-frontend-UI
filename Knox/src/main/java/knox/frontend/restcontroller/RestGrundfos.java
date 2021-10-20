@@ -2,7 +2,6 @@ package knox.frontend.restcontroller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import knox.frontend.model.DummyData;
 import knox.frontend.utility.GrundfosConnection;
 import knox.frontend.utility.GrundfosSearchData;
 import org.springframework.web.bind.annotation.*;

@@ -2,13 +2,10 @@ package knox.frontend.restcontroller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import knox.frontend.model.DummyData;
-import knox.frontend.model.NordjyskeResult;
 import knox.frontend.utility.NordJyskeConnection;
 import knox.frontend.utility.NordJyskeSearchData;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RequestMapping("/api")
 @RestController

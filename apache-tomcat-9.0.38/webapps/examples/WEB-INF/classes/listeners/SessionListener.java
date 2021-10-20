@@ -25,136 +25,132 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 /**
- * Example listener for context-related application events, which were
- * introduced in the 2.3 version of the Servlet API. This listener merely
- * documents the occurrence of such events in the application log associated
- * with our servlet context.
+ * Example listener for context-related application events, which were introduced in the 2.3 version
+ * of the Servlet API. This listener merely documents the occurrence of such events in the
+ * application log associated with our servlet context.
  *
  * @author Craig R. McClanahan
  */
-public final class SessionListener implements ServletContextListener,
-        HttpSessionAttributeListener, HttpSessionListener {
+public final class SessionListener
+    implements ServletContextListener, HttpSessionAttributeListener, HttpSessionListener {
 
-    // ----------------------------------------------------- Instance Variables
+  // ----------------------------------------------------- Instance Variables
 
-    /**
-     * The servlet context with which we are associated.
-     */
-    private ServletContext context = null;
+  /** The servlet context with which we are associated. */
+  private ServletContext context = null;
 
-    // --------------------------------------------------------- Public Methods
+  // --------------------------------------------------------- Public Methods
 
-    /**
-     * Record the fact that a servlet context attribute was added.
-     *
-     * @param event
-     *            The session attribute event
-     */
-    @Override
-    public void attributeAdded(HttpSessionBindingEvent event) {
+  /**
+   * Record the fact that a servlet context attribute was added.
+   *
+   * @param event The session attribute event
+   */
+  @Override
+  public void attributeAdded(HttpSessionBindingEvent event) {
 
-        log("attributeAdded('" + event.getSession().getId() + "', '"
-                + event.getName() + "', '" + event.getValue() + "')");
+    log(
+        "attributeAdded('"
+            + event.getSession().getId()
+            + "', '"
+            + event.getName()
+            + "', '"
+            + event.getValue()
+            + "')");
+  }
 
-    }
+  /**
+   * Record the fact that a servlet context attribute was removed.
+   *
+   * @param event The session attribute event
+   */
+  @Override
+  public void attributeRemoved(HttpSessionBindingEvent event) {
 
-    /**
-     * Record the fact that a servlet context attribute was removed.
-     *
-     * @param event
-     *            The session attribute event
-     */
-    @Override
-    public void attributeRemoved(HttpSessionBindingEvent event) {
+    log(
+        "attributeRemoved('"
+            + event.getSession().getId()
+            + "', '"
+            + event.getName()
+            + "', '"
+            + event.getValue()
+            + "')");
+  }
 
-        log("attributeRemoved('" + event.getSession().getId() + "', '"
-                + event.getName() + "', '" + event.getValue() + "')");
+  /**
+   * Record the fact that a servlet context attribute was replaced.
+   *
+   * @param event The session attribute event
+   */
+  @Override
+  public void attributeReplaced(HttpSessionBindingEvent event) {
 
-    }
+    log(
+        "attributeReplaced('"
+            + event.getSession().getId()
+            + "', '"
+            + event.getName()
+            + "', '"
+            + event.getValue()
+            + "')");
+  }
 
-    /**
-     * Record the fact that a servlet context attribute was replaced.
-     *
-     * @param event
-     *            The session attribute event
-     */
-    @Override
-    public void attributeReplaced(HttpSessionBindingEvent event) {
+  /**
+   * Record the fact that this web application has been destroyed.
+   *
+   * @param event The servlet context event
+   */
+  @Override
+  public void contextDestroyed(ServletContextEvent event) {
 
-        log("attributeReplaced('" + event.getSession().getId() + "', '"
-                + event.getName() + "', '" + event.getValue() + "')");
+    log("contextDestroyed()");
+    this.context = null;
+  }
 
-    }
+  /**
+   * Record the fact that this web application has been initialized.
+   *
+   * @param event The servlet context event
+   */
+  @Override
+  public void contextInitialized(ServletContextEvent event) {
 
-    /**
-     * Record the fact that this web application has been destroyed.
-     *
-     * @param event
-     *            The servlet context event
-     */
-    @Override
-    public void contextDestroyed(ServletContextEvent event) {
+    this.context = event.getServletContext();
+    log("contextInitialized()");
+  }
 
-        log("contextDestroyed()");
-        this.context = null;
+  /**
+   * Record the fact that a session has been created.
+   *
+   * @param event The session event
+   */
+  @Override
+  public void sessionCreated(HttpSessionEvent event) {
 
-    }
+    log("sessionCreated('" + event.getSession().getId() + "')");
+  }
 
-    /**
-     * Record the fact that this web application has been initialized.
-     *
-     * @param event
-     *            The servlet context event
-     */
-    @Override
-    public void contextInitialized(ServletContextEvent event) {
+  /**
+   * Record the fact that a session has been destroyed.
+   *
+   * @param event The session event
+   */
+  @Override
+  public void sessionDestroyed(HttpSessionEvent event) {
 
-        this.context = event.getServletContext();
-        log("contextInitialized()");
+    log("sessionDestroyed('" + event.getSession().getId() + "')");
+  }
 
-    }
+  // -------------------------------------------------------- Private Methods
 
-    /**
-     * Record the fact that a session has been created.
-     *
-     * @param event
-     *            The session event
-     */
-    @Override
-    public void sessionCreated(HttpSessionEvent event) {
+  /**
+   * Log a message to the servlet context application log.
+   *
+   * @param message Message to be logged
+   */
+  private void log(String message) {
 
-        log("sessionCreated('" + event.getSession().getId() + "')");
-
-    }
-
-    /**
-     * Record the fact that a session has been destroyed.
-     *
-     * @param event
-     *            The session event
-     */
-    @Override
-    public void sessionDestroyed(HttpSessionEvent event) {
-
-        log("sessionDestroyed('" + event.getSession().getId() + "')");
-
-    }
-
-    // -------------------------------------------------------- Private Methods
-
-    /**
-     * Log a message to the servlet context application log.
-     *
-     * @param message
-     *            Message to be logged
-     */
-    private void log(String message) {
-
-        if (context != null)
-            context.log("SessionListener: " + message);
-        else
-            System.out.println("SessionListener: " + message);
-
-    }
-
+    if (context != null) context.log("SessionListener: " + message);
+    else System.out.println("SessionListener: " + message);
+  }
 }

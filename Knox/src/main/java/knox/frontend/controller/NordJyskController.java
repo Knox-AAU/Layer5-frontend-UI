@@ -1,10 +1,7 @@
 package knox.frontend.controller;
 
 import com.fasterxml.jackson.core.*;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import knox.frontend.model.Search;
-import knox.frontend.model.NordjyskeResult;
 import knox.frontend.model.Search;
 import knox.frontend.utility.FileManager;
 import knox.frontend.utility.NordJyskeConnection;
@@ -14,10 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.io.IOException;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.List;
 
 @RequestMapping(value = "/nordjyske")
 @Controller
