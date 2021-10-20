@@ -107,7 +107,6 @@
         return options.substr(0, options.length - 1); //Search term string is returned but without the last character, to remove the last comma which isnt needed.
     }
 
-
     function SearchCallBack (result) {
         console.log("CallBack");
         console.log(result);
@@ -120,6 +119,7 @@
             SearchContentWrapper.appendChild(manualElements[i]);
         }
     }
+
 
 
 </script>

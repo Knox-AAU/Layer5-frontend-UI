@@ -29,6 +29,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.springframework.web.client.RestTemplate;
+
 @RequestMapping("")
 @Controller
 public class HelloController {
@@ -84,6 +86,28 @@ public class HelloController {
         new FileManager(modelAndView.getModelMap()).AddCssFile("classview").finish();
 
         return modelAndView;
+    }
+
+
+    @RequestMapping(value="/getpdf", method=RequestMethod.GET)
+    public ResponseEntity<byte[]> getPDF1() {
+
+
+        //SEND REQUEST TO API
+
+
+
+        HttpHeaders headers = new HttpHeaders();
+
+        headers.setContentType(MediaType.parseMediaType("application/pdf"));
+        String filename = "pdf1.pdf";
+
+        headers.add("Content-Disposition", "inline; filename=" + value;
+
+        headers.setContentDispositionFormData(filename, filename);
+        headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
+        ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(pdf1Bytes, headers, HttpStatus.OK);
+        return response;
     }
 
 /*

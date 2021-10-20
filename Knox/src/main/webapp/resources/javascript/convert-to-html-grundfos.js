@@ -23,7 +23,7 @@ function convertGrundfosToHtml(input){
         var title = document.createElement("a");
         title.innerHTML = pdfpage.title;
         title.classList.add("articletitle");
-        title.href = "/knox/grundfos/search?article=";
+        title.href = "127.0.0.1:8081/getpdf/"+ pdfpage.id;
         wrapper.appendChild(title);
         // Create SubTitle
        /* var score = document.createElement("h2");
