@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import springTest.springMVC.controllerSupport.XMLGenerator;
 import springTest.springMVC.datatypes.JavaClassStruct;
 
-
 @RestController
 public class RestAPI {
 

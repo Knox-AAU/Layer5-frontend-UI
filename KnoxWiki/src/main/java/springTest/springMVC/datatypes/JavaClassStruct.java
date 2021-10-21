@@ -1,6 +1,5 @@
 package springTest.springMVC.datatypes;
 
-
 import java.util.List;
 
 public class JavaClassStruct {

@@ -6,7 +6,6 @@ import knox.frontend.utility.NordJyskeConnection;
 import knox.frontend.utility.NordJyskeSearchData;
 import org.springframework.web.bind.annotation.*;
 
-
 @RequestMapping("/api")
 @RestController
 public class RestNordjyske {

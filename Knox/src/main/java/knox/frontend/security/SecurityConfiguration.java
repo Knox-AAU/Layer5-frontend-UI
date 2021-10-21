@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 
-
 // Most of this class is based on: https://www.baeldung.com/spring-security-login
 @Configuration
 @EnableWebSecurity

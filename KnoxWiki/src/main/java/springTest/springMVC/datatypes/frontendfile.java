@@ -1,6 +1,5 @@
 package springTest.springMVC.datatypes;
 
-
 public class frontendfile {
   public enum FILETYPE {
     CSS,
