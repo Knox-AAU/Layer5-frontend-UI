@@ -1,7 +1,7 @@
 
 
 function convertGrundfosToHtml(input){
-
+    console.log(input);
     var manuals = JSON.parse(input).result;
     var manualElement = [];
 
@@ -23,7 +23,7 @@ function convertGrundfosToHtml(input){
         var title = document.createElement("a");
         title.innerHTML = pdfpage.title;
         title.classList.add("articletitle");
-        title.href = "127.0.0.1:8081/getpdf/"+ pdfpage.id;
+        title.href = "http://localhost:8081/api/getpdf?id="+ pdfpage.id;
         wrapper.appendChild(title);
         // Create SubTitle
        /* var score = document.createElement("h2");
@@ -31,10 +31,10 @@ function convertGrundfosToHtml(input){
         score.classList.add("score");
         wrapper.appendChild(score);*/
         // Create Author
-        var filepath = document.createElement("p");
+        /*var filepath = document.createElement("p");
         filepath.innerHTML = pdfpage.filepath;
         filepath.classList.add("filepath");
-        wrapper.appendChild(filepath);
+        wrapper.appendChild(filepath);*/
 
         manualElement.push(wrapper);
 

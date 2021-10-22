@@ -63,7 +63,7 @@
                         <li>
                             <label>
                                 <p class="sidebar_option_text">Nordjyske</p>
-                                <input type="checkbox" id="option1" name="Nordjyske"">
+                                <input type="checkbox" id="option1" name="Nordjyske">
                             </label>
                         </li>
                     </ul>
@@ -87,39 +87,39 @@
     //Register a search to be started, when the enter key has been pressed
     $(document).keyup(function (e) {
         if ($('.search_input').is(":focus") && (e.keyCode == 13)) {
-            var search = {search:document.getElementById("search_input").value };
+            var search = {search: document.getElementById("search_input").value}.search.toString();
+            console.log("THIS IS THE TEST: " + search);
             var CheckBoxResults = CheckBoxes();
             console.log(CheckBoxResults);
-            GetRequest(search,CheckBoxResults,SearchCallBack);
+            GetRequest(search, CheckBoxResults, SearchCallBack);
         }
     });
 
-    //the checkbox function checks the attributes of checkboxes and if they are checked, they will be turned into a string of options for the search term
-    function CheckBoxes() {
-        var options = "";
+        //the checkbox function checks the attributes of checkboxes and if they are checked, they will be turned into a string of options for the search term
+        function CheckBoxes() {
+            var options = "";
 
-        for (var i = 0; i < NumberOfDatasets; i++) { //Number of datasets is defined at the top of the script, but should probably be dynamicly calculated in the future
-            let tempobj = document.getElementById("option" + i); //Option refers to a partial id for a checkbox which follows the naming fx "option1"
-            if (tempobj.checked) {
-                options += tempobj.getAttribute("name") + ","; //get attribute is getting the name value from the checkbox
+            for (var i = 0; i < NumberOfDatasets; i++) { //Number of datasets is defined at the top of the script, but should probably be dynamicly calculated in the future
+                let tempobj = document.getElementById("option" + i); //Option refers to a partial id for a checkbox which follows the naming fx "option1"
+                if (tempobj.checked) {
+                    options += tempobj.getAttribute("name") + ","; //get attribute is getting the name value from the checkbox
+                }
+            }
+            return options.substr(0, options.length - 1); //Search term string is returned but without the last character, to remove the last comma which isnt needed.
+        }
+
+        function SearchCallBack(result) {
+            console.log("CallBack");
+            console.log(result);
+            var manualElements = convertGrundfosToHtml(result);
+            console.log(manualElements);
+            // Clear current search result
+            SearchContentWrapper.innerHTML = '';
+            // Add search result
+            for (var i = 0; i < manualElements.length; i++) {
+                SearchContentWrapper.appendChild(manualElements[i]);
             }
         }
-        return options.substr(0, options.length - 1); //Search term string is returned but without the last character, to remove the last comma which isnt needed.
-    }
-
-    function SearchCallBack (result) {
-        console.log("CallBack");
-        console.log(result);
-        var manualElements = convertGrundfosToHtml(result);
-        console.log(manualElements);
-        // Clear current search result
-        SearchContentWrapper.innerHTML = '';
-        // Add search result
-        for(var i = 0; i < manualElements.length; i++){
-            SearchContentWrapper.appendChild(manualElements[i]);
-        }
-    }
-
 
 
 </script>

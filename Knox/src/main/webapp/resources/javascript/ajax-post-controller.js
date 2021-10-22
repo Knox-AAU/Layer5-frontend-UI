@@ -23,13 +23,16 @@ function PostCall (functionName, parameters, callBack) {
 }
 
 function GetRequest(searchQuery,searchOptions, callBack) {
+    console.log(searchQuery);
+    console.log(searchOptions);
     $.ajax({
+        //http://localhost:8081/api/search?input=test&sources=Nordjyske%2CGrundfos
         type: "GET",
-        url: "127.0.0.1:8081/api/" + "search?input="+searchQuery + "&sources=" + searchOptions,
+        url: "http://localhost:8081/api/" + "search?input="+ searchQuery + "&sources=" + searchOptions,
         success: function (returnValue) {
+            console.log(this.url)
             console.log("success");
             console.log(returnValue);
-
             callBack(returnValue);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
