@@ -78,9 +78,10 @@
 
     //Registering the click of the search button to start a search. Left alone to evaluate if any of this is needed for the new API.
     $('#search_button').click(function() {
-        var search = {search:document.getElementById("search_input").value };
-        PostCall("grundfossearch",search, SearchCallBack);
-        console.log("Searching...");
+        var search = {search: document.getElementById("search_input").value}.search.toString();
+        var CheckBoxResults = CheckBoxes();
+        console.log(CheckBoxResults);
+        GetRequest(search, CheckBoxResults, SearchCallBack);
     });
 
 
@@ -88,7 +89,6 @@
     $(document).keyup(function (e) {
         if ($('.search_input').is(":focus") && (e.keyCode == 13)) {
             var search = {search: document.getElementById("search_input").value}.search.toString();
-            console.log("THIS IS THE TEST: " + search);
             var CheckBoxResults = CheckBoxes();
             console.log(CheckBoxResults);
             GetRequest(search, CheckBoxResults, SearchCallBack);
